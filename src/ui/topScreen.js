@@ -1,8 +1,23 @@
 import { getAllModes } from "../modes.js";
 import { escapeHtml } from "../utils/dom.js";
+import { DEFAULT_ACCENT } from "../utils/color.js";
+
+const PRESET_COLORS = [
+  DEFAULT_ACCENT,
+  "#ef4444",
+  "#f97316",
+  "#eab308",
+  "#22c55e",
+  "#14b8a6",
+  "#8b5cf6",
+  "#ec4899",
+  "#64748b",
+];
 
 export function renderTopScreen(root, app) {
   const modes = getAllModes();
+  const currentColor = app.favoriteColor || DEFAULT_ACCENT;
+  const isPresetColor = PRESET_COLORS.some((c) => c.toLowerCase() === currentColor.toLowerCase());
 
   const wrap = document.createElement("div");
   wrap.className = "screen top-screen";
@@ -28,6 +43,20 @@ export function renderTopScreen(root, app) {
         .join("")}
     </div>
 
+    <div class="color-select">
+      <span class="color-select-label">アクセントカラー（お好きな色を選べます）</span>
+      <div class="color-swatches" role="group" aria-label="アクセントカラーを選択">
+        ${PRESET_COLORS.map(
+          (c) => `
+          <button type="button" class="color-swatch${c.toLowerCase() === currentColor.toLowerCase() ? " is-selected" : ""}" data-color="${c}" style="background:${c}" aria-pressed="${c.toLowerCase() === currentColor.toLowerCase()}" aria-label="アクセントカラー ${c}"></button>`
+        ).join("")}
+        <label class="color-swatch color-swatch-custom${!isPresetColor ? " is-selected" : ""}" style="${!isPresetColor ? `background:${currentColor}` : ""}" aria-label="カスタムカラーを選択">
+          <input type="color" id="custom-color-input" value="${currentColor}" aria-label="カスタムアクセントカラー" />
+          <span aria-hidden="true">${isPresetColor ? "+" : ""}</span>
+        </label>
+      </div>
+    </div>
+
     <div class="top-actions">
       <button type="button" class="btn btn-primary btn-block" id="start-game-btn">START</button>
       <button type="button" class="top-footer-link" id="my-teams-link">MY TEAMS を見る</button>
@@ -39,6 +68,21 @@ export function renderTopScreen(root, app) {
       app.selectedModeId = btn.dataset.modeId;
       app.render();
     });
+  });
+
+  wrap.querySelectorAll("[data-color]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      app.setFavoriteColor(btn.dataset.color);
+      app.render();
+    });
+  });
+
+  const customInput = wrap.querySelector("#custom-color-input");
+  customInput.addEventListener("input", (e) => {
+    app.setFavoriteColor(e.target.value);
+  });
+  customInput.addEventListener("change", () => {
+    app.render();
   });
 
   wrap.querySelector("#start-game-btn").addEventListener("click", () => {

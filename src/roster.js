@@ -49,7 +49,9 @@ const FIELDING_SLOT_IDS = new Set(["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"
 
 /**
  * 選手が実際の経験に基づき配置しうる枠のIDを、ロスター状態に関係なく列挙する。
- * - pitcherRoles: SP/RP/CL の実績にそのまま対応
+ * - pitcherRoles: SP/RP/CL の実績にそのまま対応。"P"は「投手として実際に
+ *   登板した実績はあるが、先発/中継ぎ/抑えの内訳が資料上確認できない」場合の
+ *   ワイルドカードで、SP/RP/CLいずれにも配置可能として扱う（役割の断定はしない）
  * - fieldingPositions: 各守備位置に対応。"OF"は外野の内訳が不明な場合の
  *   ワイルドカードで、LF/CF/RFいずれにも配置可能として扱う（左右中の断定はしない）
  * - canDH: true の野手はDH枠にも配置可能
@@ -59,7 +61,13 @@ export function getEligibleSlotIds(player) {
   const slots = new Set();
 
   for (const role of player.pitcherRoles || []) {
-    if (SLOT_BY_ID.has(role)) slots.add(role);
+    if (role === "P") {
+      slots.add("SP");
+      slots.add("RP");
+      slots.add("CL");
+    } else if (SLOT_BY_ID.has(role)) {
+      slots.add(role);
+    }
   }
 
   for (const pos of player.fieldingPositions || []) {

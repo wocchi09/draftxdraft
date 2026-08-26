@@ -11,13 +11,19 @@
     "amateurTeam": "花巻東高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": ["SP"],
+    "pitcherRoles": [
+      "SP"
+    ],
     "fieldingPositions": [],
     "canDH": true,
     "isTwoWay": true,
     "activeStatus": "active",
-    "titles": ["MVP"],
-    "awards": ["ベストナイン"]
+    "titles": [
+      "MVP"
+    ],
+    "awards": [
+      "ベストナイン"
+    ]
   },
   {
     "id": "morimoto_ryuya",
@@ -51,11 +57,13 @@
     "amateurTeam": "中央大学",
     "originType": "大学",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -91,11 +99,13 @@
     "amateurTeam": "東芝",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "P"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -131,15 +141,16 @@
     "amateurTeam": "新日鐵住金広畑",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
-
   {
     "id": "sasaki_roki",
     "name": "佐々木朗希",
@@ -152,7 +163,9 @@
     "amateurTeam": "大船渡高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": ["SP"],
+    "pitcherRoles": [
+      "SP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
@@ -212,11 +225,13 @@
     "amateurTeam": "専修大学松戸高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "active",
     "titles": [],
     "awards": []
   },
@@ -245,7 +260,7 @@
     "name": "本前郁也",
     "throws": null,
     "bats": null,
-    "draftYear": 2019,
+    "draftYear": 2020,
     "draftTeamId": "marines",
     "draftRound": "育成1位",
     "draftType": "育成",
@@ -280,7 +295,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "murakami_munetaka",
     "name": "村上宗隆",
@@ -294,12 +308,21 @@
     "originType": "高校",
     "draftPosition": "捕手",
     "pitcherRoles": [],
-    "fieldingPositions": ["3B"],
+    "fieldingPositions": [
+      "3B"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["首位打者", "本塁打王", "打点王"],
-    "awards": ["新人王", "ベストナイン"]
+    "titles": [
+      "首位打者",
+      "本塁打王",
+      "打点王"
+    ],
+    "awards": [
+      "新人王",
+      "ベストナイン"
+    ]
   },
   {
     "id": "oshita_yuma",
@@ -313,11 +336,14 @@
     "amateurTeam": "三菱重工広島",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "SP",
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -333,11 +359,13 @@
     "amateurTeam": "岡山商科大学",
     "originType": "大学",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -354,12 +382,16 @@
     "originType": "社会人",
     "draftPosition": "外野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["OF"],
+    "fieldingPositions": [
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
     "titles": [],
-    "awards": ["ベストナイン"]
+    "awards": [
+      "ベストナイン"
+    ]
   },
   {
     "id": "kanakubo_yuto",
@@ -373,11 +405,13 @@
     "amateurTeam": "東海大学付属市原望洋高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "SP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "active",
     "titles": [],
     "awards": []
   },
@@ -433,7 +467,9 @@
     "amateurTeam": "石川ミリオンスターズ",
     "originType": "独立リーグ",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "P"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
@@ -441,7 +477,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "yamashita_ayaki",
     "name": "山下斐紹",
@@ -475,12 +510,20 @@
     "originType": "大学",
     "draftPosition": "外野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["OF"],
+    "fieldingPositions": [
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["首位打者", "MVP"],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "titles": [
+      "首位打者",
+      "MVP"
+    ],
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "minami_takaki",
@@ -614,12 +657,18 @@
     "amateurTeam": "蒲郡高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": ["SP"],
+    "pitcherRoles": [
+      "SP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["最多勝", "最優秀防御率", "奪三振王"],
+    "titles": [
+      "最多勝",
+      "最優秀防御率",
+      "奪三振王"
+    ],
     "awards": []
   },
   {
@@ -635,7 +684,12 @@
     "originType": "高校",
     "draftPosition": "内野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["2B", "SS", "3B", "OF"],
+    "fieldingPositions": [
+      "2B",
+      "SS",
+      "3B",
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
@@ -655,14 +709,18 @@
     "originType": "高校",
     "draftPosition": "捕手",
     "pitcherRoles": [],
-    "fieldingPositions": ["C"],
+    "fieldingPositions": [
+      "C"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
     "titles": [],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
-
   {
     "id": "yamada_tetsuto",
     "name": "山田哲人",
@@ -676,12 +734,21 @@
     "originType": "高校",
     "draftPosition": "内野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["2B"],
+    "fieldingPositions": [
+      "2B"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["MVP", "本塁打王", "盗塁王", "最多安打"],
-    "awards": ["ベストナイン"]
+    "titles": [
+      "MVP",
+      "本塁打王",
+      "盗塁王",
+      "最多安打"
+    ],
+    "awards": [
+      "ベストナイン"
+    ]
   },
   {
     "id": "shichijo_yuki",
@@ -695,11 +762,14 @@
     "amateurTeam": "伯和ビクトリーズ",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "SP",
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -843,7 +913,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "takahashi_daiki",
     "name": "高橋大樹",
@@ -877,12 +946,19 @@
     "originType": "高校",
     "draftPosition": "内野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["OF"],
+    "fieldingPositions": [
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["首位打者"],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "titles": [
+      "首位打者"
+    ],
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "uemoto_takashi",
@@ -984,7 +1060,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "kaneha_norihito",
     "name": "金刃憲人",
@@ -997,11 +1072,14 @@
     "amateurTeam": "立命館大学",
     "originType": "大学",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "SP",
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -1118,12 +1196,20 @@
     "originType": "高校",
     "draftPosition": "内野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["SS", "3B"],
+    "fieldingPositions": [
+      "SS",
+      "3B"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "active",
-    "titles": ["首位打者"],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "titles": [
+      "首位打者"
+    ],
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "tanaka_daijiro",
@@ -1165,7 +1251,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "itoi_yoshio",
     "name": "糸井嘉男",
@@ -1179,12 +1264,20 @@
     "originType": "大学",
     "draftPosition": "投手",
     "pitcherRoles": [],
-    "fieldingPositions": ["OF"],
+    "fieldingPositions": [
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["首位打者", "盗塁王"],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "titles": [
+      "首位打者",
+      "盗塁王"
+    ],
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "sunaga_hideki",
@@ -1198,11 +1291,13 @@
     "amateurTeam": "浦和学院高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "P"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -1218,7 +1313,9 @@
     "amateurTeam": "日産自動車",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": ["RP"],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
@@ -1258,11 +1355,14 @@
     "amateurTeam": "東海大学付属菅生高校",
     "originType": "高校",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP",
+      "CL"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -1286,7 +1386,6 @@
     "titles": [],
     "awards": []
   },
-
   {
     "id": "nakata_sho",
     "name": "中田翔",
@@ -1300,12 +1399,20 @@
     "originType": "高校",
     "draftPosition": "外野手",
     "pitcherRoles": [],
-    "fieldingPositions": ["3B", "1B", "LF"],
+    "fieldingPositions": [
+      "3B",
+      "1B",
+      "LF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["打点王"],
-    "awards": ["ゴールデングラブ"]
+    "titles": [
+      "打点王"
+    ],
+    "awards": [
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "tadano_kazuto",
@@ -1319,11 +1426,14 @@
     "amateurTeam": "3A・サクラメント",
     "originType": null,
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "SP",
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
@@ -1339,7 +1449,9 @@
     "amateurTeam": "関西学院大学",
     "originType": "大学",
     "draftPosition": "投手",
-    "pitcherRoles": ["RP"],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
@@ -1450,8 +1562,8 @@
   {
     "id": "asanuma_toshiki",
     "name": "浅沼寿紀",
-    "throws": null,
-    "bats": null,
+    "throws": "L",
+    "bats": "L",
     "draftYear": 2007,
     "draftTeamId": "fighters",
     "draftRound": "7位",
@@ -1460,14 +1572,15 @@
     "originType": "高校",
     "draftPosition": "投手",
     "pitcherRoles": [],
-    "fieldingPositions": [],
-    "canDH": false,
+    "fieldingPositions": [
+      "OF"
+    ],
+    "canDH": true,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },
-
   {
     "id": "fukudome_kosuke",
     "name": "福留孝介",
@@ -1481,12 +1594,20 @@
     "originType": "社会人",
     "draftPosition": "遊撃手",
     "pitcherRoles": [],
-    "fieldingPositions": ["SS", "OF"],
+    "fieldingPositions": [
+      "SS",
+      "OF"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["首位打者"],
-    "awards": ["ベストナイン", "ゴールデングラブ"]
+    "titles": [
+      "首位打者"
+    ],
+    "awards": [
+      "ベストナイン",
+      "ゴールデングラブ"
+    ]
   },
   {
     "id": "abe_shinnosuke",
@@ -1501,12 +1622,21 @@
     "originType": "大学",
     "draftPosition": "捕手",
     "pitcherRoles": [],
-    "fieldingPositions": ["C", "1B"],
+    "fieldingPositions": [
+      "C",
+      "1B"
+    ],
     "canDH": true,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["MVP", "首位打者", "打点王"],
-    "awards": ["2000本安打"]
+    "titles": [
+      "MVP",
+      "首位打者",
+      "打点王"
+    ],
+    "awards": [
+      "2000本安打"
+    ]
   },
   {
     "id": "sasaki_kazuhiro",
@@ -1520,13 +1650,21 @@
     "amateurTeam": "東北福祉大学",
     "originType": "大学",
     "draftPosition": "投手",
-    "pitcherRoles": ["CL"],
+    "pitcherRoles": [
+      "CL"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["MVP", "セーブ王"],
-    "awards": ["ベストナイン", "250セーブ"]
+    "titles": [
+      "MVP",
+      "セーブ王"
+    ],
+    "awards": [
+      "ベストナイン",
+      "250セーブ"
+    ]
   },
   {
     "id": "iwase_hitoshi",
@@ -1540,12 +1678,19 @@
     "amateurTeam": "NTT東海",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": ["RP", "CL"],
+    "pitcherRoles": [
+      "RP",
+      "CL"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
     "activeStatus": "retired",
-    "titles": ["セーブ王"],
-    "awards": ["250セーブ"]
+    "titles": [
+      "セーブ王"
+    ],
+    "awards": [
+      "250セーブ"
+    ]
   }
 ]

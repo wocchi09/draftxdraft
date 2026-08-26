@@ -2,6 +2,9 @@
  * 抽選された球団カラーを「アクセント程度」にだけ使うための最小限の色計算。
  */
 
+/** ユーザーが未設定のときのデフォルトアクセントカラー */
+export const DEFAULT_ACCENT = "#4f7cff";
+
 function hexToRgb(hex) {
   const clean = hex.replace("#", "");
   const full = clean.length === 3 ? clean.split("").map((c) => c + c).join("") : clean;

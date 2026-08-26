@@ -86,7 +86,7 @@ export function renderResultScreen(root, app) {
       </div>
 
       <div class="result-section">
-        <span class="section-title">打順（並び替え可能）</span>
+        <span class="section-title">打順（野手9人・並び替え可能）</span>
         <div class="order-list" id="order-list">${orderRowsHtml}</div>
       </div>
 

@@ -10,7 +10,7 @@ import { renderGameScreen } from "./ui/gameScreen.js";
 import { renderResultScreen } from "./ui/resultScreen.js";
 import { renderMyTeamsScreen } from "./ui/myTeamsScreen.js";
 import { announce } from "./utils/dom.js";
-import { hexToRgba, lighten } from "./utils/color.js";
+import { hexToRgba, lighten, DEFAULT_ACCENT } from "./utils/color.js";
 import { loadGameData } from "./dataStore.js";
 import * as storage from "./storage.js";
 
@@ -42,6 +42,7 @@ class App {
     this.root = root;
     this.screen = "TOP";
     this.selectedModeId = storage.loadLastMode() || DEFAULT_MODE_ID;
+    this.favoriteColor = storage.loadFavoriteColor() || DEFAULT_ACCENT;
     this.game = null;
     this.viewingTeam = null;
     this.viewingTeamIndex = null;
@@ -115,7 +116,6 @@ class App {
         ? `配置可能な選手がいなかったため自動で再抽選しました（${this.game.lastAutoRedraws}回）`
         : null;
     this.render();
-    applyAccentForTeam(combo.teamId);
 
     const years = getAvailableYears();
     const teamNames = getAllTeamShortNames();
@@ -190,7 +190,7 @@ class App {
       this.viewingTeamIndex = 0;
       this.ui.pendingConfetti = true;
       this.game = null;
-      applyAccentForTeam(null);
+      applyAccent(this.favoriteColor);
       this.screen = "RESULT";
       this.render();
       return;
@@ -252,6 +252,14 @@ class App {
     this.render();
   }
 
+  setFavoriteColor(hex) {
+    this.favoriteColor = hex;
+    storage.saveFavoriteColor(hex);
+    if (this.screen !== "GAME" || !this.game || !this.game.currentDraft) {
+      applyAccent(hex);
+    }
+  }
+
   viewCompletedTeam(snapshot, index) {
     if (!snapshot) return;
     this.viewingTeam = snapshot;
@@ -287,18 +295,21 @@ class App {
     this.root.innerHTML = "";
     switch (this.screen) {
       case "TOP":
-        applyAccentForTeam(null);
+        applyAccent(this.favoriteColor);
         renderTopScreen(this.root, this);
         break;
-      case "GAME":
+      case "GAME": {
+        const draftTeamId = this.game && this.game.currentDraft ? this.game.currentDraft.teamId : null;
+        applyAccent((draftTeamId && getTeamAccentColor(draftTeamId)) || this.favoriteColor);
         renderGameScreen(this.root, this);
         break;
+      }
       case "RESULT":
-        applyAccentForTeam(null);
+        applyAccent(this.favoriteColor);
         renderResultScreen(this.root, this);
         break;
       case "MY_TEAMS":
-        applyAccentForTeam(null);
+        applyAccent(this.favoriteColor);
         renderMyTeamsScreen(this.root, this);
         break;
       default:
@@ -312,20 +323,14 @@ function cssEscape(value) {
   return String(value).replace(/["\\]/g, "\\$&");
 }
 
-function applyAccentForTeam(teamId) {
+/** 常に具体的な16進カラーを受け取り、アクセント関連のCSS変数一式に反映する。 */
+function applyAccent(color) {
   const root = document.documentElement;
-  const color = teamId ? getTeamAccentColor(teamId) : null;
-  if (color) {
-    root.style.setProperty("--accent", color);
-    root.style.setProperty("--accent-strong", lighten(color, 0.25));
-    root.style.setProperty("--accent-soft", hexToRgba(color, 0.16));
-    root.style.setProperty("--accent-text", lighten(color, 0.55));
-  } else {
-    root.style.removeProperty("--accent");
-    root.style.removeProperty("--accent-strong");
-    root.style.removeProperty("--accent-soft");
-    root.style.removeProperty("--accent-text");
-  }
+  const hex = color || DEFAULT_ACCENT;
+  root.style.setProperty("--accent", hex);
+  root.style.setProperty("--accent-strong", lighten(hex, 0.25));
+  root.style.setProperty("--accent-soft", hexToRgba(hex, 0.16));
+  root.style.setProperty("--accent-text", lighten(hex, 0.55));
 }
 
 function renderLoading(root) {

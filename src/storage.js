@@ -8,6 +8,7 @@ const KEYS = {
   currentGame: "ddxd:currentGame",
   completedTeams: "ddxd:completedTeams",
   lastMode: "ddxd:lastMode",
+  favoriteColor: "ddxd:favoriteColor",
 };
 
 function safeGet(key) {
@@ -76,4 +77,24 @@ export function saveLastMode(modeId) {
 export function loadLastMode() {
   const data = safeGet(KEYS.lastMode);
   return typeof data === "string" ? data : null;
+}
+
+const HEX_COLOR_RE = /^#[0-9a-fA-F]{6}$/;
+
+export function saveFavoriteColor(hex) {
+  if (typeof hex !== "string" || !HEX_COLOR_RE.test(hex)) return false;
+  return safeSet(KEYS.favoriteColor, hex);
+}
+
+export function loadFavoriteColor() {
+  const data = safeGet(KEYS.favoriteColor);
+  return typeof data === "string" && HEX_COLOR_RE.test(data) ? data : null;
+}
+
+export function clearFavoriteColor() {
+  try {
+    window.localStorage.removeItem(KEYS.favoriteColor);
+  } catch {
+    /* ignore */
+  }
 }
