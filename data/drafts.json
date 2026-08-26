@@ -1,0 +1,151 @@
+[
+  {
+    "year": 2012,
+    "teamId": "fighters",
+    "picks": [
+      { "playerId": "otani_shohei", "round": "1位", "type": "regular" },
+      { "playerId": "morimoto_ryuya", "round": "2位", "type": "regular" },
+      { "playerId": "kagiya_yohei", "round": "3位", "type": "regular" },
+      { "playerId": "usami_ruito", "round": "4位", "type": "regular" },
+      { "playerId": "arakaki_yuto", "round": "5位", "type": "regular" },
+      { "playerId": "yagi_shogo", "round": "6位", "type": "regular" },
+      { "playerId": "kono_hidekazu", "round": "7位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 2019,
+    "teamId": "marines",
+    "picks": [
+      { "playerId": "sasaki_roki", "round": "1位", "type": "regular" },
+      { "playerId": "sato_toshiya", "round": "2位", "type": "regular" },
+      { "playerId": "takabe_eito", "round": "3位", "type": "regular" },
+      { "playerId": "yokoyama_rikuto", "round": "4位", "type": "regular" },
+      { "playerId": "fukuda_koki", "round": "5位", "type": "regular" },
+      { "playerId": "motomae_ikuya", "round": "育成1位", "type": "development" },
+      { "playerId": "ueda_shota", "round": "育成2位", "type": "development" }
+    ]
+  },
+  {
+    "year": 2017,
+    "teamId": "swallows",
+    "picks": [
+      { "playerId": "murakami_munetaka", "round": "1位", "type": "regular" },
+      { "playerId": "oshita_yuma", "round": "2位", "type": "regular" },
+      { "playerId": "kuramoto_haruyoshi", "round": "3位", "type": "regular" },
+      { "playerId": "shiomi_yasutaka", "round": "4位", "type": "regular" },
+      { "playerId": "kanakubo_yuto", "round": "5位", "type": "regular" },
+      { "playerId": "miyamoto_jo", "round": "6位", "type": "regular" },
+      { "playerId": "matsumoto_naoki", "round": "7位", "type": "regular" },
+      { "playerId": "numata_takumi", "round": "8位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 2010,
+    "teamId": "hawks",
+    "picks": [
+      { "playerId": "yamashita_ayaki", "round": "1位", "type": "regular" },
+      { "playerId": "yanagita_yuki", "round": "2位", "type": "regular" },
+      { "playerId": "minami_takaki", "round": "3位", "type": "regular" },
+      { "playerId": "hoshino_daichi", "round": "4位", "type": "regular" },
+      { "playerId": "sakata_masato", "round": "5位", "type": "regular" },
+      { "playerId": "yasuda_keisuke", "round": "育成1位", "type": "development" },
+      { "playerId": "nakahara_daiki", "round": "育成2位", "type": "development" },
+      { "playerId": "ito_daichiro", "round": "育成3位", "type": "development" },
+      { "playerId": "senga_kodai", "round": "育成4位", "type": "development" },
+      { "playerId": "makihara_taisei", "round": "育成5位", "type": "development" },
+      { "playerId": "kai_takuya", "round": "育成6位", "type": "development" }
+    ]
+  },
+  {
+    "year": 2010,
+    "teamId": "swallows",
+    "picks": [
+      { "playerId": "yamada_tetsuto", "round": "1位", "type": "regular" },
+      { "playerId": "shichijo_yuki", "round": "2位", "type": "regular" },
+      { "playerId": "nishida_akio", "round": "3位", "type": "regular" },
+      { "playerId": "matano_tomoya", "round": "4位", "type": "regular" },
+      { "playerId": "kuko_kentaro", "round": "5位", "type": "regular" },
+      { "playerId": "kawasaki_shigeaki", "round": "6位", "type": "regular" },
+      { "playerId": "kitano_koki", "round": "育成1位", "type": "development" },
+      { "playerId": "ueno_keisuke", "round": "育成2位", "type": "development" },
+      { "playerId": "sato_takanori", "round": "育成3位", "type": "development" }
+    ]
+  },
+  {
+    "year": 2012,
+    "teamId": "carp",
+    "picks": [
+      { "playerId": "takahashi_daiki", "round": "1位", "type": "regular" },
+      { "playerId": "suzuki_seiya", "round": "2位", "type": "regular" },
+      { "playerId": "uemoto_takashi", "round": "3位", "type": "regular" },
+      { "playerId": "shimozuru_ko", "round": "4位", "type": "regular" },
+      { "playerId": "mima_yuki", "round": "5位", "type": "regular" },
+      { "playerId": "tsuji_sora", "round": "育成1位", "type": "development" },
+      { "playerId": "morishita_so", "round": "育成2位", "type": "development" }
+    ]
+  },
+  {
+    "year": 2006,
+    "teamId": "giants",
+    "picks": [
+      { "playerId": "kaneha_norihito", "round": "希望入団枠", "type": "regular" },
+      { "playerId": "ueno_takahisa", "round": "3位", "type": "regular" },
+      { "playerId": "tsuburaya_hidetoshi", "round": "4位", "type": "regular" },
+      { "playerId": "fukazawa_kazuho", "round": "5位", "type": "regular" },
+      { "playerId": "terauchi_takayuki", "round": "6位", "type": "regular" },
+      { "playerId": "fukamachi_ryosuke", "round": "7位", "type": "regular" },
+      { "playerId": "sakamoto_hayato", "round": "1位", "type": "regular" },
+      { "playerId": "tanaka_daijiro", "round": "3位", "type": "regular" },
+      { "playerId": "ijuin_minehiro", "round": "4位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 2003,
+    "teamId": "fighters",
+    "picks": [
+      { "playerId": "itoi_yoshio", "round": "自由獲得枠", "type": "regular" },
+      { "playerId": "sunaga_hideki", "round": "2位", "type": "regular" },
+      { "playerId": "oshimoto_kenhiko", "round": "4位", "type": "regular" },
+      { "playerId": "inada_naoto", "round": "5位", "type": "regular" },
+      { "playerId": "kanamori_takayuki", "round": "6位", "type": "regular" },
+      { "playerId": "watanabe_ryuichi", "round": "7位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 2007,
+    "teamId": "fighters",
+    "picks": [
+      { "playerId": "nakata_sho", "round": "1位", "type": "regular" },
+      { "playerId": "tadano_kazuto", "round": "1位", "type": "regular" },
+      { "playerId": "miyanishi_naoki", "round": "3位", "type": "regular" },
+      { "playerId": "tsuda_daiki", "round": "3位", "type": "regular" },
+      { "playerId": "murata_kazuya", "round": "4位", "type": "regular" },
+      { "playerId": "ohira_seiichi", "round": "4位", "type": "regular" },
+      { "playerId": "matsuyama_suguru", "round": "5位", "type": "regular" },
+      { "playerId": "toyoshima_akiyoshi", "round": "6位", "type": "regular" },
+      { "playerId": "asanuma_toshiki", "round": "7位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 1998,
+    "teamId": "dragons",
+    "picks": [
+      { "playerId": "fukudome_kosuke", "round": "1位", "type": "regular" },
+      { "playerId": "iwase_hitoshi", "round": "2位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 1990,
+    "teamId": "baystars",
+    "picks": [
+      { "playerId": "sasaki_kazuhiro", "round": "1位", "type": "regular" }
+    ]
+  },
+  {
+    "year": 2000,
+    "teamId": "giants",
+    "picks": [
+      { "playerId": "abe_shinnosuke", "round": "1位", "type": "regular" }
+    ]
+  }
+]

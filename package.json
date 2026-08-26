@@ -1,0 +1,11 @@
+{
+  "name": "draft-x-draft",
+  "version": "0.1.0",
+  "description": "DRAFT × DRAFT - NPBドラフト史実に基づくロスター編成ゲーム。ビルド不要のプレーンなHTML/CSS/JavaScriptで動作します。",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  }
+}

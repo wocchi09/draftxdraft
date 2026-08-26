@@ -1,0 +1,355 @@
+.result-body {
+  flex: 1;
+  padding: var(--sp-4) var(--sp-4) var(--sp-7);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-6);
+}
+
+.result-hero {
+  text-align: center;
+  padding: var(--sp-6) var(--sp-4) var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  position: relative;
+}
+
+.result-hero .complete-label {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  color: var(--text-2);
+}
+
+.result-hero h1 {
+  font-size: 32px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #fff, var(--accent-text));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.result-hero .result-sub {
+  color: var(--text-1);
+  font-size: 13px;
+}
+
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+/* Batting order */
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.order-row {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-3);
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-md);
+  padding: var(--sp-2) var(--sp-3);
+  min-height: 44px;
+}
+
+.order-row .order-num {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+
+.order-row .order-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  align-items: baseline;
+  gap: var(--sp-2);
+}
+
+.order-row .order-name {
+  font-weight: 700;
+  font-size: 14.5px;
+  overflow-wrap: anywhere;
+}
+
+.order-row .order-pos {
+  font-size: 11.5px;
+  color: var(--text-2);
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.order-row .order-controls {
+  display: flex;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.order-row[draggable="true"] {
+  cursor: grab;
+}
+
+.order-row.dragging {
+  opacity: 0.4;
+}
+
+.order-row.drag-over {
+  border-color: var(--accent);
+}
+
+/* Analysis */
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-3);
+}
+
+.analysis-card {
+  background: var(--bg-2);
+  border: 1px solid var(--border-1);
+  border-radius: var(--r-md);
+  padding: var(--sp-3);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.analysis-card .a-title {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: var(--text-2);
+  letter-spacing: 0.04em;
+}
+
+.analysis-card .a-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.analysis-card .a-row .a-value {
+  font-weight: 800;
+  color: var(--text-0);
+}
+
+.tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.tag-pill {
+  padding: 6px 14px;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  font-size: 13px;
+  font-weight: 700;
+  border: 1px solid var(--accent);
+}
+
+.award-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.award-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border-radius: var(--r-pill);
+  background: var(--bg-3);
+  border: 1px solid var(--border-2);
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.award-pill .count {
+  background: var(--bg-1);
+  border-radius: var(--r-pill);
+  padding: 1px 7px;
+  font-size: 11px;
+  color: var(--text-2);
+}
+
+/* Share card */
+.share-card-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  align-items: center;
+}
+
+.share-card {
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 9 / 16;
+  border-radius: var(--r-lg);
+  background: linear-gradient(165deg, var(--bg-1) 0%, var(--bg-0) 100%);
+  border: 1px solid var(--border-2);
+  padding: var(--sp-5) var(--sp-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-card);
+}
+
+.share-card::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -20%;
+  width: 140%;
+  height: 70%;
+  background: radial-gradient(circle, var(--accent-soft), transparent 65%);
+  pointer-events: none;
+}
+
+.share-card .sc-brand {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  color: var(--text-2);
+}
+
+.share-card .sc-heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--text-0);
+}
+
+.share-card .sc-meta {
+  font-size: 11px;
+  color: var(--text-2);
+  font-weight: 700;
+}
+
+.share-card .sc-order {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 11.5px;
+  margin-top: var(--sp-2);
+}
+
+.share-card .sc-order div {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-1);
+}
+
+.share-card .sc-order div b {
+  color: var(--text-0);
+}
+
+.share-card .sc-pitchers {
+  display: flex;
+  gap: var(--sp-2);
+  font-size: 11px;
+  margin-top: var(--sp-1);
+}
+
+.share-card .sc-pitchers span {
+  flex: 1;
+  background: var(--bg-3);
+  border-radius: var(--r-sm);
+  padding: 4px 6px;
+  text-align: center;
+}
+
+.share-card .sc-tags {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.share-card .sc-tags span {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 3px 7px;
+  border-radius: var(--r-pill);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.share-card .sc-footer {
+  font-size: 10px;
+  color: var(--text-3);
+  border-top: 1px solid var(--border-1);
+  padding-top: var(--sp-2);
+}
+
+.share-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--sp-2);
+  width: 100%;
+}
+
+.share-hint {
+  font-size: 12.5px;
+  color: var(--text-2);
+  text-align: center;
+  max-width: 320px;
+}
+
+.result-cta-row {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+/* Confetti */
+.confetti-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.confetti-piece {
+  position: absolute;
+  top: -10px;
+  width: 8px;
+  height: 14px;
+  opacity: 0.9;
+  animation-name: confetti-fall;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+}
+
+@keyframes confetti-fall {
+  to {
+    transform: translateY(110vh) rotate(360deg);
+    opacity: 0.2;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti-layer {
+    display: none;
+  }
+}

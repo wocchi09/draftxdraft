@@ -1,0 +1,115 @@
+[
+  {
+    "id": "fighters",
+    "league": "パ・リーグ",
+    "shortName": "日本ハム",
+    "colorAccent": "#00306E",
+    "nameHistory": [
+      { "from": null, "to": 2003, "name": "日本ハムファイターズ" },
+      { "from": 2004, "to": null, "name": "北海道日本ハムファイターズ" }
+    ]
+  },
+  {
+    "id": "marines",
+    "league": "パ・リーグ",
+    "shortName": "ロッテ",
+    "colorAccent": "#000000",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "千葉ロッテマリーンズ" }
+    ]
+  },
+  {
+    "id": "hawks",
+    "league": "パ・リーグ",
+    "shortName": "ソフトバンク",
+    "colorAccent": "#FBBF15",
+    "nameHistory": [
+      { "from": null, "to": 2004, "name": "福岡ダイエーホークス" },
+      { "from": 2005, "to": null, "name": "福岡ソフトバンクホークス" }
+    ]
+  },
+  {
+    "id": "seibu",
+    "league": "パ・リーグ",
+    "shortName": "西武",
+    "colorAccent": "#1B3A6B",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "埼玉西武ライオンズ" }
+    ]
+  },
+  {
+    "id": "rakuten",
+    "league": "パ・リーグ",
+    "shortName": "楽天",
+    "colorAccent": "#870139",
+    "nameHistory": [
+      { "from": 2005, "to": null, "name": "東北楽天ゴールデンイーグルス" }
+    ]
+  },
+  {
+    "id": "orix",
+    "league": "パ・リーグ",
+    "shortName": "オリックス",
+    "colorAccent": "#001E62",
+    "nameHistory": [
+      { "from": null, "to": 2004, "name": "オリックス・ブルーウェーブ" },
+      { "from": 2005, "to": null, "name": "オリックス・バファローズ" }
+    ]
+  },
+  {
+    "id": "giants",
+    "league": "セ・リーグ",
+    "shortName": "巨人",
+    "colorAccent": "#F97709",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "読売ジャイアンツ" }
+    ]
+  },
+  {
+    "id": "tigers",
+    "league": "セ・リーグ",
+    "shortName": "阪神",
+    "colorAccent": "#FFE201",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "阪神タイガース" }
+    ]
+  },
+  {
+    "id": "dragons",
+    "league": "セ・リーグ",
+    "shortName": "中日",
+    "colorAccent": "#003DA5",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "中日ドラゴンズ" }
+    ]
+  },
+  {
+    "id": "carp",
+    "league": "セ・リーグ",
+    "shortName": "広島",
+    "colorAccent": "#DB1B24",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "広島東洋カープ" }
+    ]
+  },
+  {
+    "id": "swallows",
+    "league": "セ・リーグ",
+    "shortName": "ヤクルト",
+    "colorAccent": "#0A5C34",
+    "nameHistory": [
+      { "from": null, "to": null, "name": "東京ヤクルトスワローズ" }
+    ]
+  },
+  {
+    "id": "baystars",
+    "league": "セ・リーグ",
+    "shortName": "DeNA",
+    "colorAccent": "#0055A5",
+    "nameHistory": [
+      { "from": null, "to": 1992, "name": "横浜大洋ホエールズ" },
+      { "from": 1993, "to": 2011, "name": "横浜ベイスターズ" },
+      { "from": 2012, "to": null, "name": "横浜DeNAベイスターズ" }
+    ]
+  }
+]
