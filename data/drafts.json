@@ -426,27 +426,25 @@
         "playerId": "iwase_hitoshi",
         "round": "2位",
         "type": "regular"
-      }
-    ]
-  },
-  {
-    "year": 1990,
-    "teamId": "baystars",
-    "picks": [
+      },
       {
-        "playerId": "sasaki_kazuhiro",
-        "round": "1位",
+        "playerId": "ogasawara_takashi",
+        "round": "3位",
         "type": "regular"
-      }
-    ]
-  },
-  {
-    "year": 2000,
-    "teamId": "giants",
-    "picks": [
+      },
       {
-        "playerId": "abe_shinnosuke",
-        "round": "1位",
+        "playerId": "kuramoto_hidenori",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "kawazoe_shota",
+        "round": "5位",
+        "type": "regular"
+      },
+      {
+        "playerId": "yaguchi_tetsuro",
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -455,6 +453,31 @@
     "year": 2020,
     "teamId": "marines",
     "picks": [
+      {
+        "playerId": "suzuki_shota",
+        "round": "1位",
+        "type": "regular"
+      },
+      {
+        "playerId": "nakamori_shunsuke",
+        "round": "2位",
+        "type": "regular"
+      },
+      {
+        "playerId": "ogawa_ryusei",
+        "round": "3位",
+        "type": "regular"
+      },
+      {
+        "playerId": "kawamura_tokito",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "nishikawa_ryosuke",
+        "round": "5位",
+        "type": "regular"
+      },
       {
         "playerId": "motomae_ikuya",
         "round": "育成1位",
