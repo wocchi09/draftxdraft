@@ -2,6 +2,7 @@ import { createInitialState, getSkipsRemaining, getFilledCount } from "./state.j
 import { DEFAULT_MODE_ID } from "./modes.js";
 import { drawForState, pickPlayer, skip, getEligibleOpenSlotsForCandidate, GameError } from "./game.js";
 import { getAvailableYears } from "./draft.js";
+import { getSlotDef } from "./roster.js";
 import { getAllTeamShortNames, getTeamShortName, getTeamName, getTeamAccentColor } from "./teams.js";
 import { moveUp, moveDown } from "./battingOrder.js";
 import { runRouletteAnimation, prefersReducedMotion } from "./ui/animations.js";
@@ -19,6 +20,8 @@ function defaultUiState() {
     rouletteAnimating: false,
     expandedCandidateId: null,
     slotPickerPlayerId: null,
+    slotPickerStep: null,
+    slotPickerChosenSlotId: null,
     historyOpen: false,
     noCandidatesStuck: false,
     autoRedrawNotice: null,
@@ -168,9 +171,11 @@ class App {
 
     const proceed = () => {
       if (openSlots.length === 1) {
-        this.confirmPick(playerId, openSlots[0]);
+        this.chooseRosterSlot(playerId, openSlots[0]);
       } else {
         this.ui.slotPickerPlayerId = playerId;
+        this.ui.slotPickerStep = "slot";
+        this.ui.slotPickerChosenSlotId = null;
         this.render();
       }
     };
@@ -182,9 +187,31 @@ class App {
     }
   }
 
-  confirmPick(playerId, slotId) {
+  /**
+   * ロスター枠を選んだ後の分岐。野手（DH含む）枠なら打順を選ぶステップへ、
+   * 投手枠ならそのまま確定する。打順の挿入位置が1択しかない場合
+   * （まだ誰も野手を登録していない最初の1人目など）もそのまま確定する。
+   */
+  chooseRosterSlot(playerId, slotId) {
+    this.ui.slotPickerPlayerId = playerId;
+    const slotDef = getSlotDef(slotId);
+    if (slotDef && slotDef.category === "fielder") {
+      const draftLen = (this.game.battingOrderDraft || []).length;
+      if (draftLen === 0) {
+        this.confirmPick(playerId, slotId, 0);
+        return;
+      }
+      this.ui.slotPickerChosenSlotId = slotId;
+      this.ui.slotPickerStep = "battingOrder";
+      this.render();
+      return;
+    }
+    this.confirmPick(playerId, slotId);
+  }
+
+  confirmPick(playerId, slotId, battingOrderIndex) {
     try {
-      pickPlayer(this.game, playerId, slotId);
+      pickPlayer(this.game, playerId, slotId, battingOrderIndex);
     } catch (err) {
       if (err instanceof GameError) {
         announce(err.message);
@@ -196,6 +223,8 @@ class App {
     }
 
     this.ui.slotPickerPlayerId = null;
+    this.ui.slotPickerStep = null;
+    this.ui.slotPickerChosenSlotId = null;
     this.ui.expandedCandidateId = null;
     this.ui.autoRedrawNotice = null;
 
@@ -225,6 +254,8 @@ class App {
 
   closeSlotPicker() {
     this.ui.slotPickerPlayerId = null;
+    this.ui.slotPickerStep = null;
+    this.ui.slotPickerChosenSlotId = null;
     this.render();
   }
 
