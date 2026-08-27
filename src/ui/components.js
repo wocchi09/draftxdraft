@@ -1,43 +1,9 @@
 import { escapeHtml } from "../utils/dom.js";
-import { ROSTER_SLOTS, getSlotDef, getEligibleSlotIds } from "../roster.js";
+import { ROSTER_SLOTS, getSlotDef } from "../roster.js";
 import { getTeamName } from "../teams.js";
-
-const SLOT_GROUP_CLASS = {
-  SP: "grp-pitcher",
-  RP: "grp-pitcher",
-  CL: "grp-pitcher",
-  C: "grp-catcher",
-  "1B": "grp-infield",
-  "2B": "grp-infield",
-  "3B": "grp-infield",
-  SS: "grp-infield",
-  LF: "grp-outfield",
-  CF: "grp-outfield",
-  RF: "grp-outfield",
-  DH: "grp-dh",
-};
-
-export function posBadgeHtml(slotId) {
-  const slot = getSlotDef(slotId);
-  if (!slot) return "";
-  const cls = SLOT_GROUP_CLASS[slotId] || "grp-none";
-  return `<span class="pos-badge ${cls}">${escapeHtml(slot.shortLabel)}</span>`;
-}
 
 export function twoWayBadgeHtml(pulse = false) {
   return `<span class="badge-twoway${pulse ? " pulse" : ""}" title="投手・野手の両方として実際にプレーした選手">⚡ TWO-WAY</span>`;
-}
-
-export function positionSummaryHtml(player) {
-  const slots = getEligibleSlotIds(player);
-  if (slots.length === 0) {
-    return `<span class="pos-badge grp-none">実績ポジション不明</span>`;
-  }
-  const order = ROSTER_SLOTS.map((s) => s.id);
-  return slots
-    .sort((a, b) => order.indexOf(a) - order.indexOf(b))
-    .map((s) => posBadgeHtml(s))
-    .join("");
 }
 
 function originLine(player) {
@@ -90,7 +56,6 @@ export function candidateCardHtml(player, { expanded = false, disabled = false }
         </div>
       </div>
     </div>
-    <div class="candidate-positions">${positionSummaryHtml(player)}</div>
     ${detail}
     <button type="button" class="candidate-toggle" data-toggle-detail="${escapeHtml(player.id)}">${expanded ? "閉じる ▲" : "詳細を見る ▼"}</button>
   </div>`;

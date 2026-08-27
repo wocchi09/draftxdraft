@@ -235,29 +235,6 @@
   gap: 4px 8px;
 }
 
-.candidate-positions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-  margin-top: var(--sp-2);
-}
-
-.pos-badge {
-  font-size: 12px;
-  font-weight: 800;
-  padding: 3px 9px;
-  border-radius: var(--r-pill);
-  border: 1px solid transparent;
-  white-space: nowrap;
-}
-
-.pos-badge.grp-pitcher { background: rgba(239, 131, 84, 0.16); color: var(--pos-pitcher); border-color: rgba(239, 131, 84, 0.4); }
-.pos-badge.grp-catcher { background: rgba(167, 139, 250, 0.16); color: var(--pos-catcher); border-color: rgba(167, 139, 250, 0.4); }
-.pos-badge.grp-infield { background: rgba(79, 195, 247, 0.16); color: var(--pos-infield); border-color: rgba(79, 195, 247, 0.4); }
-.pos-badge.grp-outfield { background: rgba(102, 217, 164, 0.16); color: var(--pos-outfield); border-color: rgba(102, 217, 164, 0.4); }
-.pos-badge.grp-dh { background: rgba(244, 211, 94, 0.16); color: var(--pos-dh); border-color: rgba(244, 211, 94, 0.4); }
-.pos-badge.grp-none { background: var(--bg-3); color: var(--text-3); border-color: var(--border-1); }
-
 .badge-twoway {
   display: inline-flex;
   align-items: center;
