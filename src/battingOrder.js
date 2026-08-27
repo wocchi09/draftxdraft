@@ -17,6 +17,17 @@ export function moveDown(order, index) {
   return next;
 }
 
+/**
+ * 指名時に打順を選んだ際に使う: indexの位置に新しい要素を挿入する。
+ * 既にその位置以降にいた要素は1つずつ後ろへずれる。
+ */
+export function insertAt(order, index, value) {
+  const next = order.slice();
+  const clamped = Math.max(0, Math.min(index, next.length));
+  next.splice(clamped, 0, value);
+  return next;
+}
+
 /** ドラッグ&ドロップ用: fromIndexの要素をtoIndexへ移動する */
 export function moveTo(order, fromIndex, toIndex) {
   if (

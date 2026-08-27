@@ -119,7 +119,7 @@ export function renderGameScreen(root, app) {
       ${historyHtml}
     </div>
     ${actionBarHtml}
-    ${ui.slotPickerPlayerId ? slotPickerHtml(app) : ""}
+    ${ui.slotPickerPlayerId ? (ui.slotPickerStep === "battingOrder" ? battingOrderPickerHtml(app) : slotPickerHtml(app)) : ""}
   `;
 
   bindEvents(wrap, app);
@@ -139,6 +139,36 @@ function slotPickerHtml(app) {
           .map((slotId) => {
             const slot = getSlotDef(slotId);
             return `<button type="button" class="slot-option-btn" data-slot-id="${slotId}">${escapeHtml(slot.label)}<small>${slotId}</small></button>`;
+          })
+          .join("")}
+      </div>
+      <button type="button" class="btn btn-ghost btn-block" id="slot-picker-cancel">キャンセル</button>
+    </div>
+  </div>`;
+}
+
+/**
+ * 野手（DH含む）を配置する際、指名と同時に打順の挿入位置を選ぶシート。
+ * 選んだ番号より後ろにいた選手は1つずつ後ろへずれる。
+ */
+function battingOrderPickerHtml(app) {
+  const player = app.game.currentCandidates.find((p) => p.id === app.ui.slotPickerPlayerId);
+  if (!player) return "";
+  const slotId = app.ui.slotPickerChosenSlotId;
+  const slot = getSlotDef(slotId);
+  const draft = app.game.battingOrderDraft || [];
+  const options = Array.from({ length: draft.length + 1 }, (_, i) => i);
+  return `
+  <div class="slot-picker-overlay" id="slot-picker-overlay">
+    <div class="slot-picker-sheet" role="dialog" aria-modal="true" aria-label="打順を選択">
+      <h3><span class="player-name">${escapeHtml(player.name)}</span>（${escapeHtml(slot ? slot.label : "")}）の打順を選択</h3>
+      <div class="slot-options">
+        ${options
+          .map((idx) => {
+            const displaced = draft[idx] ? getPlayer(draft[idx]) : null;
+            return `<button type="button" class="slot-option-btn" data-order-index="${idx}">${idx + 1}番${
+              displaced ? `<small>現${idx + 1}番 ${escapeHtml(displaced.name)}は繰り下げ</small>` : ""
+            }</button>`;
           })
           .join("")}
       </div>
@@ -196,7 +226,13 @@ function bindEvents(wrap, app) {
 
   wrap.querySelectorAll("[data-slot-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
-      app.confirmPick(app.ui.slotPickerPlayerId, btn.dataset.slotId);
+      app.chooseRosterSlot(app.ui.slotPickerPlayerId, btn.dataset.slotId);
+    });
+  });
+
+  wrap.querySelectorAll("[data-order-index]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      app.confirmPick(app.ui.slotPickerPlayerId, app.ui.slotPickerChosenSlotId, Number(btn.dataset.orderIndex));
     });
   });
 }

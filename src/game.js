@@ -2,12 +2,15 @@ import { getMode } from "./modes.js";
 import { drawDraftCombo, getCandidates } from "./draft.js";
 import {
   ROSTER_SLOTS,
+  getSlotDef,
   placePlayer,
   isRosterComplete,
   getOpenEligibleSlotIds,
   anyPlaceablePlayer,
 } from "./roster.js";
 import { createHistoryEntry } from "./history.js";
+import { comboKey } from "./state.js";
+import { insertAt } from "./battingOrder.js";
 
 const MAX_AUTO_REDRAW = 40;
 
@@ -22,9 +25,10 @@ export class GameError extends Error {}
 export function drawForState(state) {
   const mode = getMode(state.modeId);
   const excludeIds = new Set(state.pickedPlayerIds);
+  const excludeComboKeys = new Set(state.drawnComboKeys || []);
 
   for (let attempt = 0; attempt < MAX_AUTO_REDRAW; attempt++) {
-    const combo = drawDraftCombo(mode, { state });
+    const combo = drawDraftCombo(mode, { state, excludeComboKeys });
     if (!combo) {
       return { ok: false, reason: "pool_empty" };
     }
@@ -35,6 +39,11 @@ export function drawForState(state) {
       state.currentDraft = combo;
       state.currentCandidates = candidates;
       state.lastAutoRedraws = attempt;
+      const key = comboKey(combo.year, combo.teamId);
+      const drawnKeys = state.drawnComboKeys || [];
+      if (!drawnKeys.includes(key)) {
+        state.drawnComboKeys = [...drawnKeys, key];
+      }
       return { ok: true, autoRedraws: attempt };
     }
   }
@@ -50,8 +59,12 @@ export function getEligibleOpenSlotsForCandidate(state, playerId) {
   return getOpenEligibleSlotIds(player, state.roster);
 }
 
-/** 選手をロスターの指定枠へ登録する。成功したら次のラウンドへ進める。 */
-export function pickPlayer(state, playerId, slotId) {
+/**
+ * 選手をロスターの指定枠へ登録する。成功したら次のラウンドへ進める。
+ * 野手（DH含む）を配置する場合、`battingOrderIndex`（0始まり）で
+ * その場で打順の挿入位置を指定できる。省略時は末尾に追加する。
+ */
+export function pickPlayer(state, playerId, slotId, battingOrderIndex) {
   const player = state.currentCandidates.find((p) => p.id === playerId);
   if (!player) {
     throw new GameError("候補に存在しない選手です");
@@ -66,6 +79,14 @@ export function pickPlayer(state, playerId, slotId) {
 
   state.roster = placePlayer(state.roster, slotId, playerId);
   state.pickedPlayerIds = [...state.pickedPlayerIds, playerId];
+
+  const slotDef = getSlotDef(slotId);
+  if (slotDef && slotDef.category === "fielder") {
+    const draft = state.battingOrderDraft || [];
+    const index = typeof battingOrderIndex === "number" ? battingOrderIndex : draft.length;
+    state.battingOrderDraft = insertAt(draft, index, playerId);
+  }
+
   state.history = [
     ...state.history,
     createHistoryEntry({
@@ -84,7 +105,12 @@ export function pickPlayer(state, playerId, slotId) {
   if (isRosterComplete(state.roster)) {
     state.status = "complete";
     state.completedAt = Date.now();
-    state.battingOrder = computeDefaultBattingOrder(state.roster);
+    // 指名のたびに組み上げた打順を採用する。9人分揃っていない場合
+    // （古い保存データを再開した場合など）は既定の並びへフォールバックする。
+    state.battingOrder =
+      state.battingOrderDraft && state.battingOrderDraft.length === 9
+        ? state.battingOrderDraft
+        : computeDefaultBattingOrder(state.roster);
   }
 
   return state;

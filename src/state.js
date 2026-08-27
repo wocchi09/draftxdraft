@@ -14,7 +14,9 @@ import { getMode, DEFAULT_MODE_ID } from "./modes.js";
  * @property {{year:number, teamId:string}|null} currentDraft
  * @property {object[]} currentCandidates - 現在提示中の候補選手（配置可否計算済み）
  * @property {object[]} history
- * @property {string[]|null} battingOrder - 野手9人のplayerId配列（打順1〜9番）
+ * @property {string[]|null} battingOrder - 野手9人のplayerId配列（打順1〜9番、完成後に確定）
+ * @property {string[]} battingOrderDraft - プレイ中に指名のたびに組み上がっていく打順（完成時にbattingOrderへ確定）
+ * @property {string[]} drawnComboKeys - このゲームで一度でも抽選に出た「年度×球団」の組み合わせ（重複抽選を避けるため）
  * @property {number|null} completedAt
  */
 
@@ -30,9 +32,15 @@ export function createInitialState(modeId = DEFAULT_MODE_ID) {
     currentCandidates: [],
     history: [],
     battingOrder: null,
+    battingOrderDraft: [],
+    drawnComboKeys: [],
     completedAt: null,
     createdAt: Date.now(),
   };
+}
+
+export function comboKey(year, teamId) {
+  return `${year}-${teamId}`;
 }
 
 export function getSkipsRemaining(state) {

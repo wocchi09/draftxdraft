@@ -54,8 +54,19 @@ export function getCandidates(year, teamId, excludePlayerIds = new Set()) {
 /**
  * モードに応じてフィルタ済みのプールから1件、年度×球団をランダム抽選する。
  * プールが空の場合はnullを返す（呼び出し側で例外処理する）。
+ *
+ * `ctx.excludeComboKeys`（`"year-teamId"`文字列のSet）を渡すと、
+ * このゲームで既に一度抽選に出た組み合わせを避けて抽選する
+ * （まだ出ていない組み合わせが残っている限り優先する）。
+ * 全ての組み合わせを出し尽くした場合は、ゲームが進行不能にならないよう
+ * 除外なしの全プールへ自動でフォールバックする。
  */
 export function drawDraftCombo(mode, ctx = {}) {
   const pool = mode.filterPool(buildDraftPool(), ctx);
+  const excludeKeys = ctx.excludeComboKeys;
+  if (excludeKeys && excludeKeys.size > 0) {
+    const unseen = pool.filter((c) => !excludeKeys.has(`${c.year}-${c.teamId}`));
+    if (unseen.length > 0) return pickRandom(unseen);
+  }
   return pickRandom(pool) || null;
 }
