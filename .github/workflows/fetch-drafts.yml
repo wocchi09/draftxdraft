@@ -13,6 +13,10 @@ on:
         description: コミット先のブランチ
         required: true
         default: claude/playable-url-pm2ziq
+      fetch_status:
+        description: 各選手の在籍状況（現役/引退）も取得するか
+        required: true
+        default: "false"
 
 permissions:
   contents: write
@@ -30,6 +34,10 @@ jobs:
 
       - run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
 
+      - name: Look up each drafted player's active/retired status
+        if: inputs.fetch_status == 'true'
+        run: node tools/fetch-player-status.mjs
+
       - name: Commit the fetched wikitext
         run: |
           git config user.name "github-actions[bot]"
@@ -38,6 +46,6 @@ jobs:
           if git diff --cached --quiet; then
             echo "変更なし"
           else
-            git commit -m "Fetch draft wikitext for ${{ inputs.years }}"
+            git commit -m "Fetch draft data for ${{ inputs.years }}"
             git push origin HEAD:${{ inputs.branch }}
           fi
