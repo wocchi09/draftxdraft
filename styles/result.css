@@ -25,7 +25,7 @@
 .result-hero h1 {
   font-size: 32px;
   font-weight: 800;
-  background: linear-gradient(135deg, #fff, var(--accent-text));
+  background: linear-gradient(135deg, var(--heading-gradient-from), var(--accent-text));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

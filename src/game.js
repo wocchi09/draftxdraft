@@ -9,8 +9,7 @@ import {
   anyPlaceablePlayer,
 } from "./roster.js";
 import { createHistoryEntry } from "./history.js";
-import { comboKey } from "./state.js";
-import { insertAt } from "./battingOrder.js";
+import { comboKey, BATTING_ORDER_SIZE, normalizeBattingOrderDraft } from "./state.js";
 
 const MAX_AUTO_REDRAW = 40;
 
@@ -59,10 +58,20 @@ export function getEligibleOpenSlotsForCandidate(state, playerId) {
   return getOpenEligibleSlotIds(player, state.roster);
 }
 
+/** 打順ドラフトのうち、まだ誰も入っていない番号（0始まりのindex）を返す */
+export function getOpenBattingOrderIndexes(state) {
+  const draft = normalizeBattingOrderDraft(state.battingOrderDraft);
+  const open = [];
+  for (let i = 0; i < BATTING_ORDER_SIZE; i++) {
+    if (draft[i] === null) open.push(i);
+  }
+  return open;
+}
+
 /**
  * 選手をロスターの指定枠へ登録する。成功したら次のラウンドへ進める。
  * 野手（DH含む）を配置する場合、`battingOrderIndex`（0始まり）で
- * その場で打順の挿入位置を指定できる。省略時は末尾に追加する。
+ * 1〜9番のうち空いている好きな打順を指定できる。省略時は空いている最も若い番号に入る。
  */
 export function pickPlayer(state, playerId, slotId, battingOrderIndex) {
   const player = state.currentCandidates.find((p) => p.id === playerId);
@@ -77,15 +86,28 @@ export function pickPlayer(state, playerId, slotId, battingOrderIndex) {
     throw new GameError("その選手はこの枠には配置できません");
   }
 
+  // 打順は野手枠のときだけ使う。stateを書き換える前に妥当性を検証し、
+  // 途中で例外を投げてロスターだけ埋まった中途半端な状態にならないようにする。
+  const slotDef = getSlotDef(slotId);
+  const isFielder = Boolean(slotDef && slotDef.category === "fielder");
+  let nextBattingOrderDraft = null;
+  if (isFielder) {
+    const draft = normalizeBattingOrderDraft(state.battingOrderDraft);
+    const index =
+      typeof battingOrderIndex === "number" ? battingOrderIndex : draft.findIndex((v) => v === null);
+    if (!Number.isInteger(index) || index < 0 || index >= BATTING_ORDER_SIZE) {
+      throw new GameError("その打順は選べません");
+    }
+    if (draft[index] !== null) {
+      throw new GameError("その打順は既に埋まっています");
+    }
+    draft[index] = playerId;
+    nextBattingOrderDraft = draft;
+  }
+
   state.roster = placePlayer(state.roster, slotId, playerId);
   state.pickedPlayerIds = [...state.pickedPlayerIds, playerId];
-
-  const slotDef = getSlotDef(slotId);
-  if (slotDef && slotDef.category === "fielder") {
-    const draft = state.battingOrderDraft || [];
-    const index = typeof battingOrderIndex === "number" ? battingOrderIndex : draft.length;
-    state.battingOrderDraft = insertAt(draft, index, playerId);
-  }
+  if (nextBattingOrderDraft) state.battingOrderDraft = nextBattingOrderDraft;
 
   state.history = [
     ...state.history,
@@ -105,12 +127,12 @@ export function pickPlayer(state, playerId, slotId, battingOrderIndex) {
   if (isRosterComplete(state.roster)) {
     state.status = "complete";
     state.completedAt = Date.now();
-    // 指名のたびに組み上げた打順を採用する。9人分揃っていない場合
+    // 指名のたびに選んでもらった打順を採用する。9枠すべて埋まっていない場合
     // （古い保存データを再開した場合など）は既定の並びへフォールバックする。
-    state.battingOrder =
-      state.battingOrderDraft && state.battingOrderDraft.length === 9
-        ? state.battingOrderDraft
-        : computeDefaultBattingOrder(state.roster);
+    const draft = normalizeBattingOrderDraft(state.battingOrderDraft);
+    state.battingOrder = draft.every((id) => id !== null)
+      ? draft
+      : computeDefaultBattingOrder(state.roster);
   }
 
   return state;

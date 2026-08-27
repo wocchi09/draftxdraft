@@ -367,8 +367,15 @@
   font-weight: 700;
 }
 
-.slot-option-btn:active {
+.slot-option-btn:active:not(:disabled) {
   transform: scale(0.96);
+}
+
+/* 既に埋まっている打順。誰が入っているかは読めるようにしたまま選べなくする */
+.slot-option-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: var(--bg-3);
 }
 
 /* ---------------- FIELD ROSTER ---------------- */
@@ -611,7 +618,7 @@
   max-width: 480px;
   margin: 0 auto;
   padding: var(--sp-3) var(--sp-4) calc(var(--sp-3) + var(--sa-bottom));
-  background: rgba(11, 14, 20, 0.94);
+  background: var(--bg-overlay);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--border-1);
   display: flex;
