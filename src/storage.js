@@ -9,6 +9,7 @@ const KEYS = {
   completedTeams: "ddxd:completedTeams",
   lastMode: "ddxd:lastMode",
   favoriteColor: "ddxd:favoriteColor",
+  theme: "ddxd:theme",
 };
 
 function safeGet(key) {
@@ -89,6 +90,20 @@ export function saveFavoriteColor(hex) {
 export function loadFavoriteColor() {
   const data = safeGet(KEYS.favoriteColor);
   return typeof data === "string" && HEX_COLOR_RE.test(data) ? data : null;
+}
+
+/** 表示テーマ: "system"（端末の設定に追従） | "light" | "dark" */
+export const THEMES = ["system", "light", "dark"];
+export const DEFAULT_THEME = "system";
+
+export function saveTheme(theme) {
+  if (!THEMES.includes(theme)) return false;
+  return safeSet(KEYS.theme, theme);
+}
+
+export function loadTheme() {
+  const data = safeGet(KEYS.theme);
+  return THEMES.includes(data) ? data : DEFAULT_THEME;
 }
 
 export function clearFavoriteColor() {

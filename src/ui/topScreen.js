@@ -14,8 +14,15 @@ const PRESET_COLORS = [
   "#64748b",
 ];
 
+const THEME_OPTIONS = [
+  { id: "system", label: "端末に合わせる", icon: "🖥" },
+  { id: "light", label: "ライト", icon: "☀️" },
+  { id: "dark", label: "ダーク", icon: "🌙" },
+];
+
 export function renderTopScreen(root, app) {
   const modes = getAllModes();
+  const currentTheme = app.theme || "system";
   const currentColor = app.favoriteColor || DEFAULT_ACCENT;
   const isPresetColor = PRESET_COLORS.some((c) => c.toLowerCase() === currentColor.toLowerCase());
 
@@ -57,6 +64,18 @@ export function renderTopScreen(root, app) {
       </div>
     </div>
 
+    <div class="theme-select">
+      <span class="color-select-label">表示テーマ</span>
+      <div class="theme-options" role="radiogroup" aria-label="表示テーマを選択">
+        ${THEME_OPTIONS.map(
+          (t) => `
+          <button type="button" class="theme-option${t.id === currentTheme ? " is-selected" : ""}" role="radio" aria-checked="${t.id === currentTheme}" data-theme-id="${t.id}">
+            <span aria-hidden="true">${t.icon}</span>${escapeHtml(t.label)}
+          </button>`
+        ).join("")}
+      </div>
+    </div>
+
     <div class="top-actions">
       <button type="button" class="btn btn-primary btn-block" id="start-game-btn">START</button>
       <button type="button" class="top-footer-link" id="my-teams-link">MY TEAMS を見る</button>
@@ -67,6 +86,12 @@ export function renderTopScreen(root, app) {
     btn.addEventListener("click", () => {
       app.selectedModeId = btn.dataset.modeId;
       app.render();
+    });
+  });
+
+  wrap.querySelectorAll("[data-theme-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      app.setTheme(btn.dataset.themeId);
     });
   });
 

@@ -1,37 +1,60 @@
+/*
+ * デザイントークン。
+ *
+ * テーマは3状態:
+ *   - html に data-theme なし  … 端末（OS）の設定に追従する
+ *   - data-theme="light"       … 常にライト
+ *   - data-theme="dark"        … 常にダーク
+ *
+ * 素の :root にライトを置き、ダークは
+ *   (1) prefers-color-scheme: dark かつ明示的にライト指定されていないとき
+ *   (2) data-theme="dark" が指定されたとき
+ * の2箇所で上書きする。この2ブロックは必ず同じ内容に保つこと。
+ */
+
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 
   /* Base surfaces */
-  --bg-0: #0b0e14;
-  --bg-1: #12161f;
-  --bg-2: #191f2c;
-  --bg-3: #222939;
-  --border-1: #2a3246;
-  --border-2: #3a4460;
+  --bg-0: #eef1f7;
+  --bg-1: #ffffff;
+  --bg-2: #f6f8fc;
+  --bg-3: #e6ebf4;
+  --border-1: #dbe1ec;
+  --border-2: #bcc6d8;
 
   /* Text */
-  --text-0: #f4f6fb;
-  --text-1: #c3cadb;
-  --text-2: #8b93a8;
-  --text-3: #5c6478;
+  --text-0: #101521;
+  --text-1: #3a4356;
+  --text-2: #667085;
+  --text-3: #8c95a8;
 
   /* Accent (neutral default, overridden per drawn team) */
-  --accent: #4f7cff;
-  --accent-strong: #6f93ff;
-  --accent-soft: rgba(79, 124, 255, 0.16);
-  --accent-text: #dbe4ff;
+  --accent: #3b63e0;
+  --accent-strong: #2c4fc4;
+  --accent-soft: rgba(59, 99, 224, 0.12);
+  --accent-text: #23409c;
+  --accent-on: #ffffff;
 
   /* Semantic */
-  --success: #2fbf71;
-  --warning: #e6b325;
-  --danger: #ef5350;
+  --success: #1a8d54;
+  --warning: #9a6a00;
+  --danger: #c93b38;
 
   /* Position group colors (paired with text labels, never color-only) */
-  --pos-pitcher: #ef8354;
-  --pos-catcher: #a78bfa;
-  --pos-infield: #4fc3f7;
-  --pos-outfield: #66d9a4;
-  --pos-dh: #f4d35e;
+  --pos-pitcher: #b8501f;
+  --pos-catcher: #6d47c9;
+  --pos-infield: #1a6f9c;
+  --pos-outfield: #1c7d52;
+  --pos-dh: #8a6a00;
+
+  /* Translucent bar backgrounds (sticky topbar / action bar) */
+  --bg-overlay: rgba(246, 248, 252, 0.92);
+  /* Start color of the display headings' gradient (pairs with --accent-text) */
+  --heading-gradient-from: #1b2333;
+
+  --shadow-card: 0 8px 24px rgba(16, 21, 33, 0.1);
+  --shadow-pop: 0 12px 40px rgba(16, 21, 33, 0.18);
 
   /* Spacing scale */
   --sp-1: 4px;
@@ -53,10 +76,6 @@
     sans-serif;
   --font-display: "Noto Sans JP", -apple-system, BlinkMacSystemFont, "Hiragino Sans", "Yu Gothic UI", sans-serif;
 
-  /* Shadow */
-  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
-  --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.5);
-
   /* Safe area */
   --sa-top: env(safe-area-inset-top, 0px);
   --sa-bottom: env(safe-area-inset-bottom, 0px);
@@ -75,4 +94,88 @@
     --motion-base: 0ms;
     --motion-slow: 0ms;
   }
+}
+
+/* ---------------- Dark theme ----------------
+ * 下記2ブロックは同じ内容。片方だけ直さないこと。
+ * 1つ目: 端末がダーク設定で、かつ明示的にライトを選んでいないとき
+ * 2つ目: ユーザーが明示的にダークを選んだとき
+ */
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+
+    --bg-0: #0b0e14;
+    --bg-1: #12161f;
+    --bg-2: #191f2c;
+    --bg-3: #222939;
+    --border-1: #2a3246;
+    --border-2: #3a4460;
+
+    --text-0: #f4f6fb;
+    --text-1: #c3cadb;
+    --text-2: #8b93a8;
+    --text-3: #5c6478;
+
+    --accent: #4f7cff;
+    --accent-strong: #6f93ff;
+    --accent-soft: rgba(79, 124, 255, 0.16);
+    --accent-text: #dbe4ff;
+    --accent-on: #06090f;
+
+    --success: #2fbf71;
+    --warning: #e6b325;
+    --danger: #ef5350;
+
+    --pos-pitcher: #ef8354;
+    --pos-catcher: #a78bfa;
+    --pos-infield: #4fc3f7;
+    --pos-outfield: #66d9a4;
+    --pos-dh: #f4d35e;
+
+    --bg-overlay: rgba(11, 14, 20, 0.92);
+    --heading-gradient-from: #ffffff;
+
+    --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+    --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --bg-0: #0b0e14;
+  --bg-1: #12161f;
+  --bg-2: #191f2c;
+  --bg-3: #222939;
+  --border-1: #2a3246;
+  --border-2: #3a4460;
+
+  --text-0: #f4f6fb;
+  --text-1: #c3cadb;
+  --text-2: #8b93a8;
+  --text-3: #5c6478;
+
+  --accent: #4f7cff;
+  --accent-strong: #6f93ff;
+  --accent-soft: rgba(79, 124, 255, 0.16);
+  --accent-text: #dbe4ff;
+  --accent-on: #06090f;
+
+  --success: #2fbf71;
+  --warning: #e6b325;
+  --danger: #ef5350;
+
+  --pos-pitcher: #ef8354;
+  --pos-catcher: #a78bfa;
+  --pos-infield: #4fc3f7;
+  --pos-outfield: #66d9a4;
+  --pos-dh: #f4d35e;
+
+  --bg-overlay: rgba(11, 14, 20, 0.92);
+  --heading-gradient-from: #ffffff;
+
+  --shadow-card: 0 8px 24px rgba(0, 0, 0, 0.35);
+  --shadow-pop: 0 12px 40px rgba(0, 0, 0, 0.5);
 }

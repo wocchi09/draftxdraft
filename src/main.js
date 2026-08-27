@@ -1,4 +1,9 @@
-import { createInitialState, getSkipsRemaining, getFilledCount } from "./state.js";
+import {
+  createInitialState,
+  getSkipsRemaining,
+  getFilledCount,
+  normalizeBattingOrderDraft,
+} from "./state.js";
 import { DEFAULT_MODE_ID } from "./modes.js";
 import { drawForState, pickPlayer, skip, getEligibleOpenSlotsForCandidate, GameError } from "./game.js";
 import { getAvailableYears } from "./draft.js";
@@ -11,7 +16,7 @@ import { renderGameScreen } from "./ui/gameScreen.js";
 import { renderResultScreen } from "./ui/resultScreen.js";
 import { renderMyTeamsScreen } from "./ui/myTeamsScreen.js";
 import { announce } from "./utils/dom.js";
-import { hexToRgba, lighten, DEFAULT_ACCENT } from "./utils/color.js";
+import { hexToRgba, lighten, darken, readableTextOn, DEFAULT_ACCENT } from "./utils/color.js";
 import { loadGameData } from "./dataStore.js";
 import * as storage from "./storage.js";
 
@@ -46,12 +51,43 @@ class App {
     this.screen = "TOP";
     this.selectedModeId = storage.loadLastMode() || DEFAULT_MODE_ID;
     this.favoriteColor = storage.loadFavoriteColor() || DEFAULT_ACCENT;
+    this.theme = storage.loadTheme();
+    applyTheme(this.theme);
     this.game = null;
     this.viewingTeam = null;
     this.viewingTeamIndex = null;
     this.ui = defaultUiState();
     this._stopRoulette = null;
+    this.watchSystemTheme();
     this.init();
+  }
+
+  /**
+   * テーマが "system" のとき、端末側の設定変更に追従して
+   * アクセント色（明暗が反転する）を計算し直す。
+   */
+  watchSystemTheme() {
+    let mq;
+    try {
+      mq = window.matchMedia("(prefers-color-scheme: dark)");
+    } catch {
+      return;
+    }
+    const onChange = () => {
+      if (this.theme !== "system") return;
+      applyAccent(this.favoriteColor);
+    };
+    if (mq.addEventListener) mq.addEventListener("change", onChange);
+    else if (mq.addListener) mq.addListener(onChange);
+  }
+
+  setTheme(theme) {
+    this.theme = theme;
+    storage.saveTheme(theme);
+    applyTheme(theme);
+    // テーマによって --accent-text 等の明暗が変わるので必ず計算し直す
+    applyAccent(this.favoriteColor);
+    this.render();
   }
 
   init() {
@@ -64,6 +100,8 @@ class App {
 
     if (saved && saved.status === "playing") {
       this.game = saved;
+      // 旧仕様（可変長の打順配列）で保存されたゲームも9枠形式へ揃えてから再開する
+      this.game.battingOrderDraft = normalizeBattingOrderDraft(this.game.battingOrderDraft);
       this.selectedModeId = saved.modeId;
       this.screen = "GAME";
       if (!this.game.currentDraft) {
@@ -367,13 +405,47 @@ function cssEscape(value) {
 }
 
 /** 常に具体的な16進カラーを受け取り、アクセント関連のCSS変数一式に反映する。 */
+/**
+ * 表示テーマを html 要素へ反映する。
+ * "system" のときは data-theme を外し、CSS側の prefers-color-scheme に委ねる。
+ */
+function applyTheme(theme) {
+  const root = document.documentElement;
+  if (theme === "light" || theme === "dark") {
+    root.setAttribute("data-theme", theme);
+  } else {
+    root.removeAttribute("data-theme");
+  }
+}
+
+/** 現在描画されているテーマが実際にダークかどうか */
+function isDarkTheme() {
+  const explicit = document.documentElement.getAttribute("data-theme");
+  if (explicit === "dark") return true;
+  if (explicit === "light") return false;
+  try {
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  } catch {
+    return true;
+  }
+}
+
+/**
+ * アクセントカラーを反映する。
+ * --accent-text はアクセントを薄く敷いた面の上に載る文字色なので、
+ * ダークでは明るく、ライトでは暗くふる必要がある。
+ */
 function applyAccent(color) {
   const root = document.documentElement;
   const hex = color || DEFAULT_ACCENT;
+  const dark = isDarkTheme();
   root.style.setProperty("--accent", hex);
-  root.style.setProperty("--accent-strong", lighten(hex, 0.25));
-  root.style.setProperty("--accent-soft", hexToRgba(hex, 0.16));
-  root.style.setProperty("--accent-text", lighten(hex, 0.55));
+  root.style.setProperty("--accent-strong", dark ? lighten(hex, 0.25) : darken(hex, 0.18));
+  root.style.setProperty("--accent-soft", hexToRgba(hex, dark ? 0.16 : 0.12));
+  root.style.setProperty("--accent-text", dark ? lighten(hex, 0.55) : darken(hex, 0.35));
+  // アクセント面（PRIMARYボタン）に載る文字色。アクセントはユーザーが自由に
+  // 選べるため、固定色ではなく背景の輝度から都度決める。
+  root.style.setProperty("--accent-on", readableTextOn(hex, dark ? 0 : 0.18));
 }
 
 function renderLoading(root) {
