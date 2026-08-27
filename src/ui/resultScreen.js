@@ -3,7 +3,15 @@ import { getTeamName } from "../teams.js";
 import { getSlotDef, ROSTER_SLOTS } from "../roster.js";
 import { computeAnalysis, computeTags, getPlayerBadges } from "../analysis.js";
 import { moveTo } from "../battingOrder.js";
-import { buildShareText, buildShareSummary, shareTeam, buildSnsIntentUrls } from "../share.js";
+import {
+  buildShareText,
+  buildShareSummary,
+  shareTeamImage,
+  downloadImage,
+  shareImageFileName,
+  buildSnsIntentUrls,
+} from "../share.js";
+import { renderShareCardImage } from "../shareImage.js";
 import { getMode } from "../modes.js";
 import { spawnConfetti } from "./animations.js";
 import { escapeHtml } from "../utils/dom.js";
@@ -165,11 +173,12 @@ export function renderResultScreen(root, app) {
               ${shareSummary.battingOrder.map((o) => `<div><span>${o.order}. ${escapeHtml(o.posLabel)}</span><b>${escapeHtml(o.name)}</b></div>`).join("")}
             </div>
             <div class="sc-tags">${tags.map((t) => `<span>${escapeHtml(t)}</span>`).join("")}</div>
-            <div class="sc-footer">あなたならこのチーム、どう見る？</div>
+            <div class="sc-footer"><span>あなたならこのチーム、どう見る？</span><span>DRAFT × DRAFT</span></div>
           </div>
-          <p class="share-hint">スクリーンショットしてそのままSNSに投稿できます。</p>
+          <p class="share-hint">このカードを画像にして共有できます。X・LINEは文章だけなので、画像を保存してから添えてください。</p>
           <div class="share-actions">
-            <button type="button" class="btn btn-secondary btn-sm" id="native-share-btn">共有する</button>
+            <button type="button" class="btn btn-secondary btn-sm" id="image-share-btn">画像で共有</button>
+            <button type="button" class="btn btn-ghost btn-sm" id="image-save-btn">画像を保存</button>
             <a class="btn btn-ghost btn-sm" href="${snsUrls.x}" target="_blank" rel="noopener">Xでポスト</a>
             <a class="btn btn-ghost btn-sm" href="${snsUrls.line}" target="_blank" rel="noopener">LINEで送る</a>
           </div>
@@ -194,22 +203,76 @@ export function renderResultScreen(root, app) {
   }
 }
 
+/** ボタンの文言を一時的に差し替えて結果を知らせる */
+function flash(btn, message, revertTo) {
+  btn.textContent = message;
+  setTimeout(() => {
+    btn.textContent = revertTo;
+  }, 2400);
+}
+
+/**
+ * シェアカードを画像にして共有・保存する。
+ * 画像付き共有はiOS/Androidでは使えるがPCのブラウザでは対応していないことが多いので、
+ * 使えない場合はそのまま保存へ回して「保存した」と伝える。
+ */
+function bindShareImage(wrap, record) {
+  const shareBtn = wrap.querySelector("#image-share-btn");
+  const saveBtn = wrap.querySelector("#image-save-btn");
+
+  const build = async () => {
+    const tags = computeTags(computeAnalysis(record.roster));
+    const blob = await renderShareCardImage({
+      summary: buildShareSummary(record),
+      tags,
+      modeLabel: getMode(record.modeId).label,
+    });
+    return { blob, text: buildShareText(record, tags) };
+  };
+
+  shareBtn.addEventListener("click", async () => {
+    shareBtn.disabled = true;
+    shareBtn.textContent = "画像を作成中…";
+    try {
+      const { blob, text } = await build();
+      const result = await shareTeamImage(text, blob, shareImageFileName(record));
+      if (result === "unsupported") {
+        // 画像付き共有に対応していない端末（PCのブラウザなど）。そのまま保存へ回す
+        downloadImage(blob, shareImageFileName(record));
+        flash(shareBtn, "画像を保存しました", "画像で共有");
+      } else {
+        shareBtn.textContent = "画像で共有";
+      }
+    } catch (err) {
+      console.warn("[share] 画像の作成に失敗しました", err);
+      flash(shareBtn, "画像を作成できませんでした", "画像で共有");
+    } finally {
+      shareBtn.disabled = false;
+    }
+  });
+
+  saveBtn.addEventListener("click", async () => {
+    saveBtn.disabled = true;
+    saveBtn.textContent = "画像を作成中…";
+    try {
+      const { blob } = await build();
+      downloadImage(blob, shareImageFileName(record));
+      flash(saveBtn, "保存しました", "画像を保存");
+    } catch (err) {
+      console.warn("[share] 画像の作成に失敗しました", err);
+      flash(saveBtn, "作成できませんでした", "画像を保存");
+    } finally {
+      saveBtn.disabled = false;
+    }
+  });
+}
+
 function bindEvents(wrap, app, record) {
   wrap.querySelector("#back-btn").addEventListener("click", () => app.setScreen("TOP"));
   wrap.querySelector("#play-again-btn").addEventListener("click", () => app.startNewGame(app.selectedModeId));
   wrap.querySelector("#my-teams-btn").addEventListener("click", () => app.setScreen("MY_TEAMS"));
 
-  const nativeShareBtn = wrap.querySelector("#native-share-btn");
-  nativeShareBtn.addEventListener("click", async () => {
-    const text = buildShareText(record, computeTags(computeAnalysis(record.roster)));
-    const ok = await shareTeam(text);
-    if (!ok) {
-      nativeShareBtn.textContent = "この端末では共有シートを開けません";
-      setTimeout(() => {
-        nativeShareBtn.textContent = "共有する";
-      }, 2200);
-    }
-  });
+  bindShareImage(wrap, record);
 
   wrap.querySelectorAll("[data-order-select]").forEach((select) => {
     select.addEventListener("change", () => {
