@@ -10,6 +10,7 @@ import {
 } from "./roster.js";
 import { createHistoryEntry } from "./history.js";
 import { comboKey, BATTING_ORDER_SIZE, normalizeBattingOrderDraft } from "./state.js";
+import { normalizeYearRange } from "./yearRange.js";
 
 const MAX_AUTO_REDRAW = 40;
 
@@ -29,9 +30,11 @@ export function drawForState(state) {
   const drawnKeys = state.drawnComboKeys || [];
   const excludeComboKeys = new Set(drawnKeys);
   const avoidComboKey = drawnKeys.length > 0 ? drawnKeys[drawnKeys.length - 1] : null;
+  // 範囲は保存データから復元されることもあるので、毎回整えてから使う
+  const yearRange = normalizeYearRange(state.yearRange);
 
   for (let attempt = 0; attempt < MAX_AUTO_REDRAW; attempt++) {
-    const combo = drawDraftCombo(mode, { state, excludeComboKeys, avoidComboKey });
+    const combo = drawDraftCombo(mode, { state, excludeComboKeys, avoidComboKey, yearRange });
     if (!combo) {
       return { ok: false, reason: "pool_empty" };
     }

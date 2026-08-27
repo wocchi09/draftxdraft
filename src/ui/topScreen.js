@@ -1,6 +1,13 @@
 import { getAllModes } from "../modes.js";
 import { escapeHtml } from "../utils/dom.js";
 import { DEFAULT_ACCENT } from "../utils/color.js";
+import { getAvailableYears } from "../draft.js";
+import {
+  getYearPresets,
+  matchPresetId,
+  normalizeYearRange,
+  summarizeYearRange,
+} from "../yearRange.js";
 
 const PRESET_COLORS = [
   DEFAULT_ACCENT,
@@ -26,6 +33,13 @@ export function renderTopScreen(root, app) {
   const currentColor = app.favoriteColor || DEFAULT_ACCENT;
   const isPresetColor = PRESET_COLORS.some((c) => c.toLowerCase() === currentColor.toLowerCase());
 
+  const years = getAvailableYears();
+  const range = normalizeYearRange(app.yearRange);
+  const activePresetId = matchPresetId(range);
+  const { comboCount, playerCount } = summarizeYearRange(range);
+  // 12人そろえるので、12通り未満だと一巡しきって同じ組み合わせが再び出る
+  const tooNarrow = comboCount < 12;
+
   const wrap = document.createElement("div");
   wrap.className = "screen top-screen";
   wrap.innerHTML = `
@@ -48,6 +62,40 @@ export function renderTopScreen(root, app) {
         </button>`
         )
         .join("")}
+    </div>
+
+    <div class="year-select">
+      <span class="color-select-label">出題する年度</span>
+      <div class="year-presets" role="radiogroup" aria-label="年度の範囲を選択">
+        ${getYearPresets()
+          .map(
+            (p) => `
+          <button type="button" class="year-preset${p.id === activePresetId ? " is-selected" : ""}" role="radio" aria-checked="${p.id === activePresetId}" data-year-preset="${p.id}">
+            <span class="year-preset-name">${escapeHtml(p.label)}</span>
+            <span class="year-preset-years">${p.from}〜${p.to}</span>
+          </button>`
+          )
+          .join("")}
+      </div>
+      <div class="year-custom">
+        <label class="year-custom-field">
+          <span>開始</span>
+          <select id="year-from-select" aria-label="開始年">
+            ${years.map((y) => `<option value="${y}"${y === range.from ? " selected" : ""}>${y}年</option>`).join("")}
+          </select>
+        </label>
+        <span class="year-custom-sep" aria-hidden="true">〜</span>
+        <label class="year-custom-field">
+          <span>終了</span>
+          <select id="year-to-select" aria-label="終了年">
+            ${years.map((y) => `<option value="${y}"${y === range.to ? " selected" : ""}>${y}年</option>`).join("")}
+          </select>
+        </label>
+      </div>
+      <p class="year-summary${tooNarrow ? " is-warning" : ""}">
+        この範囲：<strong>${comboCount}</strong> 通り（${playerCount}人）から出題
+        ${tooNarrow ? "<br />12通りを下回るため、同じ年度×球団が再び出ることがあります" : ""}
+      </p>
     </div>
 
     <div class="color-select">
@@ -88,6 +136,28 @@ export function renderTopScreen(root, app) {
       app.render();
     });
   });
+
+  wrap.querySelectorAll("[data-year-preset]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const preset = getYearPresets().find((p) => p.id === btn.dataset.yearPreset);
+      if (preset) app.setYearRange({ from: preset.from, to: preset.to });
+    });
+  });
+
+  const fromSelect = wrap.querySelector("#year-from-select");
+  const toSelect = wrap.querySelector("#year-to-select");
+  const onYearChange = (e) => {
+    // 開始が終了を追い越したら、逆転しないよう「いま動かした側」に相手を合わせる
+    let from = Number(fromSelect.value);
+    let to = Number(toSelect.value);
+    if (from > to) {
+      if (e.target === fromSelect) to = from;
+      else from = to;
+    }
+    app.setYearRange({ from, to });
+  };
+  fromSelect.addEventListener("change", onYearChange);
+  toSelect.addEventListener("change", onYearChange);
 
   wrap.querySelectorAll("[data-theme-id]").forEach((btn) => {
     btn.addEventListener("click", () => {

@@ -10,6 +10,7 @@ const KEYS = {
   lastMode: "ddxd:lastMode",
   favoriteColor: "ddxd:favoriteColor",
   theme: "ddxd:theme",
+  yearRange: "ddxd:yearRange",
 };
 
 function safeGet(key) {
@@ -104,6 +105,21 @@ export function saveTheme(theme) {
 export function loadTheme() {
   const data = safeGet(KEYS.theme);
   return THEMES.includes(data) ? data : DEFAULT_THEME;
+}
+
+/**
+ * 抽選する年度の範囲。値の妥当性（収録年度の中に収まっているか等）は
+ * yearRange.js 側で整えるので、ここでは形だけを見る。
+ */
+export function saveYearRange(range) {
+  if (!range || !Number.isFinite(range.from) || !Number.isFinite(range.to)) return false;
+  return safeSet(KEYS.yearRange, { from: range.from, to: range.to });
+}
+
+export function loadYearRange() {
+  const data = safeGet(KEYS.yearRange);
+  if (!data || typeof data !== "object") return null;
+  return { from: Number(data.from), to: Number(data.to) };
 }
 
 export function clearFavoriteColor() {
