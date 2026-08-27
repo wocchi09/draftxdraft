@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
     inputs:
       years:
-        description: 取得する年度（スペース区切り。範囲も可。例 "1965-1980" / "2024 2023"）
-        required: true
+        description: 取得する年度（スペース区切り。範囲も可。例 "1965-1980"。空なら取得しない）
+        required: false
         default: "2024"
       branch:
         description: コミット先のブランチ
@@ -32,7 +32,9 @@ jobs:
         with:
           node-version: "22"
 
-      - run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
+      - name: Fetch each year's wikitext
+        if: inputs.years != ''
+        run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
 
       - name: Look up each drafted player's active/retired status
         if: inputs.fetch_status == 'true'

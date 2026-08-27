@@ -32,6 +32,9 @@ function classify(intro) {
   if (!intro) return null;
   const head = intro.slice(0, 400);
   if (/元プロ野球選手/.test(head)) return "retired";
+  // 物故者は「（1940年1月1日 - 2005年5月5日）」のように没年月日が入る。
+  // 稀に「元」が付かない記事があるため、生没年の形からも引退と判定する。
+  if (/\d{4}年\d{1,2}月\d{1,2}日\s*[-–—]\s*\d{4}年\d{1,2}月\d{1,2}日/.test(head)) return "retired";
   if (/プロ野球選手/.test(head)) return "active";
   return null;
 }
