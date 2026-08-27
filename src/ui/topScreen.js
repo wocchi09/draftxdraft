@@ -27,8 +27,18 @@ const THEME_OPTIONS = [
   { id: "dark", label: "ダーク", icon: "🌙" },
 ];
 
+/**
+ * TOP画面。
+ *
+ * 遊ぶ前に決めることは「モード」と「年度」の2つだけなので、
+ * この2つとSTARTがスクロールせずに収まるようにしている。
+ * 見た目の好み（アクセントカラー・表示テーマ）は毎回いじるものではないため、
+ * STARTの下の「表示設定」に畳んである。
+ */
 export function renderTopScreen(root, app) {
   const modes = getAllModes();
+  const selectedMode = modes.find((m) => m.id === app.selectedModeId) || modes[0];
+  const appearanceOpen = Boolean(app.appearanceOpen);
   const currentTheme = app.theme || "system";
   const currentColor = app.favoriteColor || DEFAULT_ACCENT;
   const isPresetColor = PRESET_COLORS.some((c) => c.toLowerCase() === currentColor.toLowerCase());
@@ -40,6 +50,9 @@ export function renderTopScreen(root, app) {
   // 12人そろえるので、12通り未満だと一巡しきって同じ組み合わせが再び出る
   const tooNarrow = comboCount < 12;
 
+  const yearOptions = (selected) =>
+    years.map((y) => `<option value="${y}"${y === selected ? " selected" : ""}>${y}年</option>`).join("");
+
   const wrap = document.createElement("div");
   wrap.className = "screen top-screen";
   wrap.innerHTML = `
@@ -49,23 +62,21 @@ export function renderTopScreen(root, app) {
       <p class="copy">運命のドラフトから、自分だけのチームを作れ。</p>
     </div>
 
-    <div class="mode-select" role="radiogroup" aria-label="ゲームモード選択">
-      ${modes
-        .map(
-          (m) => `
-        <button type="button" class="mode-option" role="radio" aria-pressed="${m.id === app.selectedModeId}" data-mode-id="${m.id}">
-          <span>
-            <span class="mode-name">${escapeHtml(m.label)}</span>
-            <span class="mode-desc">${escapeHtml(m.description)}</span>
-          </span>
-          <span class="mode-radio" aria-hidden="true"></span>
-        </button>`
-        )
-        .join("")}
+    <div class="top-field">
+      <span class="top-field-label">ゲームモード</span>
+      <div class="mode-select" role="radiogroup" aria-label="ゲームモード選択">
+        ${modes
+          .map(
+            (m) => `
+          <button type="button" class="mode-option" role="radio" aria-checked="${m.id === app.selectedModeId}" data-mode-id="${m.id}">${escapeHtml(m.label)}</button>`
+          )
+          .join("")}
+      </div>
+      <p class="top-field-note">${escapeHtml(selectedMode.description)}</p>
     </div>
 
-    <div class="year-select">
-      <span class="color-select-label">出題する年度</span>
+    <div class="top-field year-select">
+      <span class="top-field-label">出題する年度</span>
       <div class="year-presets" role="radiogroup" aria-label="年度の範囲を選択">
         ${getYearPresets()
           .map(
@@ -78,55 +89,51 @@ export function renderTopScreen(root, app) {
           .join("")}
       </div>
       <div class="year-custom">
-        <label class="year-custom-field">
-          <span>開始</span>
-          <select id="year-from-select" aria-label="開始年">
-            ${years.map((y) => `<option value="${y}"${y === range.from ? " selected" : ""}>${y}年</option>`).join("")}
-          </select>
-        </label>
+        <select id="year-from-select" aria-label="開始年">${yearOptions(range.from)}</select>
         <span class="year-custom-sep" aria-hidden="true">〜</span>
-        <label class="year-custom-field">
-          <span>終了</span>
-          <select id="year-to-select" aria-label="終了年">
-            ${years.map((y) => `<option value="${y}"${y === range.to ? " selected" : ""}>${y}年</option>`).join("")}
-          </select>
-        </label>
+        <select id="year-to-select" aria-label="終了年">${yearOptions(range.to)}</select>
       </div>
-      <p class="year-summary${tooNarrow ? " is-warning" : ""}">
-        この範囲：<strong>${comboCount}</strong> 通り（${playerCount}人）から出題
-        ${tooNarrow ? "<br />12通りを下回るため、同じ年度×球団が再び出ることがあります" : ""}
+      <p class="top-field-note${tooNarrow ? " is-warning" : ""}">
+        <strong>${comboCount}</strong> 通り（${playerCount}人）から出題${tooNarrow ? "／12通りを下回るため同じ年度×球団が再び出ます" : ""}
       </p>
-    </div>
-
-    <div class="color-select">
-      <span class="color-select-label">アクセントカラー（お好きな色を選べます）</span>
-      <div class="color-swatches" role="group" aria-label="アクセントカラーを選択">
-        ${PRESET_COLORS.map(
-          (c) => `
-          <button type="button" class="color-swatch${c.toLowerCase() === currentColor.toLowerCase() ? " is-selected" : ""}" data-color="${c}" style="background:${c}" aria-pressed="${c.toLowerCase() === currentColor.toLowerCase()}" aria-label="アクセントカラー ${c}"></button>`
-        ).join("")}
-        <label class="color-swatch color-swatch-custom${!isPresetColor ? " is-selected" : ""}" style="${!isPresetColor ? `background:${currentColor}` : ""}" aria-label="カスタムカラーを選択">
-          <input type="color" id="custom-color-input" value="${currentColor}" aria-label="カスタムアクセントカラー" />
-          <span aria-hidden="true">${isPresetColor ? "+" : ""}</span>
-        </label>
-      </div>
-    </div>
-
-    <div class="theme-select">
-      <span class="color-select-label">表示テーマ</span>
-      <div class="theme-options" role="radiogroup" aria-label="表示テーマを選択">
-        ${THEME_OPTIONS.map(
-          (t) => `
-          <button type="button" class="theme-option${t.id === currentTheme ? " is-selected" : ""}" role="radio" aria-checked="${t.id === currentTheme}" data-theme-id="${t.id}">
-            <span aria-hidden="true">${t.icon}</span>${escapeHtml(t.label)}
-          </button>`
-        ).join("")}
-      </div>
     </div>
 
     <div class="top-actions">
       <button type="button" class="btn btn-primary btn-block" id="start-game-btn">START</button>
-      <button type="button" class="top-footer-link" id="my-teams-link">MY TEAMS を見る</button>
+      <div class="top-sub-actions">
+        <button type="button" class="top-disclosure" id="appearance-toggle" aria-expanded="${appearanceOpen}" aria-controls="appearance-panel">
+          表示設定 <span aria-hidden="true">${appearanceOpen ? "▲" : "▼"}</span>
+        </button>
+        <button type="button" class="top-footer-link" id="my-teams-link">MY TEAMS</button>
+      </div>
+    </div>
+
+    <div class="appearance-panel" id="appearance-panel"${appearanceOpen ? "" : " hidden"}>
+      <div class="top-field">
+        <span class="top-field-label">アクセントカラー</span>
+        <div class="color-swatches" role="group" aria-label="アクセントカラーを選択">
+          ${PRESET_COLORS.map(
+            (c) => `
+            <button type="button" class="color-swatch${c.toLowerCase() === currentColor.toLowerCase() ? " is-selected" : ""}" data-color="${c}" style="background:${c}" aria-pressed="${c.toLowerCase() === currentColor.toLowerCase()}" aria-label="アクセントカラー ${c}"></button>`
+          ).join("")}
+          <label class="color-swatch color-swatch-custom${!isPresetColor ? " is-selected" : ""}" style="${!isPresetColor ? `background:${currentColor}` : ""}" aria-label="カスタムカラーを選択">
+            <input type="color" id="custom-color-input" value="${currentColor}" aria-label="カスタムアクセントカラー" />
+            <span aria-hidden="true">${isPresetColor ? "+" : ""}</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="top-field">
+        <span class="top-field-label">表示テーマ</span>
+        <div class="theme-options" role="radiogroup" aria-label="表示テーマを選択">
+          ${THEME_OPTIONS.map(
+            (t) => `
+            <button type="button" class="theme-option${t.id === currentTheme ? " is-selected" : ""}" role="radio" aria-checked="${t.id === currentTheme}" data-theme-id="${t.id}">
+              <span aria-hidden="true">${t.icon}</span>${escapeHtml(t.label)}
+            </button>`
+          ).join("")}
+        </div>
+      </div>
     </div>
   `;
 
@@ -177,6 +184,11 @@ export function renderTopScreen(root, app) {
     app.setFavoriteColor(e.target.value);
   });
   customInput.addEventListener("change", () => {
+    app.render();
+  });
+
+  wrap.querySelector("#appearance-toggle").addEventListener("click", () => {
+    app.appearanceOpen = !app.appearanceOpen;
     app.render();
   });
 

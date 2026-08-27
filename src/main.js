@@ -387,6 +387,11 @@ class App {
   }
 
   render() {
+    // 画面が変わったときだけ先頭へ戻す。同じ画面の描き直し（候補の詳細を開く等）で
+    // 見ている位置が飛ばないよう、切り替わりを検知したときに限る。
+    const screenChanged = this._renderedScreen !== this.screen;
+    this._renderedScreen = this.screen;
+
     this.root.innerHTML = "";
     switch (this.screen) {
       case "TOP":
@@ -410,7 +415,25 @@ class App {
       default:
         renderTopScreen(this.root, this);
     }
+
+    if (screenChanged) scrollToTop();
   }
+}
+
+/**
+ * 画面の先頭へ戻す。
+ * スクロールを持っているのが window か、アプリの入れ物かは環境で変わるので両方戻す。
+ * 画面が切り替わった直後なので、なめらかにではなく即座に戻す。
+ */
+function scrollToTop() {
+  try {
+    window.scrollTo(0, 0);
+  } catch {
+    /* ignore */
+  }
+  if (document.scrollingElement) document.scrollingElement.scrollTop = 0;
+  const app = document.getElementById("app");
+  if (app) app.scrollTop = 0;
 }
 
 function cssEscape(value) {
