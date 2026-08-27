@@ -56,7 +56,8 @@ const FIELDING_SLOT_IDS = new Set(["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"
  *   登板した実績はあるが、先発/中継ぎ/抑えの内訳が資料上確認できない」場合の
  *   ワイルドカードで、SP/RP/CLいずれにも対応するものとして扱う（役割の断定はしない）
  * - fieldingPositions: 各守備位置に対応。"OF"は外野の内訳が不明な場合の
- *   ワイルドカードで、LF/CF/RFいずれにも対応するものとして扱う（左右中の断定はしない）
+ *   ワイルドカードで、LF/CF/RFいずれにも対応するものとして扱う（左右中の断定はしない）。
+ *   同様に"IF"は内野の内訳が不明な場合のワイルドカードで、1B/2B/3B/SSに対応する
  * - canDH: true の野手はDHにも対応
  */
 export function getEligibleSlotIds(player) {
@@ -78,6 +79,11 @@ export function getEligibleSlotIds(player) {
       slots.add("LF");
       slots.add("CF");
       slots.add("RF");
+    } else if (pos === "IF") {
+      slots.add("1B");
+      slots.add("2B");
+      slots.add("3B");
+      slots.add("SS");
     } else if (FIELDING_SLOT_IDS.has(pos)) {
       slots.add(pos);
     }
