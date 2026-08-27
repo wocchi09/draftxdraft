@@ -1,0 +1,815 @@
+{{Pathnav|プロ野球ドラフト会議|frame=1}}
+{{各年の日本プロ野球ドラフト
+| 画像 = [[ファイル:Tsuneo_Horiuchi_(2010).jpg|200px|堀内]]
+| 画像説明 = 巨人のドラフト1位で指名された堀内
+| 年度 = 1965
+| 開催日 = [[1965年]][[11月17日]]
+| 開催地 = [[東京都]][[千代田区]]
+| 会場 = 日生会館
+| 司会 = [[伊東一雄]]
+| 制度 = 1巡目：重複くじ引き（名簿提出）<br />2巡目以下：[[ウェーバー方式|変則ウェーバー]]
+| 指名数 = 132名
+| 拒否数 = 80名（不交渉含む）
+| 最多指名数 = 2球団
+| 最多指名選手1球団 = [[1965年の東映フライヤーズ|東映]]
+| 最多指名選手1 = [[森安敏明]]
+| 最多指名守備1 = 投手
+| 最多指名所属1 = [[関西高等学校|関西高]]
+| 最多指名選手2球団 = [[1965年の近鉄バファローズ|近鉄]]
+| 最多指名選手2 =[[田端謙二郎]]
+| 最多指名守備2 = 投手
+| 最多指名所属2 = [[NTTグループ九州野球クラブ|電電九州]]
+}}
+'''1965年度新人選手選択会議'''（1965ねんどしんじんせんしゅせんたくかいぎ）は、{{by|1965年}}[[11月17日]]に[[日比谷]]日生会館で行われた第1回の[[プロ野球ドラフト会議]]である。
+
+== 概要 ==
+* 球団は連盟に獲得希望選手名簿を提出。名簿内では希望順に1番から12番も記載（[[プロ野球ドラフト会議#ドラフト制度の変遷]]も参照）。
+* 1位指名選手限定で、希望順1番が他球団と重複でなければ指名交渉権確定。重複した場合は抽選。
+* 抽選で外れた場合は希望順2番、駄目なら3番と進行・・・以下、再度の重複があればその度に抽選。
+* 2位以下の指名選手は[[ウェーバー方式]]と逆ウェーバー方式を採用。
+* ウェーバー方式による指名順は[[大阪近鉄バファローズ|近鉄]] - [[東京ヤクルトスワローズ|サンケイ]] - [[千葉ロッテマリーンズ|東京]] - [[広島東洋カープ|広島]] - [[オリックス・バファローズ|阪急]] - [[横浜DeNAベイスターズ|大洋]] - [[埼玉西武ライオンズ|西鉄]] - [[阪神タイガース|阪神]] - [[北海道日本ハムファイターズ|東映]] - [[中日ドラゴンズ|中日]] - [[福岡ソフトバンクホークス|南海]] - [[読売ジャイアンツ|巨人]]
+* 指名選手数は1球団30名まで。
+* 全12球団が参加し、合計で132人の選手を指名した。しかし、後述のように意中の球団とは異なる球団から指名されたことや野球活動終了後の安定した暮らしを目的として[[社会人野球]]行きを望んでいることを理由とした入団拒否、選手を指名したにもかかわらず球団自ら入団交渉を行わなかったケースが相次ぎ、その結果、実際に指名球団に入団したのは全体の半分以下となる50人（入団率約37.9％）だけだった<ref name=":0">{{Cite web|和書 |title=入団率わずか37.9％！第1回ドラフト会議は“入団拒否”連発だった |url=https://newsdig.tbs.co.jp/articles/-/177518?display=1 |website=TBS NEWS DIG |access-date=2022-10-17 |date=2022-10-17 |author=TBSテレビ}}</ref>。
+** サンケイは11人指名したが、入団にまで至ったのは2人だけだった<ref name=":0" />。特に1位指名を受けた河本和昭は入団拒否。プロ野球史上初の1位指名選手の入団拒否である。
+** 広島が18位まで指名したのに対し、南海は4位で指名終了するなどチームにより指名選手の数に大きな差があった。
+** 西鉄は16位まで指名したが、そのうち13人が入団を拒否した（球団が指名後交渉せず、そのまま交渉権失効となった選手を含む）。
+** 中日が10位指名した[[松井猛]]は、過去にプロ経験があり（[[千葉ロッテマリーンズ|大毎]]に2年間在籍）、[[柳川事件]]直前にアマ復帰している。プロ野球（NPB）経験者が唯一ドラフト指名された例である（現在の制度では、アマ復帰した元プロ選手のプロ復帰時にはドラフトにかける必要がない）。
+
+== 選択希望選手一覧 ==
+{| class="wikitable" style="text-align:center; font-size:90%;font-weight:bold;white-space:nowrap"
+!チーム
+![[1965年の近鉄バファローズ|近鉄]]
+![[1965年のサンケイスワローズ|サンケイ]]
+![[1965年の東京オリオンズ|東京]]
+![[1965年の広島カープ|広島]]
+![[1965年の阪急ブレーブス|阪急]]
+![[1965年の大洋ホエールズ|大洋]]
+![[1965年の西鉄ライオンズ|西鉄]]
+![[1965年の阪神タイガース|阪神]]
+![[1965年の東映フライヤーズ|東映]]
+![[1965年の中日ドラゴンズ|中日]]
+![[1965年の南海ホークス|南海]]
+![[1965年の読売ジャイアンツ|巨人]]
+|-
+!1巡目①
+| style=background-color:#fcc;|田端謙二郎
+| style=background-color:#ccf;font-weight:normal;|森安敏明
+|大塚弥寿男
+| style=background-color:#fcc;font-weight:normal;|田端謙二郎
+|長池徳二
+|岡正光
+|浜村孝
+|石床幹雄
+| style=background-color:#ccf;|森安敏明
+|豊永隆盛
+|牧憲二郎
+|堀内恒夫
+|-
+!1巡目②
+| ---
+| style=background-color:#ccc;|河本和昭
+| ---
+|佐野真樹夫
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!2巡目→
+|鈴木啓示
+|山本寛
+|木樽正明
+|白石静生
+|斎藤喜
+| style=background-color:#ccc;|加藤俊夫
+| style=background-color:#ccc;|吉岡宣男
+|藤田平
+| style=background-color:#ccc;|広畑良次
+|新宅洋志
+| style=background-color:#ccc;|阿天坊俊明
+|林千代作
+|-
+!3巡目←
+| style=background-color:#ccc;|長井繁夫
+| style=background-color:#ccc;|川上宣緒
+|嵯峨野昇
+|鎌田豊
+|住友平
+|淵上澄雄
+| style=background-color:#ccc;|三浦健二
+| style=background-color:#ccc;|北角富士雄
+|浜口春好
+|広野功
+| style=background-color:#ccc;|山本堯二
+|江藤省三
+|-
+!4巡目→
+|飯田幸夫
+|浜口政信
+| style=background-color:#ccc;|塩谷守也
+|水谷実雄
+| style=background-color:#ccc;|谷沢健一
+|岸勝之
+| style=background-color:#ccc;|江本孟紀
+|久野剛司
+| style=background-color:#ccc;|三田晃
+| style=background-color:#ccc;|平松政次
+|栗崎日出男
+| style=background-color:#ccc;|広瀬邦敏
+|-
+!5巡目←
+|松原良明
+| style=background-color:#ccc;|高橋恒夫
+| style=background-color:#ccc;|簾内政雄
+| style=background-color:#ccc;|河端良二
+| style=background-color:#ccc;|豊田憲司
+| style=background-color:#ccc;|樋口実
+|田中辰次
+| style=background-color:#ccc;|石井満
+| style=background-color:#ccc;|阪本敏三
+| style=background-color:#ccc;|平野年明
+| ---
+|才所俊郎
+|-
+!6巡目→
+| style=background-color:#ccc;|田中章
+| style=background-color:#ccc;|山田豊彦
+| style=background-color:#ccc;|真崎勝
+|山元二三男
+| style=background-color:#ccc;|小田義人
+| style=background-color:#ccc;|紺野功
+| style=background-color:#ccc;|安友定吉
+| style=background-color:#ccc;|岡村晃
+| style=background-color:#ccc;|遠山明
+|高岡英司
+| ---
+|宇佐美敏晴
+|-
+!7巡目←
+| style=background-color:#ccc;|渡辺立也
+| style=background-color:#ccc;|柿木孟
+|佐藤元彦
+|竹野吉郎
+| style=background-color:#ccc;|神山修
+| style=background-color:#ccc;|白井秀樹
+| style=background-color:#ccc;|吉原勉
+| style=background-color:#ccc;|松原保雄
+|落合勤一
+| style=background-color:#ccc;|小弓場保
+| ---
+| style=background-color:#ccc;|西山敏明
+|-
+!8巡目→
+| style=background-color:#ccc;|得津高宏
+| style=background-color:#ccc;|細川昌俊
+| style=background-color:#ccc;|広瀬幸司
+| style=background-color:#ccc;|福島久
+| style=background-color:#ccc;|中田拓
+|小山正
+| style=background-color:#ccc;|久木田正昭
+| style=background-color:#ccc;|下田典隆
+| style=background-color:#ccc;|米沢武
+| style=background-color:#ccc;|永江健一
+| ---
+| style=background-color:#ccc;|深津修司
+|-
+!9巡目←
+| style=background-color:#ccc;|金子準一
+| style=background-color:#ccc;|島谷金二
+|川藤竜之輔
+| style=background-color:#ccc;|上柏徳治
+|水谷勇
+| style=background-color:#ccc;|竹之内雅史
+| style=background-color:#ccc;|少弐克也
+| style=background-color:#ccc;|井石裕也
+| ---
+| style=background-color:#ccc;|仲子隆司
+| ---
+| ---
+|-
+!10巡目→
+| ---
+| style=background-color:#ccc;|柳田四郎
+|吉川和男
+| style=background-color:#ccc;|石原昌美
+| style=background-color:#ccc;|黒田正宏
+|石崎一夫
+| style=background-color:#ccc;|坂元健
+| ---
+| ---
+| style=background-color:#ccc;|松井猛
+| ---
+| ---
+|-
+!11巡目←
+| ---
+| style=background-color:#ccc;|市川幸男
+| style=background-color:#ccc;|池田昭洋
+| style=background-color:#ccc;|宇都宮勝
+| style=background-color:#ccc;|浜敏男
+| ---
+| style=background-color:#ccc;|衛藤雅登
+| ---
+| ---
+|鳥谷元
+| ---
+| ---
+|-
+!12巡目→
+| ---
+| ---
+| style=background-color:#ccc;|大戸洋儀
+|矢崎健治
+| style=background-color:#ccc;|安岡静夫
+| ---
+| style=background-color:#ccc;|岩田宗彦
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!13巡目←
+| ---
+| ---
+| style=background-color:#ccc;|石井一男
+| style=background-color:#ccc;|沖本光昭
+| style=background-color:#ccc;|佐々木保昌
+| ---
+|小室光男
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!14巡目→
+| ---
+| ---
+| style=background-color:#ccc;|城戸徳夫
+| style=background-color:#ccc;|杵島永至
+| ---
+| ---
+| style=background-color:#ccc;|京田憲治
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!15巡目←
+| ---
+| ---
+| style=background-color:#ccc;|児玉好弘
+| style=background-color:#ccc;|池田重喜
+| ---
+| ---
+| style=background-color:#ccc;|蔵原偉吾
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!16巡目→
+| ---
+| ---
+| ---
+|山本真一
+| ---
+| ---
+| style=background-color:#ccc;|太田喜一郎
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!17巡目←
+| ---
+| ---
+| ---
+|川内雄富
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+|-
+!18巡目→
+| ---
+| ---
+| ---
+|下村栄二
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+| ---
+|}
+* '''太字'''は交渉権確定、色付きの選手は指名が重複した選手。
+*2巡目以下は矢印の向きの順に指名。
+*背景色が暗い選手は、入団に至らなかった選手（球団が入団交渉の着手をしなかった場合を含む）。
+
+== 球団別選択選手 ==
+拒否については、球団が指名した後に交渉を実施せず、そのまま失効（事実上の交渉権放棄）となった選手についても便宜上含める。
+
+{|
+| style="background-color:#BBFFBB; border:1px solid #aaaaaa; width:2em;"|
+| = [[野球殿堂 (日本)|野球殿堂]] ||
+| style="background-color:#C0C0C0; border:1px solid #aaaaaa; width:2em;"|
+| = 一軍公式戦出場なし
+| style="background-color:#EE82EE; border:1px solid #aaaaaa; width:2em;"|
+| = 契約せず ||
+|}
+=== 近鉄バファローズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[田端謙二郎]]||投手||[[NTTグループ九州野球クラブ|電電九州]]||入団||
+|-
+!2位
+|style="background-color:#BBFFBB"|[[鈴木啓示]]||投手||[[育英高等学校|育英高]]||入団||
+|-
+!3位
+|style="background-color: #EE82EE"|[[長井繁夫]]||内野手||[[PL学園中学校・高等学校|PL学園高]]||交渉権放棄・[[中央大学硬式野球部|中央大学]]進学||style="text-align:center;"| -
+|-
+!4位
+|[[飯田幸夫]]||内野手||[[横浜中学校・高等学校|横浜高]]||入団||
+|-
+!5位
+|[[松原良明]]||外野手||[[鳥取県立米子工業高等学校|米子工業高]]||入団||
+|-
+!6位
+|style="background-color: #EE82EE"|[[田中章 (野球)|田中章]]||投手||[[日本通運硬式野球部|日本通運]]||拒否||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|渡辺立也||捕手||[[徳島県立徳島商業高等学校|徳島商業高]]||交渉権放棄・関西大学進学||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|[[得津高宏]]||外野手||PL学園高||交渉権放棄・[[クラレ岡山硬式野球部|クラレ岡山]]入社||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|[[金子準一]]||投手||[[愛媛県立今治南高等学校|今治南高]]||交渉権放棄・同年ドラフト外で西鉄入団||style="text-align:center;"| -
+|}
+
+=== サンケイスワローズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|style="background-color: #EE82EE"|河本和昭||投手||[[広陵高等学校 (広島県)|広陵高]]||交渉権放棄・亜細亜大学進学||style="text-align:center;"| -
+|-
+!2位
+|[[山本寛 (野球)|山本寛]]||投手||[[愛知中学校・高等学校|愛知高]]||入団||
+|-
+!3位
+|style="background-color: #EE82EE"|川上宣緒||内野手||[[全鐘紡|鐘紡]]||交渉権放棄||style="text-align:center;"| -
+|-
+!4位
+|[[浜口政信]]||投手||[[大分県立別府鶴見丘高等学校|別府鶴見丘高]]||入団||
+|-
+!5位
+|style="background-color: #EE82EE"|[[高橋恒夫]]||投手||[[SUBARU硬式野球部|富士重工業]]||交渉権放棄||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|[[山田豊彦]]||投手||[[阪南大学高等学校|大鉄高]]||交渉権放棄・[[近畿大学体育会硬式野球部|近畿大学]]進学||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|柿木孟||投手||[[奈良県立磯城野高等学校|田原本農業高]]||交渉権放棄・[[デュプロ硬式野球部|デュプロ印刷機]]入社||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|[[細川昌俊]]||投手||[[香川県立志度高等学校|志度商業高]]||交渉権放棄・[[東洋大学硬式野球部|東洋大学]]進学||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|[[島谷金二]]||内野手||[[四国電力硬式野球部|四国電力]]||交渉権放棄||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #EE82EE"|柳田四郎||投手||[[豊川高等学校|豊川高]]||交渉権放棄・[[トヨタ自動車硬式野球部|トヨタ自動車]]入社||style="text-align:center;"| -
+|-
+!11位
+|style="background-color: #EE82EE"|市川幸男||捕手||[[武相中学校・高等学校|武相高]]||交渉権放棄・[[髙島屋]]入社||style="text-align:center;"| -
+|}
+
+=== 東京オリオンズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[大塚弥寿男]]||捕手||[[早稲田大学野球部|早稲田大学]]||入団||
+|-
+!2位
+|[[木樽正明]]||投手||[[千葉県立銚子商業高等学校|銚子商業高]]||入団||
+|-
+!3位
+|[[嵯峨野昇]]||内野手||[[日立製作所硬式野球部|日立製作所]]||入団||
+|-
+!4位
+|style="background-color: #EE82EE"|塩谷守也||捕手||[[育英高等学校|育英高]]||拒否・専修大学進学||style="text-align:center;"| -
+|-
+!5位
+|style="background-color: #EE82EE"|[[簾内政雄]]||投手||[[日本鉱業日立硬式野球部|日本鉱業日立]]||拒否||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|真崎勝||投手||[[羽幌炭鉱|羽幌クラブ]]||拒否||style="text-align:center;"| -
+|-
+!7位
+|[[佐藤元彦]]||投手||[[サッポロビール]]||入団||
+|-
+!8位
+|style="background-color: #EE82EE"|[[広瀬幸司]]||捕手||[[ENEOS野球部|日本石油]]||拒否||style="text-align:center;"| -
+|-
+!9位
+|[[川藤竜之輔]]||投手||[[福井県立若狭高等学校|若狭高]]||入団||
+|-
+!10位
+|[[吉川和男 (野球)|吉川和男]]||内野手||[[新潟県立糸魚川高等学校|糸魚川高]]||入団||
+|-
+!11位
+|style="background-color: #EE82EE"|池田昭洋||捕手||[[山口県立小野田工業高等学校|小野田工業高]]||拒否・[[駒澤大学硬式野球部|駒澤大学]]入学||style="text-align:center;"| -
+|-
+!12位
+|style="background-color: #EE82EE"|[[大戸洋儀]]||外野手||[[全鐘紡|鐘紡淀川]]||拒否||style="text-align:center;"| -
+|-
+!13位
+|style="background-color: #EE82EE"|石井一男||捕手||[[相洋中学校・高等学校|相洋高]]||拒否・[[日本コロムビア硬式野球部|コロムビア]]入社||style="text-align:center;"| -
+|-
+!14位
+|style="background-color: #EE82EE"|[[城戸徳夫]]||投手||[[博多高等学校|博多高]]||拒否・[[NTTグループ九州野球クラブ|電電九州]]入社||style="text-align:center;"| -
+|-
+!15位
+|style="background-color: #EE82EE"|[[児玉好弘]]||投手||[[日本軽金属硬式野球部|日本軽金属]]||拒否||style="text-align:center;"| -
+|}
+
+=== 広島カープ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[佐野真樹夫]]||内野手||[[専修大学硬式野球部|専修大学]]||入団||
+|-
+!2位
+|[[白石静生]]||投手||[[JR四国硬式野球部|四国鉄道管理局]]||入団||
+|-
+!3位
+|[[鎌田豊]]||外野手||[[法政大学野球部|法政大学]]||入団||
+|-
+!4位
+|[[水谷実雄]]||投手||[[宮崎県立宮崎商業高等学校|宮崎商業高]]||入団||
+|-
+!5位
+|style="background-color: #EE82EE"|河端良二||投手||[[京都市立伏見工業高等学校|伏見工業高]]||交渉権放棄・[[大阪商業大学硬式野球部|大阪商業大学]]進学||style="text-align:center;"| -
+|-
+!6位
+|[[山元二三男]]||内野手||[[鹿児島城西高等学校|鹿児島照国高]]||入団||
+|-
+!7位
+|[[竹野吉郎]]||外野手||[[駒澤大学硬式野球部|駒澤大学]]||入団||
+|-
+!8位
+|style="background-color: #EE82EE"|[[福嶋久晃|福島久]]||捕手||[[PL学園中学校・高等学校|PL学園高]]||交渉権放棄・[[大昭和製紙硬式野球部|大昭和製紙]]入社||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|上柏徳治||内野手||[[崇徳中学校・高等学校|崇徳高]]||交渉権放棄・[[亜細亜大学硬式野球部|亜細亜大学]]進学||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #EE82EE"|石原昌美||投手||[[琉球電信電話公社|電電琉球]]||交渉権放棄||style="text-align:center;"| -
+|-
+!11位
+|style="background-color: #EE82EE"|宇都宮勝||投手||専修大学||拒否・[[NTT関東硬式野球部|電電関東]]入社||style="text-align:center;"| -
+|-
+!12位
+|style="background-color: #c0c0c0"|[[矢崎健治]]||投手||[[山梨県立巨摩高等学校|巨摩高]]卒||入団||style="text-align:center;"| -
+|-
+!13位
+|style="background-color: #EE82EE"|沖本光昭||外野手||[[呉港高等学校|呉港高]]||交渉権放棄・[[芝浦工業大学硬式野球部|芝浦工業大学]]進学||style="text-align:center;"| -
+|-
+!14位
+|style="background-color: #EE82EE"|杵島永至||外野手||[[福岡県立香椎高等学校|香椎高]]||交渉権放棄・[[国士舘大学硬式野球部|国士舘大学]]進学||style="text-align:center;"| -
+|-
+!15位
+|style="background-color: #EE82EE"|[[池田重喜]]||投手||[[日本鉱業佐賀関硬式野球部|日本鉱業佐賀関]]||拒否||style="text-align:center;"| -
+|-
+!16位
+|[[山本真一]]||内野手||専修大学中退||入団||
+|-
+!17位
+|[[川内雄富]]||外野手||[[広陵高等学校 (広島県)|広陵高]]中退||入団||
+|-
+!18位
+|[[下村栄二]]||投手||[[名古屋商科大学]]中退||入団||
+|}
+
+=== 阪急ブレーブス ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[長池徳士|長池徳二]]||外野手||[[法政大学野球部|法政大学]]||入団||
+|-
+!2位
+|[[斎藤喜]]||内野手||[[習志野市立習志野高等学校|習志野高]]||入団||
+|-
+!3位
+|[[住友平]]||内野手||[[明治大学硬式野球部|明治大学]]||入団||
+|-
+!4位
+|style="background-color: #EE82EE"|[[谷沢健一]]||外野手||習志野高||交渉権放棄・[[早稲田大学野球部|早稲田大学]]進学||style="text-align:center;"| -
+|-
+!5位
+|style="background-color: #EE82EE"|[[豊田憲司]]||投手||[[呉港高等学校|呉港高]]||交渉権放棄・[[芝浦工業大学硬式野球部|芝浦工業大学]]進学||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|[[小田義人]]||内野手||[[静岡県立静岡高等学校|静岡高]]||交渉権放棄・早稲田大学進学||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|[[神山修]]||投手||[[日本大学第二中学校・高等学校|日本大学第二高]]||交渉権放棄・[[日本大学硬式野球部|日本大学]]進学||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|中田拓||投手||[[和歌山県立神島高等学校|田辺商業高]]||交渉権放棄・[[DMG森精機|森精機]]入社||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #c0c0c0"|[[水谷勇]]||投手||[[秋田県立大曲農業高等学校|大曲農業高]]||入団||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #EE82EE"|[[黒田正宏]]||捕手||[[兵庫県立姫路南高等学校|姫路南高]]||交渉権放棄・法政大学進学||style="text-align:center;"| -
+|-
+!11位
+|style="background-color: #EE82EE"|浜敏男||捕手||田辺商業高||交渉権放棄・[[日本新薬硬式野球部|日本新薬]]入社||style="text-align:center;"| -
+|-
+!12位
+|style="background-color: #EE82EE"|安岡静夫||外野手||[[横浜中学校・高等学校|横浜高]]||交渉権放棄・川崎市水道局入局||style="text-align:center;"| -
+|-
+!13位
+|style="background-color: #EE82EE"|佐々木保昌||外野手||[[埼玉県立熊谷高等学校|熊谷高]]||交渉権放棄・進学||style="text-align:center;"| -
+|}
+
+=== 大洋ホエールズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|style="background-color: #c0c0c0"|[[岡正光]]||投手||[[福島県立保原高等学校|保原高]]||入団||style="text-align:center;"| -
+|-
+!2位
+|style="background-color: #EE82EE"|[[加藤俊夫]]||捕手||[[仙台育英学園高等学校|仙台育英高]]||拒否・[[日本軽金属硬式野球部|日本軽金属]]入社||style="text-align:center;"| -
+|-
+!3位
+|[[淵上澄雄]]||投手||[[岐阜第一高等学校|岐阜短期大学付属岐阜高]]||入団||
+|-
+!4位
+|[[岸勝之]]||投手||[[横浜中学校・高等学校|横浜高]]||入団||
+|-
+!5位
+|style="background-color: #EE82EE"|樋口実||投手||[[羽幌炭鉱]]||交渉権放棄||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|紺野功||投手||[[福島県立磐城高等学校|磐城高]]||交渉権放棄・[[常磐炭鉱|全常磐]]入部||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|白井秀樹||投手||[[帝京中学校・高等学校|帝京高]]||交渉権放棄・[[Honda硬式野球部|本田技研]]入社||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #c0c0c0"|[[小山正]]||捕手||[[宮城県気仙沼高等学校|気仙沼高]]||入団||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|[[竹之内雅史]]||内野手||[[日本通運硬式野球部|日本通運]]||交渉権放棄||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #c0c0c0"|[[石崎一夫]]||内野手||[[仙台育英学園高等学校|仙台育英高]]||入団||style="text-align:center;"| -
+|}
+
+=== 西鉄ライオンズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[浜村孝]]||内野手||[[高知市立高知商業高等学校|高知商業高]]||入団||
+|-
+!2位
+|style="background-color: #EE82EE"|[[吉岡宣男]]||内野手||[[立命館大学硬式野球部|立命館大学]]||交渉権放棄・[[日本生命硬式野球部|日本生命]]入社||style="text-align:center;"| -
+|-
+!3位
+|style="background-color: #EE82EE"|[[三浦健二]]||投手||[[ENEOS野球部|日本石油]]||拒否||style="text-align:center;"| -
+|-
+!4位
+|style="background-color: #EE82EE"|[[江本孟紀]]||投手||高知商業高||拒否・[[法政大学野球部|法政大学]]進学||style="text-align:center;"| -
+|-
+!5位
+|[[田中辰次]]||内野手||[[鷺宮製作所硬式野球部|鷺宮製作所]]||入団||
+|-
+!6位
+|style="background-color: #EE82EE"|[[安友定吉]]||外野手||[[徳島県立徳島商業高等学校|徳島商業高]]||交渉権放棄・[[四国電力硬式野球部|四国電力]]入社||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|吉原勉||内野手||[[香川県立高松商業高等学校|高松商業高]]||交渉権放棄・[[芝浦工業大学硬式野球部|芝浦工業大学]]進学||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|久木田正昭||捕手||[[鹿児島実業高等学校|鹿児島実業高]]||交渉権放棄・[[日本鉱業佐賀関硬式野球部|日本鉱業佐賀関]]入社||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|少弐克也||捕手||[[NTTグループ九州野球クラブ|電電九州]]||交渉権放棄||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #EE82EE"|坂元健||投手||[[宮崎県立都城農業高等学校|都城農業高]]||交渉権放棄・[[NTT関東硬式野球部|電電関東]]入社||style="text-align:center;"| -
+|-
+!11位
+|style="background-color: #EE82EE"|[[衛藤雅登]]||投手||[[明豊中学校・高等学校|別府大学附属高]]||交渉権放棄・[[大東文化大学硬式野球部|大東文化大学]]進学||style="text-align:center;"| -
+|-
+!12位
+|style="background-color: #EE82EE"|岩田宗彦||捕手||[[岐阜市立岐阜商業高等学校|市立岐阜商業高]]||交渉権放棄・[[愛知学院大学硬式野球部|愛知学院大学]]進学||style="text-align:center;"| -
+|-
+!13位
+|[[小室光男]]||内野手||[[島根県立松江商業高等学校|松江商業高]]||入団||
+|-
+!14位
+|style="background-color: #EE82EE"|[[京田憲治]]||内野手||[[鹿児島市立鹿児島玉龍中学校・鹿児島玉龍高等学校|鹿児島玉龍高]]||交渉権放棄・[[立教大学野球部|立教大学]]進学||style="text-align:center;"| -
+|-
+!15位
+|style="background-color: #EE82EE"|蔵原偉吾||外野手||[[熊本県立熊本工業高等学校|熊本工業高]]||交渉権放棄・[[日本軽金属硬式野球部|日本軽金属]]入社||style="text-align:center;"| -
+|-
+!16位
+|style="background-color: #EE82EE"|太田喜一郎||外野手||立命館大学||交渉権放棄・[[ヤマハ硬式野球部|日本楽器]]入社||style="text-align:center;"| -
+|}
+
+=== 阪神タイガース ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[石床幹雄]]||投手||[[香川県立土庄高等学校|土庄高]]||入団||
+|-
+!2位
+|[[藤田平]]||内野手||[[和歌山市立和歌山高等学校|市立和歌山商業高]]||入団||
+|-
+!3位
+|style="background-color: #EE82EE"|[[北角富士雄]]||投手||[[東邦高等学校|東邦高]]||拒否・同年ドラフト外で[[中日ドラゴンズ|中日]]入団||style="text-align:center;"| -
+|-
+!4位
+|[[久野剛司]]||投手||[[同志社大学体育会硬式野球部|同志社大学]]||入団||
+|-
+!5位
+|style="background-color: #EE82EE"|石井満||投手||[[ENEOS野球部|日本石油]]||交渉権放棄||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|[[岡村晃]]||内野手||[[関西大学野球部|関西大学]]||交渉権放棄・[[河合楽器硬式野球部|河合楽器]]入社||style="text-align:center;"| -
+|-
+!7位
+|style="background-color: #EE82EE"|松原保雄||捕手||[[香川県立高松商業高等学校|高松商業高]]||交渉権放棄・[[芝浦工業大学硬式野球部|芝浦工業大学]]進学||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|下田典隆||内野手||[[広陵高等学校 (広島県)|広陵高]]||交渉権放棄・[[専修大学硬式野球部|専修大学]]進学||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|井石裕也||内野手||[[浪速高等学校・中学校|浪速高]]||拒否・[[早稲田大学野球部|早稲田大学]]進学||style="text-align:center;"| -
+|}
+
+=== 東映フライヤーズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[森安敏明]]||投手||[[関西高等学校|関西高]]||入団||
+|-
+!2位
+|style="background-color: #EE82EE"|[[広畑良次]]||投手||[[和歌山県立古佐田丘中学校・橋本高等学校|橋本高]]||拒否・[[立教大学野球部|立教大学]]進学||style="text-align:center;"| -
+|-
+!3位
+|[[浜口春好]]||内野手||[[NTT西日本硬式野球部|電電近畿]]||入団||
+|-
+!4位
+|style="background-color: #EE82EE"|[[三田晃]]||投手||[[大昭和製紙硬式野球部|大昭和製紙]]||拒否||style="text-align:center;"| -
+|-
+!5位
+|style="background-color: #EE82EE"|[[阪本敏三]]||内野手||[[立命館大学硬式野球部|立命館大学]]||拒否・[[河合楽器硬式野球部|河合楽器]]入社||style="text-align:center;"| -
+|-
+!6位
+|style="background-color: #EE82EE"|遠山明||投手||[[大阪府立桜宮高等学校|桜宮高]]||交渉権放棄・[[大東文化大学硬式野球部|大東文化大学]]進学||style="text-align:center;"| -
+|-
+!7位
+|[[落合勤一]]||投手||[[実践学園中学・高等学校|実践商業高]]||入団||
+|-
+!8位
+|style="background-color: #EE82EE"|[[米沢武]]||内野手||[[明治大学硬式野球部|明治大学]]||拒否・[[クラレ岡山硬式野球部|クラレ岡山]]入社||style="text-align:center;"| -
+|}
+
+=== 中日ドラゴンズ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[豊永隆盛]]||投手||[[秀岳館高等学校|八代第一高]]||入団||
+|-
+!2位
+|[[新宅洋志]]||捕手||[[駒澤大学硬式野球部|駒澤大学]]||入団||
+|-
+!3位
+|[[広野功]]||内野手||[[慶應義塾体育会野球部|慶應義塾大学]]||入団||
+|-
+!4位
+|style="background-color: #EE82EE"|[[平松政次]]||投手||[[岡山県立岡山東商業高等学校|岡山東商業高]]||拒否・[[ENEOS野球部|日本石油]]入社||style="text-align:center;"| -
+|-
+!5位
+|style="background-color: #EE82EE"|平野年明||投手||[[新日本製鐵八幡硬式野球部|八幡製鐵]]||拒否||style="text-align:center;"| -
+|-
+!6位
+|[[高岡英司]]||投手||[[日本製鉄瀬戸内硬式野球部|富士製鐵広畑]]||入団||
+|-
+!7位
+|style="background-color: #EE82EE"|[[小弓場保]]||投手||[[日本生命硬式野球部|日本生命]]||拒否||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|[[永江健一]]||投手||[[鹿児島実業高等学校|鹿児島実業高]]||交渉権放棄・[[日本鉱業佐賀関硬式野球部|日本鉱業佐賀関]]入社||style="text-align:center;"| -
+|-
+!9位
+|style="background-color: #EE82EE"|[[仲子隆司]]||投手||[[ヤマハ硬式野球部|日本楽器]]||拒否||style="text-align:center;"| -
+|-
+!10位
+|style="background-color: #EE82EE"|[[松井猛]]||外野手||[[NTT北海道硬式野球部|電電北海道]]||交渉権放棄||style="text-align:center;"| -
+|-
+!11位
+|[[鳥谷元]]||投手||[[福岡県立青豊高等学校|築上中部高]]||入団||
+|}
+
+=== 南海ホークス ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[牧憲二郎]]||投手||[[宮崎県立高鍋高等学校|高鍋高]]||入団||
+|-
+!2位
+|style="background-color: #EE82EE"|[[阿天坊俊明]]||内野手||[[千葉県立銚子商業高等学校|銚子商業高]]||拒否・[[立教大学野球部|立教大学]]進学||style="text-align:center;"| -
+|-
+!3位
+|style="background-color: #EE82EE"|山本堯二||投手||[[兵庫県立長田高等学校|長田高]]||拒否・[[慶應義塾体育会野球部|慶應義塾大学]]進学||style="text-align:center;"| -
+|-
+!4位
+|style="background-color: #c0c0c0"|[[栗崎日出男]]||外野手||[[柳川高等学校|柳川商業高]]||入団||style="text-align:center;"| -
+|}
+
+=== 読売ジャイアンツ ===
+{| class="wikitable" style="white-space:nowrap;"
+|-
+!順位!!選手名!!守備!!所属!!結果!![[最優秀選手 (日本プロ野球)|MVP]]
+|-
+!1位
+|[[堀内恒夫]]||投手||[[甲府市立甲府商業高等学校|甲府商業高]]||入団||style="text-align:center;"| ○
+|-
+!2位
+|[[林千代作]]||外野手||[[鎌倉学園中学校・高等学校|鎌倉学園高]]||入団||
+|-
+!3位
+|[[江藤省三]]||内野手||[[慶應義塾体育会野球部|慶應義塾大学]]||入団||
+|-
+!4位
+|style="background-color: #EE82EE"|広瀬邦敏||外野手||[[広島県立大竹高等学校|大竹高]]||拒否・[[芝浦工業大学硬式野球部|芝浦工業大学]]進学||style="text-align:center;"| -
+|-
+!5位
+|[[才所俊郎]]||外野手||[[河合楽器硬式野球部|河合楽器]]||入団||
+|-
+!6位
+|[[宇佐美敏晴]]||投手||[[愛媛県立西条高等学校|西条高]]||入団||
+|-
+!7位
+|style="background-color: #EE82EE"|[[西山敏明]]||外野手||[[岡山県立津山商業高等学校|津山商業高]]||拒否・[[駒澤大学硬式野球部|駒澤大学]]進学||style="text-align:center;"| -
+|-
+!8位
+|style="background-color: #EE82EE"|深津修司||内野手||[[中京大学附属中京高等学校|中京商業高]]||拒否・[[たくぎん野球部|北海道拓殖銀行]]入行||style="text-align:center;"| -
+|}
+
+== 脚注 ==
+{{Reflist}}
+
+{{プロ野球ドラフト会議}}
+{{1965年の日本プロ野球}}
+{{デフォルトソート:しんしんせんしゆせんたくかいき1965}}
+[[Category:各年のプロ野球ドラフト会議|1965]]
+[[Category:1965年の日本プロ野球]]
+[[Category:千代田区のスポーツ史]]
+[[Category:1965年10月]]
+[[Category:江本孟紀]]
+[[Category:堀内恒夫]]
+[[Category:鈴木啓示]]
