@@ -81,6 +81,23 @@ class App {
     this.render();
   }
 
+  /**
+   * プレイ中のロスターを破棄してTOPへ戻る。
+   * ページ再読み込み時は進行中のゲームを自動再開する仕様のため、
+   * 「同じ抽選結果からやり直したい」場合はここで明示的に保存データを消す必要がある。
+   */
+  abandonGame() {
+    if (this._stopRoulette) {
+      this._stopRoulette();
+      this._stopRoulette = null;
+    }
+    storage.clearCurrentGame();
+    this.game = null;
+    this.ui = defaultUiState();
+    this.screen = "TOP";
+    this.render();
+  }
+
   startNewGame(modeId) {
     if (this._stopRoulette) {
       this._stopRoulette();

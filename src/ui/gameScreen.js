@@ -24,6 +24,7 @@ export function renderGameScreen(root, app) {
 
   const topbarHtml = `
     <div class="topbar">
+      <button type="button" class="btn btn-icon btn-ghost" id="game-abandon-btn" aria-label="ゲームを中断してTOPに戻る">←</button>
       <h2>${escapeHtml(mode.label)}</h2>
     </div>`;
 
@@ -147,6 +148,15 @@ function slotPickerHtml(app) {
 }
 
 function bindEvents(wrap, app) {
+  const abandonBtn = wrap.querySelector("#game-abandon-btn");
+  if (abandonBtn) {
+    abandonBtn.addEventListener("click", () => {
+      if (window.confirm("ここまでのロスターは失われます。中断してTOPに戻りますか？")) {
+        app.abandonGame();
+      }
+    });
+  }
+
   const manualRedraw = wrap.querySelector("#manual-redraw-btn");
   if (manualRedraw) manualRedraw.addEventListener("click", () => app.manualRedraw());
 
