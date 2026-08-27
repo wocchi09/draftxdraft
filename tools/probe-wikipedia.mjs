@@ -27,13 +27,15 @@ console.log("=== 見出し（===レベル） ===");
 console.log(headings.join(" | "));
 
 // 指定球団のセクションを丸ごと出す（ここが指名テーブルの実体）
-const start = text.indexOf(`=== ${TEAM} ===`);
-if (start < 0) {
+const headingRe = new RegExp(`^===\\s*${TEAM}\\s*===\\s*$`, "m");
+const m = headingRe.exec(text);
+if (!m) {
   console.log(`セクション「${TEAM}」が見つからない`);
 } else {
-  const rest = text.slice(start + 1);
-  const nextIdx = rest.search(/^==/m);
-  const section = text.slice(start, nextIdx < 0 ? undefined : start + 1 + nextIdx);
-  console.log(`=== 「${TEAM}」セクション全文（${section.length}文字） ===`);
+  const bodyStart = m.index + m[0].length;
+  // 見出しの次の行から探さないと、見出し自身の "==" にマッチしてしまう
+  const rel = text.slice(bodyStart).search(/^==[^=]/m);
+  const section = text.slice(bodyStart, rel < 0 ? undefined : bodyStart + rel);
+  console.log(`=== 「${TEAM}」セクション本文（${section.length}文字） ===`);
   console.log(section);
 }
