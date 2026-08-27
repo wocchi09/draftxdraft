@@ -19,6 +19,7 @@ import { announce } from "./utils/dom.js";
 import { hexToRgba, lighten, darken, readableTextOn, DEFAULT_ACCENT } from "./utils/color.js";
 import { loadGameData } from "./dataStore.js";
 import * as storage from "./storage.js";
+import { normalizeYearRange } from "./yearRange.js";
 
 function defaultUiState() {
   return {
@@ -52,6 +53,7 @@ class App {
     this.selectedModeId = storage.loadLastMode() || DEFAULT_MODE_ID;
     this.favoriteColor = storage.loadFavoriteColor() || DEFAULT_ACCENT;
     this.theme = storage.loadTheme();
+    this.yearRange = storage.loadYearRange();
     applyTheme(this.theme);
     this.game = null;
     this.viewingTeam = null;
@@ -81,6 +83,13 @@ class App {
     else if (mq.addListener) mq.addListener(onChange);
   }
 
+  /** TOP画面で選んだ、抽選する年度の範囲を覚えておく */
+  setYearRange(range) {
+    this.yearRange = normalizeYearRange(range);
+    storage.saveYearRange(this.yearRange);
+    this.render();
+  }
+
   setTheme(theme) {
     this.theme = theme;
     storage.saveTheme(theme);
@@ -103,6 +112,9 @@ class App {
       // 旧仕様（可変長の打順配列）で保存されたゲームも9枠形式へ揃えてから再開する
       this.game.battingOrderDraft = normalizeBattingOrderDraft(this.game.battingOrderDraft);
       this.selectedModeId = saved.modeId;
+      // 範囲を持たない古い保存データは全期間として再開する
+      this.game.yearRange = normalizeYearRange(this.game.yearRange);
+      this.yearRange = this.game.yearRange;
       this.screen = "GAME";
       if (!this.game.currentDraft) {
         const result = drawForState(this.game);
@@ -146,7 +158,7 @@ class App {
     }
     this.selectedModeId = modeId;
     storage.saveLastMode(modeId);
-    this.game = createInitialState(modeId);
+    this.game = createInitialState(modeId, this.yearRange);
     this.viewingTeam = null;
     this.viewingTeamIndex = null;
     this.ui = defaultUiState();
@@ -175,7 +187,9 @@ class App {
         : null;
     this.render();
 
-    const years = getAvailableYears();
+    // ルーレットに流す年度は、選んだ範囲の中だけにする
+    const range = normalizeYearRange(this.game.yearRange);
+    const years = getAvailableYears().filter((y) => y >= range.from && y <= range.to);
     const teamNames = getAllTeamShortNames();
     const finalTeamShortName = getTeamShortName(combo.teamId);
 

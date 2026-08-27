@@ -1,5 +1,6 @@
 import { getGameData } from "./dataStore.js";
 import { pickRandom } from "./utils/random.js";
+import { filterPoolByYearRange } from "./yearRange.js";
 
 function draftsData() {
   return getGameData().drafts;
@@ -18,9 +19,9 @@ export function getAvailableTeamIds() {
   return [...new Set(draftsData().map((d) => d.teamId))];
 }
 
-/** 一意な {year, teamId} の抽選プールを構築する */
+/** 一意な {year, teamId} の抽選プールを構築する。pickCount は範囲選択の目安表示に使う */
 export function buildDraftPool() {
-  return draftsData().map((d) => ({ year: d.year, teamId: d.teamId }));
+  return draftsData().map((d) => ({ year: d.year, teamId: d.teamId, pickCount: d.picks.length }));
 }
 
 // 選手は5000人近くいるので、毎回の線形探索を避けてIDで索く。
@@ -72,9 +73,12 @@ export function getCandidates(year, teamId, excludePlayerIds = new Set()) {
  * プールを出し尽くしたら次の巡に入る。その最初の1件だけは
  * `ctx.avoidComboKey`（直前に出た組み合わせ）を候補から外し、
  * 巡の境目で同じ組み合わせが2連続で出ないようにする。
+ *
+ * `ctx.yearRange` が指定されていれば、その年度の範囲だけに絞ってから抽選する。
  */
 export function drawDraftCombo(mode, ctx = {}) {
-  const pool = mode.filterPool(buildDraftPool(), ctx);
+  const inRange = filterPoolByYearRange(buildDraftPool(), ctx.yearRange);
+  const pool = mode.filterPool(inRange, ctx);
   if (pool.length === 0) return null;
 
   const keyOf = (c) => `${c.year}-${c.teamId}`;
