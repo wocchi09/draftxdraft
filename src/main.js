@@ -188,19 +188,14 @@ class App {
   }
 
   /**
-   * ロスター枠を選んだ後の分岐。野手（DH含む）枠なら打順を選ぶステップへ、
-   * 投手枠ならそのまま確定する。打順の挿入位置が1択しかない場合
-   * （まだ誰も野手を登録していない最初の1人目など）もそのまま確定する。
+   * ロスター枠を選んだ後の分岐。野手（DH含む）枠なら続けて打順を選ぶ
+   * ステップへ進む（1人目でも「1番」を明示的に選んでもらう）。
+   * 投手枠は打順に関係ないためそのまま確定する。
    */
   chooseRosterSlot(playerId, slotId) {
     this.ui.slotPickerPlayerId = playerId;
     const slotDef = getSlotDef(slotId);
     if (slotDef && slotDef.category === "fielder") {
-      const draftLen = (this.game.battingOrderDraft || []).length;
-      if (draftLen === 0) {
-        this.confirmPick(playerId, slotId, 0);
-        return;
-      }
       this.ui.slotPickerChosenSlotId = slotId;
       this.ui.slotPickerStep = "battingOrder";
       this.render();
