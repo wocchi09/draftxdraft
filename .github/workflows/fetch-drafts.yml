@@ -1,0 +1,43 @@
+name: Fetch draft wikitext
+
+# この開発環境からは ja.wikipedia.org へ到達できないが、Actionsランナーからは到達できる。
+# 取得した生のwikitextをブランチへコミットして持ち帰り、パースはローカルで行う。
+on:
+  workflow_dispatch:
+    inputs:
+      years:
+        description: 取得する年度（スペース区切り。例 "2024 2023 2022"）
+        required: true
+        default: "2024"
+      branch:
+        description: コミット先のブランチ
+        required: true
+        default: claude/playable-url-pm2ziq
+
+permissions:
+  contents: write
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.branch }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
+
+      - name: Commit the fetched wikitext
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/_raw
+          if git diff --cached --quiet; then
+            echo "変更なし"
+          else
+            git commit -m "Fetch draft wikitext for ${{ inputs.years }}"
+            git push origin HEAD:${{ inputs.branch }}
+          fi
