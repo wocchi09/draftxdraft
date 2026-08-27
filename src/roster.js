@@ -1,7 +1,8 @@
 /**
- * ロスターの12枠定義と、選手がどの枠に配置可能かの判定ロジック。
- * ここでは「能力の優劣」は一切扱わず、実際に経験した役割・守備位置
- * という客観的事実だけから配置可否を決める。
+ * ロスターの12枠定義と、実際に経験した役割・守備位置（getEligibleSlotIds）を
+ * 候補カード表示用の参考情報として算出するロジック。
+ * 配置先の選択そのものは能力の優劣はもちろん実績ポジションでも制限せず、
+ * 空いている枠であればどこにでも配置できる（getOpenEligibleSlotIds）。
  */
 
 export const ROSTER_SLOTS = [
@@ -48,13 +49,15 @@ export function getOpenSlotIds(roster) {
 const FIELDING_SLOT_IDS = new Set(["C", "1B", "2B", "3B", "SS", "LF", "CF", "RF"]);
 
 /**
- * 選手が実際の経験に基づき配置しうる枠のIDを、ロスター状態に関係なく列挙する。
+ * 選手が実際に経験した役割・守備位置に対応する枠のIDを、ロスター状態に関係なく列挙する。
+ * 候補カードの参考バッジ表示にのみ使う情報で、配置先の選択を制限するものではない
+ * （実際の配置可否は getOpenEligibleSlotIds が決める）。
  * - pitcherRoles: SP/RP/CL の実績にそのまま対応。"P"は「投手として実際に
  *   登板した実績はあるが、先発/中継ぎ/抑えの内訳が資料上確認できない」場合の
- *   ワイルドカードで、SP/RP/CLいずれにも配置可能として扱う（役割の断定はしない）
+ *   ワイルドカードで、SP/RP/CLいずれにも対応するものとして扱う（役割の断定はしない）
  * - fieldingPositions: 各守備位置に対応。"OF"は外野の内訳が不明な場合の
- *   ワイルドカードで、LF/CF/RFいずれにも配置可能として扱う（左右中の断定はしない）
- * - canDH: true の野手はDH枠にも配置可能
+ *   ワイルドカードで、LF/CF/RFいずれにも対応するものとして扱う（左右中の断定はしない）
+ * - canDH: true の野手はDHにも対応
  */
 export function getEligibleSlotIds(player) {
   if (!player) return [];
@@ -87,9 +90,15 @@ export function getEligibleSlotIds(player) {
   return Array.from(slots);
 }
 
-/** 現在のロスターで実際に選べる（空いている）配置先のみを返す */
+/**
+ * 選手を実際に配置できる（空いている）枠を返す。
+ * ドラフト時ポジション・実際の守備経験（getEligibleSlotIds）は候補カードの
+ * 参考情報としてのみ表示し、配置先の選択そのものは制限しない仕様のため、
+ * ここでは常に「空いている全枠」を返す。
+ */
 export function getOpenEligibleSlotIds(player, roster) {
-  return getEligibleSlotIds(player).filter((slotId) => roster[slotId] === null);
+  if (!player) return [];
+  return getOpenSlotIds(roster);
 }
 
 export function canPlaceAnywhere(player, roster) {

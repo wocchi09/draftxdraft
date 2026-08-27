@@ -1086,8 +1086,8 @@
   {
     "id": "ueno_takahisa",
     "name": "上野貴久",
-    "throws": null,
-    "bats": null,
+    "throws": "L",
+    "bats": "L",
     "draftYear": 2006,
     "draftTeamId": "giants",
     "draftRound": "3位",
@@ -1095,11 +1095,13 @@
     "amateurTeam": "NTT東日本",
     "originType": "社会人",
     "draftPosition": "投手",
-    "pitcherRoles": [],
+    "pitcherRoles": [
+      "RP"
+    ],
     "fieldingPositions": [],
     "canDH": false,
     "isTwoWay": false,
-    "activeStatus": "unknown",
+    "activeStatus": "retired",
     "titles": [],
     "awards": []
   },

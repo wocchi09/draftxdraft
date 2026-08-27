@@ -31,7 +31,7 @@ export function twoWayBadgeHtml(pulse = false) {
 export function positionSummaryHtml(player) {
   const slots = getEligibleSlotIds(player);
   if (slots.length === 0) {
-    return `<span class="pos-badge grp-none">配置先未確認</span>`;
+    return `<span class="pos-badge grp-none">実績ポジション不明</span>`;
   }
   const order = ROSTER_SLOTS.map((s) => s.id);
   return slots
