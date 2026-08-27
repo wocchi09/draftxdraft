@@ -1,5 +1,6 @@
 import { ROSTER_SLOTS } from "./roster.js";
 import { getPlayer } from "./draft.js";
+import { classifyRound } from "./draftRound.js";
 
 /**
  * 完成ロスターの客観的事実分析。
@@ -8,12 +9,7 @@ import { getPlayer } from "./draft.js";
  */
 
 function classifyDraftRound(player) {
-  if (player.draftType === "育成") return "育成";
-  const round = player.draftRound || "";
-  if (round.startsWith("1") || round === "自由獲得枠" || round === "希望入団枠") return "1位";
-  if (round.startsWith("2")) return "2位";
-  if (round.startsWith("3")) return "3位";
-  return "4位以下";
+  return classifyRound(player.draftRound, player.draftType);
 }
 
 export function getRosterPlayers(roster) {

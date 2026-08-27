@@ -6,8 +6,8 @@ on:
   workflow_dispatch:
     inputs:
       years:
-        description: 取得する年度（スペース区切り。例 "2024 2023 2022"）
-        required: true
+        description: 取得する年度（スペース区切り。範囲も可。例 "1965-1980"。空なら取得しない）
+        required: false
         default: "2024"
       branch:
         description: コミット先のブランチ
@@ -16,6 +16,10 @@ on:
       fetch_status:
         description: 各選手の在籍状況（現役/引退）も取得するか
         required: true
+        default: "false"
+      dump_intros:
+        description: data/_raw/debug-titles.json の記事の冒頭文を書き出すか（判定の調査用）
+        required: false
         default: "false"
 
 permissions:
@@ -32,13 +36,22 @@ jobs:
         with:
           node-version: "22"
 
-      - run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
+      - name: Fetch each year's wikitext
+        if: inputs.years != ''
+        run: node tools/fetch-wikitext.mjs ${{ inputs.years }}
 
       - name: Look up each drafted player's active/retired status
         if: inputs.fetch_status == 'true'
         run: node tools/fetch-player-status.mjs
 
+      # 在籍状況の取得は件数が多く失敗しうるが、その場合でも
+      # ここまでに取れたwikitextは必ず持ち帰る。
+      - name: Dump article intros for debugging the active/retired rules
+        if: inputs.dump_intros == 'true'
+        run: node tools/dump-intros.mjs
+
       - name: Commit the fetched wikitext
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -47,5 +60,11 @@ jobs:
             echo "変更なし"
           else
             git commit -m "Fetch draft data for ${{ inputs.years }}"
-            git push origin HEAD:${{ inputs.branch }}
+            for i in 1 2 3 4 5; do
+              git pull --rebase origin ${{ inputs.branch }} && \
+                git push origin HEAD:${{ inputs.branch }} && exit 0
+              echo "push に失敗。$((i * 5))秒待って再試行"
+              sleep $((i * 5))
+            done
+            exit 1
           fi

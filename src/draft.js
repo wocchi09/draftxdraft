@@ -23,8 +23,18 @@ export function buildDraftPool() {
   return draftsData().map((d) => ({ year: d.year, teamId: d.teamId }));
 }
 
+// 選手は5000人近くいるので、毎回の線形探索を避けてIDで索く。
+// データが差し替わったら（配列の同一性で判定）作り直す。
+let playerIndex = null;
+let playerIndexSource = null;
+
 export function getPlayer(playerId) {
-  return playersData().find((p) => p.id === playerId) || null;
+  const players = playersData();
+  if (playerIndexSource !== players) {
+    playerIndex = new Map(players.map((p) => [p.id, p]));
+    playerIndexSource = players;
+  }
+  return playerIndex.get(playerId) || null;
 }
 
 export function getAllPlayers() {

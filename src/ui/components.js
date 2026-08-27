@@ -1,6 +1,7 @@
 import { escapeHtml } from "../utils/dom.js";
 import { ROSTER_SLOTS, getSlotDef } from "../roster.js";
 import { getTeamName } from "../teams.js";
+import { parseDraftRound, draftKindLabel, isLowRound } from "../draftRound.js";
 
 export function twoWayBadgeHtml(pulse = false) {
   return `<span class="badge-twoway${pulse ? " pulse" : ""}" title="投手・野手の両方として実際にプレーした選手">⚡ TWO-WAY</span>`;
@@ -19,7 +20,10 @@ function typeLabel(player) {
 
 export function candidateCardHtml(player, { expanded = false, disabled = false } = {}) {
   const round = player.pickRound || player.draftRound || "-";
-  const lowRound = /^[4-9]/.test(round) || round.startsWith("育成");
+  // 「高校1巡目」のような区分名付きの順位は、バッジ内で2行に分けて表示する
+  const { kind, shortRank } = parseDraftRound(round);
+  const kindLabel = draftKindLabel(round);
+  const lowRound = isLowRound(round, player.draftType);
   const throwsBats =
     player.throws || player.bats
       ? `投打 ${player.throws || "-"} / ${player.bats || "-"}`
@@ -33,6 +37,7 @@ export function candidateCardHtml(player, { expanded = false, disabled = false }
       <div><div class="field-label">${throwsBats}</div></div>
       <div><div class="field-label">当時の所属</div><div class="field-value">${originLine(player) || "不明"}</div></div>
       <div><div class="field-label">ドラフト時ポジション</div><div class="field-value">${escapeHtml(player.draftPosition || "不明")}</div></div>
+      ${kindLabel ? `<div><div class="field-label">指名区分</div><div class="field-value">${escapeHtml(kindLabel)}</div></div>` : ""}
       <div><div class="field-label">在籍状況</div><div class="field-value">${statusLabel}</div></div>
       ${
         (player.titles || []).length + (player.awards || []).length > 0
@@ -45,8 +50,9 @@ export function candidateCardHtml(player, { expanded = false, disabled = false }
   return `
   <div class="candidate-card${disabled ? " disabled" : ""}" data-player-id="${escapeHtml(player.id)}" role="button" tabindex="0" aria-disabled="${disabled}">
     <div class="candidate-top">
-      <div class="candidate-round-badge${lowRound ? " low-round" : ""}">
-        <span>${escapeHtml(round)}</span>
+      <div class="candidate-round-badge${lowRound ? " low-round" : ""}" title="${escapeHtml(kindLabel ? `${kindLabel} ${shortRank}` : round)}">
+        ${kind ? `<span class="round-kind">${escapeHtml(kind)}</span>` : ""}
+        <span class="round-rank">${escapeHtml(shortRank)}</span>
       </div>
       <div class="candidate-name-block">
         <div class="candidate-name">${escapeHtml(player.name)}${player.isTwoWay ? " " + twoWayBadgeHtml(true) : ""}</div>
