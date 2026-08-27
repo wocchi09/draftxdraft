@@ -93,6 +93,21 @@ draftxdraft/
 どこにでも配置できます）、候補カードには表示せず、ドラフト時のポジション
 （`draftPosition`）のみを表示しています。
 
+### データの取得と更新
+
+`data/players.json` / `data/drafts.json` は、Wikipediaの「YYYY年度新人選手選択会議 (日本プロ野球)」から
+機械的に生成しています（2016〜2025年度＝128通り・1242人を収録）。手順は3段階です。
+
+1. **取得** — GitHub Actions の `fetch-drafts` ワークフローを `workflow_dispatch` で実行すると、
+   ランナーが各年度のウィキテキストを取得して `data/_raw/YYYY.wikitext` としてコミットします
+   （`years` に年度をスペース区切りで指定）。
+2. **パース** — `node tools/parse-drafts.mjs` が `data/_raw/*.wikitext` を読み、
+   指名順位・ドラフト時ポジション・出身校を抽出して2つのJSONへ反映します。
+   既に登録済みの選手（名前×年度×球団が一致）は調査済みの値を温存し、上書きしません。
+3. **在籍状況** — `node tools/fetch-player-status.mjs` が記事冒頭の文言から現役/引退を判定し、
+   `node tools/apply-player-status.mjs` で `players.json` に反映します。
+   判定できなかった選手は `unknown` のままにし、推測では埋めません。
+
 ## ローカルでの実行
 
 Node.js等のビルド環境は不要です。リポジトリ直下で任意の静的サーバーを起動するだけで動きます。

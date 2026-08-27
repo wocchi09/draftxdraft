@@ -107,13 +107,15 @@ function parseTeamSection(body) {
       const position = plain(cells[1] || "");
       const school = plain(cells[2] || "");
       const result = plain(cells[3] || "");
+      // 順位の見出しは直後の1行にだけ対応するので、読み取ってから消す。
+      const pickRank = rank;
       rank = null;
       if (!name || !position) continue;
       if (result && result !== "入団") continue; // 拒否などは除く
       picks.push({
         name,
         wikiTitle: title,
-        round: type === "development" ? `育成${rank}` : rank,
+        round: type === "development" ? `育成${pickRank}` : pickRank,
         type,
         position,
         school,

@@ -373,77 +373,77 @@
     "picks": [
       {
         "playerId": "wp_2016_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_giants_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_13",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_14",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_giants_15",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -454,42 +454,42 @@
     "picks": [
       {
         "playerId": "wp_2016_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_tigers_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       }
     ]
@@ -500,37 +500,37 @@
     "picks": [
       {
         "playerId": "wp_2016_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -541,52 +541,52 @@
     "picks": [
       {
         "playerId": "wp_2016_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_9",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_baystars_10",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -597,32 +597,32 @@
     "picks": [
       {
         "playerId": "wp_2016_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -633,37 +633,37 @@
     "picks": [
       {
         "playerId": "wp_2016_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_swallows_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -674,52 +674,52 @@
     "picks": [
       {
         "playerId": "wp_2016_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_hawks_5",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_hawks_6",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_hawks_7",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_hawks_8",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_hawks_9",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_hawks_10",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -730,42 +730,42 @@
     "picks": [
       {
         "playerId": "wp_2016_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_6",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_7",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_fighters_8",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       }
     ]
@@ -776,47 +776,47 @@
     "picks": [
       {
         "playerId": "wp_2016_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_marines_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_marines_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -827,32 +827,32 @@
     "picks": [
       {
         "playerId": "wp_2016_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -863,72 +863,72 @@
     "picks": [
       {
         "playerId": "wp_2016_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_9",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_orix_10",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_orix_11",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_orix_12",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_orix_13",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_orix_14",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -939,72 +939,72 @@
     "picks": [
       {
         "playerId": "wp_2016_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_9",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_10",
-        "round": null,
+        "round": "10位",
         "type": "regular"
       },
       {
         "playerId": "wp_2016_rakuten_11",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_rakuten_12",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_rakuten_13",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2016_rakuten_14",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -1015,82 +1015,82 @@
     "picks": [
       {
         "playerId": "wp_2017_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_giants_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_10",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_11",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_12",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_13",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_14",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_15",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_giants_16",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -1101,37 +1101,37 @@
     "picks": [
       {
         "playerId": "wp_2017_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_tigers_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -1142,42 +1142,42 @@
     "picks": [
       {
         "playerId": "wp_2017_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_dragons_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -1188,52 +1188,52 @@
     "picks": [
       {
         "playerId": "wp_2017_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_9",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_baystars_10",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -1244,47 +1244,47 @@
     "picks": [
       {
         "playerId": "wp_2017_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_carp_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_carp_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_carp_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -1295,42 +1295,42 @@
     "picks": [
       {
         "playerId": "murakami_munetaka",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "oshita_yuma",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "kuramoto_haruyoshi",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "shiomi_yasutaka",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "kanakubo_yuto",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "miyamoto_jo",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "matsumoto_naoki",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "numata_takumi",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       }
     ]
@@ -1341,57 +1341,57 @@
     "picks": [
       {
         "playerId": "wp_2017_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_hawks_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_hawks_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_hawks_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_hawks_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_hawks_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_hawks_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -1402,37 +1402,37 @@
     "picks": [
       {
         "playerId": "wp_2017_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_fighters_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       }
     ]
@@ -1443,42 +1443,42 @@
     "picks": [
       {
         "playerId": "wp_2017_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_marines_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_marines_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -1489,42 +1489,42 @@
     "picks": [
       {
         "playerId": "wp_2017_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_seibu_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_seibu_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -1535,62 +1535,62 @@
     "picks": [
       {
         "playerId": "wp_2017_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_orix_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_orix_10",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_orix_11",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_orix_12",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -1601,52 +1601,52 @@
     "picks": [
       {
         "playerId": "wp_2017_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2017_rakuten_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_rakuten_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2017_rakuten_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -1657,52 +1657,52 @@
     "picks": [
       {
         "playerId": "wp_2018_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_giants_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_giants_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_giants_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_giants_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -1713,37 +1713,37 @@
     "picks": [
       {
         "playerId": "wp_2018_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_tigers_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -1754,32 +1754,32 @@
     "picks": [
       {
         "playerId": "wp_2018_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -1790,37 +1790,37 @@
     "picks": [
       {
         "playerId": "wp_2018_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_baystars_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -1831,42 +1831,42 @@
     "picks": [
       {
         "playerId": "wp_2018_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_carp_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -1877,52 +1877,52 @@
     "picks": [
       {
         "playerId": "wp_2018_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_swallows_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_swallows_10",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -1933,57 +1933,57 @@
     "picks": [
       {
         "playerId": "wp_2018_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_hawks_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_hawks_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_hawks_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_hawks_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -1994,42 +1994,42 @@
     "picks": [
       {
         "playerId": "wp_2018_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_fighters_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -2040,47 +2040,47 @@
     "picks": [
       {
         "playerId": "wp_2018_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_marines_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -2091,52 +2091,52 @@
     "picks": [
       {
         "playerId": "wp_2018_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_seibu_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_seibu_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_seibu_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -2147,42 +2147,42 @@
     "picks": [
       {
         "playerId": "wp_2018_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_orix_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -2193,52 +2193,52 @@
     "picks": [
       {
         "playerId": "wp_2018_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2018_rakuten_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2018_rakuten_10",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -2249,42 +2249,42 @@
     "picks": [
       {
         "playerId": "wp_2019_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_giants_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_giants_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -2295,42 +2295,42 @@
     "picks": [
       {
         "playerId": "wp_2019_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_tigers_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_tigers_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -2341,37 +2341,37 @@
     "picks": [
       {
         "playerId": "wp_2019_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -2382,37 +2382,37 @@
     "picks": [
       {
         "playerId": "wp_2019_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_baystars_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       }
     ]
@@ -2423,47 +2423,47 @@
     "picks": [
       {
         "playerId": "wp_2019_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_carp_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_carp_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_carp_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -2474,32 +2474,32 @@
     "picks": [
       {
         "playerId": "wp_2019_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_swallows_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -2510,62 +2510,62 @@
     "picks": [
       {
         "playerId": "wp_2019_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_hawks_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_hawks_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       }
     ]
@@ -2576,52 +2576,52 @@
     "picks": [
       {
         "playerId": "wp_2019_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_fighters_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_fighters_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_fighters_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -2632,37 +2632,37 @@
     "picks": [
       {
         "playerId": "sasaki_roki",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "sato_toshiya",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "takabe_eito",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "yokoyama_rikuto",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "fukuda_koki",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_marines_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "ueda_shota",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -2673,47 +2673,47 @@
     "picks": [
       {
         "playerId": "wp_2019_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_seibu_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -2724,67 +2724,67 @@
     "picks": [
       {
         "playerId": "wp_2019_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_orix_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_orix_13",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -2795,57 +2795,57 @@
     "picks": [
       {
         "playerId": "wp_2019_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2019_rakuten_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_rakuten_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_rakuten_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2019_rakuten_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -2856,92 +2856,92 @@
     "picks": [
       {
         "playerId": "wp_2020_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_giants_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_12",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_13",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_14",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_15",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_16",
-        "round": "育成null",
+        "round": "育成10位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_17",
-        "round": "育成null",
+        "round": "育成11位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_giants_18",
-        "round": "育成null",
+        "round": "育成12位",
         "type": "development"
       }
     ]
@@ -2952,47 +2952,47 @@
     "picks": [
       {
         "playerId": "wp_2020_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_tigers_9",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -3003,47 +3003,47 @@
     "picks": [
       {
         "playerId": "wp_2020_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_dragons_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_dragons_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -3054,42 +3054,42 @@
     "picks": [
       {
         "playerId": "wp_2020_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_baystars_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_baystars_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -3100,37 +3100,37 @@
     "picks": [
       {
         "playerId": "wp_2020_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_carp_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -3141,52 +3141,52 @@
     "picks": [
       {
         "playerId": "wp_2020_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_swallows_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_swallows_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_swallows_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_swallows_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -3197,67 +3197,67 @@
     "picks": [
       {
         "playerId": "wp_2020_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_hawks_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_hawks_13",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -3268,42 +3268,42 @@
     "picks": [
       {
         "playerId": "wp_2020_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_fighters_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_fighters_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -3314,47 +3314,47 @@
     "picks": [
       {
         "playerId": "suzuki_shota",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "nakamori_shunsuke",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "ogawa_ryusei",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "kawamura_tokito",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "nishikawa_ryosuke",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_marines_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_marines_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_marines_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_marines_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -3365,62 +3365,62 @@
     "picks": [
       {
         "playerId": "wp_2020_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_seibu_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_seibu_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_seibu_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_seibu_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_seibu_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -3431,62 +3431,62 @@
     "picks": [
       {
         "playerId": "wp_2020_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_orix_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_orix_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_orix_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_orix_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_orix_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2020_orix_12",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -3497,37 +3497,37 @@
     "picks": [
       {
         "playerId": "wp_2020_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2020_rakuten_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -3538,87 +3538,87 @@
     "picks": [
       {
         "playerId": "wp_2021_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_giants_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_13",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_14",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_15",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_16",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_giants_17",
-        "round": "育成null",
+        "round": "育成10位",
         "type": "development"
       }
     ]
@@ -3629,42 +3629,42 @@
     "picks": [
       {
         "playerId": "wp_2021_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_tigers_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -3675,32 +3675,32 @@
     "picks": [
       {
         "playerId": "wp_2021_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       }
     ]
@@ -3711,47 +3711,47 @@
     "picks": [
       {
         "playerId": "wp_2021_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_baystars_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_baystars_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_baystars_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -3762,57 +3762,57 @@
     "picks": [
       {
         "playerId": "wp_2021_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_carp_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_carp_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_carp_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_carp_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -3823,32 +3823,32 @@
     "picks": [
       {
         "playerId": "wp_2021_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_swallows_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -3859,97 +3859,97 @@
     "picks": [
       {
         "playerId": "wp_2021_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_hawks_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_13",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_14",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_15",
-        "round": "育成null",
+        "round": "育成10位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_16",
-        "round": "育成null",
+        "round": "育成11位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_17",
-        "round": "育成null",
+        "round": "育成12位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_18",
-        "round": "育成null",
+        "round": "育成13位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_hawks_19",
-        "round": "育成null",
+        "round": "育成14位",
         "type": "development"
       }
     ]
@@ -3960,67 +3960,67 @@
     "picks": [
       {
         "playerId": "wp_2021_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_9",
-        "round": null,
+        "round": "9位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_fighters_10",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_fighters_11",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_fighters_12",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_fighters_13",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4031,47 +4031,47 @@
     "picks": [
       {
         "playerId": "wp_2021_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_marines_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_marines_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_marines_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_marines_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4082,52 +4082,52 @@
     "picks": [
       {
         "playerId": "wp_2021_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_seibu_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_seibu_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_seibu_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_seibu_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4138,52 +4138,52 @@
     "picks": [
       {
         "playerId": "wp_2021_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_orix_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_orix_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_orix_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -4194,52 +4194,52 @@
     "picks": [
       {
         "playerId": "wp_2021_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2021_rakuten_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_rakuten_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2021_rakuten_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -4250,72 +4250,72 @@
     "picks": [
       {
         "playerId": "wp_2022_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_giants_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_13",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_giants_14",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       }
     ]
@@ -4326,37 +4326,37 @@
     "picks": [
       {
         "playerId": "wp_2022_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_tigers_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -4367,52 +4367,52 @@
     "picks": [
       {
         "playerId": "wp_2022_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_dragons_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_dragons_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_dragons_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -4423,52 +4423,52 @@
     "picks": [
       {
         "playerId": "wp_2022_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_baystars_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_baystars_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_baystars_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_baystars_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_baystars_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -4479,52 +4479,52 @@
     "picks": [
       {
         "playerId": "wp_2022_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_carp_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_carp_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_carp_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -4535,32 +4535,32 @@
     "picks": [
       {
         "playerId": "wp_2022_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_swallows_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -4571,102 +4571,102 @@
     "picks": [
       {
         "playerId": "wp_2022_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_hawks_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_12",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_13",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_14",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_15",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_16",
-        "round": "育成null",
+        "round": "育成10位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_17",
-        "round": "育成null",
+        "round": "育成11位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_18",
-        "round": "育成null",
+        "round": "育成12位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_19",
-        "round": "育成null",
+        "round": "育成13位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_hawks_20",
-        "round": "育成null",
+        "round": "育成14位",
         "type": "development"
       }
     ]
@@ -4677,52 +4677,52 @@
     "picks": [
       {
         "playerId": "wp_2022_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_fighters_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_fighters_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_fighters_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_fighters_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4733,47 +4733,47 @@
     "picks": [
       {
         "playerId": "wp_2022_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_marines_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_marines_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_marines_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_marines_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4784,52 +4784,52 @@
     "picks": [
       {
         "playerId": "wp_2022_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_seibu_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_seibu_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_seibu_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_seibu_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4840,52 +4840,52 @@
     "picks": [
       {
         "playerId": "wp_2022_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_orix_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_orix_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_orix_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_orix_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_orix_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -4896,52 +4896,52 @@
     "picks": [
       {
         "playerId": "wp_2022_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2022_rakuten_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_rakuten_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_rakuten_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2022_rakuten_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -4952,62 +4952,62 @@
     "picks": [
       {
         "playerId": "wp_2023_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_giants_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_giants_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       }
     ]
@@ -5018,42 +5018,42 @@
     "picks": [
       {
         "playerId": "shimomura_kaito",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "shiiba_tsuyoshi",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "yamada_shuya",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "ishiguro_yuya",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "tsuda_junya",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "matsubara_kai",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "fukushima_keito",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -5064,52 +5064,52 @@
     "picks": [
       {
         "playerId": "wp_2023_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_dragons_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_dragons_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_dragons_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -5120,57 +5120,57 @@
     "picks": [
       {
         "playerId": "wp_2023_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_baystars_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_baystars_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_baystars_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_baystars_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_baystars_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -5181,42 +5181,42 @@
     "picks": [
       {
         "playerId": "wp_2023_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_carp_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_carp_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_carp_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -5227,37 +5227,37 @@
     "picks": [
       {
         "playerId": "wp_2023_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_swallows_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_swallows_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -5268,77 +5268,77 @@
     "picks": [
       {
         "playerId": "wp_2023_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_hawks_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_13",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_14",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_hawks_15",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -5349,42 +5349,42 @@
     "picks": [
       {
         "playerId": "wp_2023_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_fighters_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_fighters_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_fighters_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -5395,52 +5395,52 @@
     "picks": [
       {
         "playerId": "wp_2023_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_marines_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_marines_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_marines_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_marines_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_marines_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -5451,67 +5451,67 @@
     "picks": [
       {
         "playerId": "wp_2023_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_seibu_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_seibu_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_seibu_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_seibu_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_seibu_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_seibu_13",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -5522,62 +5522,62 @@
     "picks": [
       {
         "playerId": "wp_2023_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_orix_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_orix_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_orix_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_orix_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2023_orix_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -5588,42 +5588,42 @@
     "picks": [
       {
         "playerId": "wp_2023_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2023_rakuten_8",
-        "round": null,
+        "round": "8位",
         "type": "regular"
       }
     ]
@@ -5634,57 +5634,57 @@
     "picks": [
       {
         "playerId": "wp_2024_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_giants_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_giants_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_giants_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_giants_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_giants_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_giants_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -5695,47 +5695,47 @@
     "picks": [
       {
         "playerId": "wp_2024_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_tigers_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_tigers_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_tigers_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_tigers_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -5746,42 +5746,42 @@
     "picks": [
       {
         "playerId": "kanemaru_yumeto",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "yoshida_seiya",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "mori_shunta",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "ishii_yuta",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "takahashi_kosuke",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_dragons_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -5792,47 +5792,47 @@
     "picks": [
       {
         "playerId": "wp_2024_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_baystars_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_baystars_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_baystars_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -5843,42 +5843,42 @@
     "picks": [
       {
         "playerId": "sasaki_tai",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "sato_ryunosuke",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "okamoto_shun",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "watanabe_yuto",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "kikuchi_harun",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_carp_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_carp_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_carp_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -5889,47 +5889,47 @@
     "picks": [
       {
         "playerId": "wp_2024_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_swallows_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_swallows_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_swallows_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_swallows_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -5940,92 +5940,92 @@
     "picks": [
       {
         "playerId": "wp_2024_hawks_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_hawks_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_8",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_9",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_10",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_11",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_12",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_13",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_14",
-        "round": "育成null",
+        "round": "育成9位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_15",
-        "round": "育成null",
+        "round": "育成10位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_16",
-        "round": "育成null",
+        "round": "育成11位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_17",
-        "round": "育成null",
+        "round": "育成12位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_hawks_18",
-        "round": "育成null",
+        "round": "育成13位",
         "type": "development"
       }
     ]
@@ -6036,42 +6036,42 @@
     "picks": [
       {
         "playerId": "wp_2024_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_fighters_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_fighters_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -6082,47 +6082,47 @@
     "picks": [
       {
         "playerId": "wp_2024_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_marines_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_marines_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_marines_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -6133,72 +6133,72 @@
     "picks": [
       {
         "playerId": "saito_hiroto",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "watanabe_seiya",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "kariu_shoma",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "rin_kwanchen",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "shinohara_hibiki",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "tatsuyama_haruki",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "koga_teruki",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_seibu_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_13",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_seibu_14",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       }
     ]
@@ -6209,62 +6209,62 @@
     "picks": [
       {
         "playerId": "wp_2024_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_orix_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_orix_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_orix_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_orix_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_orix_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2024_orix_12",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       }
     ]
@@ -6275,37 +6275,37 @@
     "picks": [
       {
         "playerId": "wp_2024_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2024_rakuten_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -6316,57 +6316,57 @@
     "picks": [
       {
         "playerId": "wp_2025_giants_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_giants_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_giants_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_giants_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_giants_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_giants_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
@@ -6377,37 +6377,37 @@
     "picks": [
       {
         "playerId": "wp_2025_tigers_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_tigers_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_tigers_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_tigers_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_tigers_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_tigers_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_tigers_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -6418,47 +6418,47 @@
     "picks": [
       {
         "playerId": "wp_2025_dragons_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_dragons_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_dragons_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_dragons_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -6469,32 +6469,32 @@
     "picks": [
       {
         "playerId": "wp_2025_baystars_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_baystars_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_baystars_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_baystars_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_baystars_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_baystars_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -6505,47 +6505,47 @@
     "picks": [
       {
         "playerId": "wp_2025_carp_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_carp_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_carp_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -6556,42 +6556,42 @@
     "picks": [
       {
         "playerId": "wp_2025_swallows_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_swallows_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       }
     ]
@@ -6602,62 +6602,62 @@
     "picks": [
       {
         "playerId": "wp_2025_hawks_1",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_hawks_2",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_hawks_3",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_hawks_4",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_hawks_5",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_6",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_7",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_8",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_9",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_10",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_11",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_hawks_12",
-        "round": "育成null",
+        "round": "育成8位",
         "type": "development"
       }
     ]
@@ -6668,37 +6668,37 @@
     "picks": [
       {
         "playerId": "wp_2025_fighters_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_fighters_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_fighters_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_fighters_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_fighters_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_fighters_6",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_fighters_7",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       }
     ]
@@ -6709,52 +6709,52 @@
     "picks": [
       {
         "playerId": "wp_2025_marines_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_marines_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_marines_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_marines_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       }
     ]
@@ -6765,67 +6765,67 @@
     "picks": [
       {
         "playerId": "wp_2025_seibu_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_seibu_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_11",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_12",
-        "round": "育成null",
+        "round": "育成6位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_seibu_13",
-        "round": "育成null",
+        "round": "育成7位",
         "type": "development"
       }
     ]
@@ -6836,52 +6836,52 @@
     "picks": [
       {
         "playerId": "wp_2025_orix_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_6",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_orix_7",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_orix_8",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_orix_9",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_orix_10",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       }
     ]
@@ -6892,62 +6892,62 @@
     "picks": [
       {
         "playerId": "wp_2025_rakuten_1",
-        "round": null,
+        "round": "1位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_2",
-        "round": null,
+        "round": "2位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_3",
-        "round": null,
+        "round": "3位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_4",
-        "round": null,
+        "round": "4位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_5",
-        "round": null,
+        "round": "5位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_6",
-        "round": null,
+        "round": "6位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_7",
-        "round": null,
+        "round": "7位",
         "type": "regular"
       },
       {
         "playerId": "wp_2025_rakuten_8",
-        "round": "育成null",
+        "round": "育成1位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_rakuten_9",
-        "round": "育成null",
+        "round": "育成2位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_rakuten_10",
-        "round": "育成null",
+        "round": "育成3位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_rakuten_11",
-        "round": "育成null",
+        "round": "育成4位",
         "type": "development"
       },
       {
         "playerId": "wp_2025_rakuten_12",
-        "round": "育成null",
+        "round": "育成5位",
         "type": "development"
       }
     ]
