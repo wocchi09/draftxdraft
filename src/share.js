@@ -45,22 +45,57 @@ export function buildShareSummary(state) {
   };
 }
 
+/** シェア画像のファイル名。同じチームなら同じ名前になるようにする */
+export function shareImageFileName(state) {
+  const at = new Date(state.completedAt || Date.now());
+  const stamp = [
+    at.getFullYear(),
+    String(at.getMonth() + 1).padStart(2, "0"),
+    String(at.getDate()).padStart(2, "0"),
+  ].join("");
+  return `draftxdraft-${stamp}.png`;
+}
+
 /**
- * Web Share APIが使える環境ではネイティブ共有シートを開く。
- * 使えない環境ではfalseを返し、呼び出し側でスクリーンショット導線を案内する。
+ * 画像を添えてネイティブ共有シートを開く。
+ *
+ * 画像の添付に対応しているかは端末とブラウザ次第なので、戻り値で伝える。
+ *   "shared"      共有シートを開いて共有した
+ *   "cancelled"   利用者が共有シートを閉じた
+ *   "unsupported" 画像付き共有に対応していない（呼び出し側で保存へ回す）
  */
-export async function shareTeam(text) {
-  if (navigator.share) {
-    try {
-      await navigator.share({ text });
-      return true;
-    } catch (err) {
-      if (err && err.name === "AbortError") return false;
-      console.warn("[share] Web Share APIでの共有に失敗しました", err);
-      return false;
-    }
+export async function shareTeamImage(text, blob, fileName) {
+  if (!blob || !navigator.share || !navigator.canShare) return "unsupported";
+  let file;
+  try {
+    file = new File([blob], fileName, { type: "image/png" });
+  } catch {
+    return "unsupported";
   }
-  return false;
+  if (!navigator.canShare({ files: [file] })) return "unsupported";
+  try {
+    await navigator.share({ text, files: [file] });
+    return "shared";
+  } catch (err) {
+    if (err && err.name === "AbortError") return "cancelled";
+    console.warn("[share] 画像付き共有に失敗しました", err);
+    return "unsupported";
+  }
+}
+
+/** 画像をその場でダウンロードさせる（共有シートが使えない環境向け） */
+export function downloadImage(blob, fileName) {
+  if (!blob) return false;
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = fileName;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  // すぐ revoke するとダウンロードが始まらない環境があるので少し待つ
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+  return true;
 }
 
 export function buildSnsIntentUrls(text) {
