@@ -210,6 +210,24 @@
   text-align: center;
 }
 
+/* 「高校1巡目」のような区分名付きの順位は、区分を小さく上段に載せる */
+.candidate-round-badge .round-kind {
+  font-size: 9px;
+  font-weight: 700;
+  opacity: 0.72;
+  letter-spacing: -0.02em;
+}
+
+.candidate-round-badge .round-rank {
+  font-size: 11px;
+  letter-spacing: -0.03em;
+}
+
+/* 「1巡目」など4文字以上でも44pxの箱からはみ出さないようにする */
+.candidate-round-badge:has(.round-kind) .round-rank {
+  font-size: 10px;
+}
+
 .candidate-round-badge.low-round {
   background: var(--accent-soft);
   color: var(--accent-text);

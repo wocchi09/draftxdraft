@@ -67,11 +67,12 @@ const TEAM_IDS = {
  * 表の区分見出し → { type, prefix }。
  * 同じ年に複数のドラフトがあった年（1966年の第1次/第2次、2005〜2007年の
  * 高校生/大学生・社会人）は「1位」が重複するので、順位に区分名を冠する。
+ * 冠する語は src/draftRound.js の DRAFT_KINDS と対応させること。
  */
 const SECTION_KINDS = [
   { match: /^育成/, type: "development", prefix: "育成" },
-  { match: /^大学生・社会人/, type: "regular", prefix: "大学社会人" },
-  { match: /^高校生/, type: "regular", prefix: "高校生" },
+  { match: /^大学生・社会人/, type: "regular", prefix: "大社" },
+  { match: /^高校生/, type: "regular", prefix: "高校" },
   { match: /^第(\d)次/, type: "regular", prefix: (m) => `第${m[1]}次` },
   { match: /^(新人選手選択会議|支配下選手)/, type: "regular", prefix: "" },
 ];
