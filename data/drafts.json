@@ -484,5 +484,159 @@
         "type": "development"
       }
     ]
+  },
+  {
+    "year": 2023,
+    "teamId": "tigers",
+    "picks": [
+      {
+        "playerId": "shimomura_kaito",
+        "round": "1位",
+        "type": "regular"
+      },
+      {
+        "playerId": "shiiba_tsuyoshi",
+        "round": "2位",
+        "type": "regular"
+      },
+      {
+        "playerId": "yamada_shuya",
+        "round": "3位",
+        "type": "regular"
+      },
+      {
+        "playerId": "momosaki_aoi",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "ishiguro_yuya",
+        "round": "5位",
+        "type": "regular"
+      },
+      {
+        "playerId": "tsuda_junya",
+        "round": "6位",
+        "type": "regular"
+      },
+      {
+        "playerId": "matsubara_kai",
+        "round": "育成1位",
+        "type": "development"
+      },
+      {
+        "playerId": "fukushima_keito",
+        "round": "育成2位",
+        "type": "development"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "teamId": "carp",
+    "picks": [
+      {
+        "playerId": "sasaki_tai",
+        "round": "1位",
+        "type": "regular"
+      },
+      {
+        "playerId": "sato_ryunosuke",
+        "round": "2位",
+        "type": "regular"
+      },
+      {
+        "playerId": "okamoto_shun",
+        "round": "3位",
+        "type": "regular"
+      },
+      {
+        "playerId": "watanabe_yuto",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "kikuchi_harun",
+        "round": "5位",
+        "type": "regular"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "teamId": "seibu",
+    "picks": [
+      {
+        "playerId": "saito_hiroto",
+        "round": "1位",
+        "type": "regular"
+      },
+      {
+        "playerId": "watanabe_seiya",
+        "round": "2位",
+        "type": "regular"
+      },
+      {
+        "playerId": "kariu_shoma",
+        "round": "3位",
+        "type": "regular"
+      },
+      {
+        "playerId": "rin_kwanchen",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "shinohara_hibiki",
+        "round": "5位",
+        "type": "regular"
+      },
+      {
+        "playerId": "tatsuyama_haruki",
+        "round": "6位",
+        "type": "regular"
+      },
+      {
+        "playerId": "koga_teruki",
+        "round": "7位",
+        "type": "regular"
+      }
+    ]
+  },
+  {
+    "year": 2024,
+    "teamId": "dragons",
+    "picks": [
+      {
+        "playerId": "kanemaru_yumeto",
+        "round": "1位",
+        "type": "regular"
+      },
+      {
+        "playerId": "yoshida_seiya",
+        "round": "2位",
+        "type": "regular"
+      },
+      {
+        "playerId": "mori_shunta",
+        "round": "3位",
+        "type": "regular"
+      },
+      {
+        "playerId": "ishii_yuta",
+        "round": "4位",
+        "type": "regular"
+      },
+      {
+        "playerId": "takahashi_kosuke",
+        "round": "5位",
+        "type": "regular"
+      },
+      {
+        "playerId": "arima_kanato",
+        "round": "6位",
+        "type": "regular"
+      }
+    ]
   }
 ]

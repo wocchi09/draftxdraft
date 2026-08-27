@@ -55,18 +55,28 @@ export function getCandidates(year, teamId, excludePlayerIds = new Set()) {
  * モードに応じてフィルタ済みのプールから1件、年度×球団をランダム抽選する。
  * プールが空の場合はnullを返す（呼び出し側で例外処理する）。
  *
- * `ctx.excludeComboKeys`（`"year-teamId"`文字列のSet）を渡すと、
- * このゲームで既に一度抽選に出た組み合わせを避けて抽選する
- * （まだ出ていない組み合わせが残っている限り優先する）。
- * 全ての組み合わせを出し尽くした場合は、ゲームが進行不能にならないよう
- * 除外なしの全プールへ自動でフォールバックする。
+ * 抽選は「シャッフルバッグ」方式。`ctx.excludeComboKeys`（この巡で既に出た
+ * `"year-teamId"` のSet）にある組み合わせは除外され、
+ * まだ出ていないものから一様ランダムに選ぶ。つまり一巡する間は絶対に重複しない。
+ *
+ * プールを出し尽くしたら次の巡に入る。その最初の1件だけは
+ * `ctx.avoidComboKey`（直前に出た組み合わせ）を候補から外し、
+ * 巡の境目で同じ組み合わせが2連続で出ないようにする。
  */
 export function drawDraftCombo(mode, ctx = {}) {
   const pool = mode.filterPool(buildDraftPool(), ctx);
-  const excludeKeys = ctx.excludeComboKeys;
-  if (excludeKeys && excludeKeys.size > 0) {
-    const unseen = pool.filter((c) => !excludeKeys.has(`${c.year}-${c.teamId}`));
+  if (pool.length === 0) return null;
+
+  const keyOf = (c) => `${c.year}-${c.teamId}`;
+  const exclude = ctx.excludeComboKeys;
+
+  if (exclude && exclude.size > 0) {
+    const unseen = pool.filter((c) => !exclude.has(keyOf(c)));
     if (unseen.length > 0) return pickRandom(unseen);
+    // ここに来たら一巡し終えた。次の巡へ移る。
+    const fresh = pool.filter((c) => keyOf(c) !== ctx.avoidComboKey);
+    return pickRandom(fresh.length > 0 ? fresh : pool);
   }
-  return pickRandom(pool) || null;
+
+  return pickRandom(pool);
 }

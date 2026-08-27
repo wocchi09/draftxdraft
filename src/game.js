@@ -24,10 +24,14 @@ export class GameError extends Error {}
 export function drawForState(state) {
   const mode = getMode(state.modeId);
   const excludeIds = new Set(state.pickedPlayerIds);
-  const excludeComboKeys = new Set(state.drawnComboKeys || []);
+  // drawnComboKeys は「今の巡で既に出た組み合わせ」。プールを一周したら
+  // 下で作り直すので、ゲーム全体の履歴ではない点に注意。
+  const drawnKeys = state.drawnComboKeys || [];
+  const excludeComboKeys = new Set(drawnKeys);
+  const avoidComboKey = drawnKeys.length > 0 ? drawnKeys[drawnKeys.length - 1] : null;
 
   for (let attempt = 0; attempt < MAX_AUTO_REDRAW; attempt++) {
-    const combo = drawDraftCombo(mode, { state, excludeComboKeys });
+    const combo = drawDraftCombo(mode, { state, excludeComboKeys, avoidComboKey });
     if (!combo) {
       return { ok: false, reason: "pool_empty" };
     }
@@ -39,10 +43,8 @@ export function drawForState(state) {
       state.currentCandidates = candidates;
       state.lastAutoRedraws = attempt;
       const key = comboKey(combo.year, combo.teamId);
-      const drawnKeys = state.drawnComboKeys || [];
-      if (!drawnKeys.includes(key)) {
-        state.drawnComboKeys = [...drawnKeys, key];
-      }
+      // 既に出ている＝プールを一周したということ。この1件を先頭にして次の巡を始める。
+      state.drawnComboKeys = drawnKeys.includes(key) ? [key] : [...drawnKeys, key];
       return { ok: true, autoRedraws: attempt };
     }
   }
