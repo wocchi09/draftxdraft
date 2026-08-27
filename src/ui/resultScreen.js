@@ -29,14 +29,18 @@ export function renderResultScreen(root, app) {
   const wrap = document.createElement("div");
   wrap.className = "screen";
 
+  const orderTotal = (record.battingOrder || []).length;
   const orderRowsHtml = (record.battingOrder || [])
     .map((playerId, idx) => {
       const player = getPlayer(playerId);
       const slotId = slotIdForPlayer(record.roster, playerId);
       const slot = getSlotDef(slotId);
+      const numOptionsHtml = Array.from({ length: orderTotal }, (_, i) => i + 1)
+        .map((n) => `<option value="${n}"${n === idx + 1 ? " selected" : ""}>${n}</option>`)
+        .join("");
       return `
       <div class="order-row" draggable="true" data-index="${idx}">
-        <span class="order-num">${idx + 1}</span>
+        <select class="order-num-select" data-order-select="${idx}" aria-label="${escapeHtml(player ? player.name : "選手")}の打順を選択">${numOptionsHtml}</select>
         <span class="order-info">
           <span class="order-name">${escapeHtml(player ? player.name : "?")}</span>
           <span class="order-pos">${slot ? escapeHtml(slot.shortLabel) : ""}</span>
@@ -205,6 +209,14 @@ function bindEvents(wrap, app, record) {
         nativeShareBtn.textContent = "共有する";
       }, 2200);
     }
+  });
+
+  wrap.querySelectorAll("[data-order-select]").forEach((select) => {
+    select.addEventListener("change", () => {
+      const from = Number(select.dataset.orderSelect);
+      const to = Number(select.value) - 1;
+      app.setBattingOrder(moveTo(record.battingOrder, from, to));
+    });
   });
 
   wrap.querySelectorAll("[data-move-up]").forEach((btn) => {
