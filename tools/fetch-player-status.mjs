@@ -68,7 +68,11 @@ for (let i = 0; i < todo.length; i += BATCH) {
   for (const n of json?.query?.normalized || []) alias.set(n.to, n.from);
 
   for (const page of json?.query?.pages || []) {
-    if (page.missing) continue;
+    if (page.missing) {
+      // 記事が存在しない（赤リンク）。再実行で叩き直さないよう印を残す。
+      out[page.title] = { missing: true };
+      continue;
+    }
     const record = {
       intro: (page.extract || "").slice(0, 300),
       alive: (page.categories || []).some((c) => c.title === "Category:存命人物"),
