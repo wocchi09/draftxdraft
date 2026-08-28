@@ -3,7 +3,12 @@
   padding: var(--sp-3) var(--sp-4) calc(96px + var(--sa-bottom));
   display: flex;
   flex-direction: column;
-  gap: var(--sp-5);
+  gap: var(--sp-3);
+}
+
+/* MY TEAMと履歴は選び終わってから見るものなので、候補一覧との間だけ広くとる */
+.game-body > .myteam-block {
+  margin-top: var(--sp-4);
 }
 
 /* ---------------- PROGRESS ---------------- */
@@ -11,17 +16,18 @@
 .progress-block {
   display: flex;
   flex-direction: column;
-  gap: var(--sp-2);
+  gap: 6px;
 }
 
 .progress-row {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-between;
+  gap: var(--sp-3);
 }
 
 .progress-count {
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 800;
 }
 
@@ -32,7 +38,7 @@
 }
 
 .progress-track {
-  height: 8px;
+  height: 6px;
   border-radius: var(--r-pill);
   background: var(--bg-3);
   overflow: hidden;
@@ -49,7 +55,7 @@
   display: flex;
   align-items: center;
   gap: var(--sp-2);
-  font-size: 13px;
+  font-size: 12px;
   color: var(--text-2);
   font-weight: 700;
 }
@@ -83,6 +89,26 @@
   gap: var(--sp-2);
   position: relative;
   overflow: hidden;
+}
+
+/*
+ * 抽選が確定したら1行に畳む。回している間は演出として大きく見せたいが、
+ * 確定後は候補を選ぶのが主役なので、場所を候補一覧へ譲る。
+ */
+.draft-result.settled {
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: center;
+  gap: var(--sp-3);
+  padding: var(--sp-3) var(--sp-4);
+}
+
+.draft-result.settled .year {
+  font-size: 26px;
+}
+
+.draft-result.settled .team-name {
+  font-size: 17px;
 }
 
 .draft-result::before {
@@ -157,16 +183,41 @@
 /* ---------------- CANDIDATE CARDS ---------------- */
 
 .candidate-list {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sp-3);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
+
+/*
+ * 候補は全部見えてから選びたいので、スクロールせずに収まることを優先する。
+ * 指名が多い年（最多20人）と、画面の低い端末では2列に切り替える。
+ * カードの見た目は1列でも2列でも同じにして、切り替わっても違和感が出ないようにしている。
+ */
+.candidate-list.is-dense {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+@media (max-height: 780px) {
+  .candidate-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
+
+/* 2列のときに詳細を開いたカードは、幅が狭くて読みにくいので横いっぱいに広げる */
+.candidate-list .candidate-card:has(.candidate-detail) {
+  grid-column: 1 / -1;
+}
+
 
 .candidate-card {
   background: var(--bg-2);
   border: 1.5px solid var(--border-1);
   border-radius: var(--r-md);
-  padding: var(--sp-3) var(--sp-4);
+  padding: 5px 8px;
+  /* 2列になったときに中身を詰めるため、カード自身を基準にサイズを決める */
+  container-type: inline-size;
   cursor: pointer;
   transition: border-color var(--motion-fast), transform var(--motion-fast) var(--ease-pop), box-shadow var(--motion-fast);
   min-height: 44px;
@@ -190,13 +241,13 @@
 .candidate-top {
   display: flex;
   align-items: center;
-  gap: var(--sp-3);
+  gap: var(--sp-2);
 }
 
 .candidate-round-badge {
   flex-shrink: 0;
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--r-sm);
   background: var(--bg-3);
   display: flex;
@@ -239,7 +290,7 @@
 }
 
 .candidate-name {
-  font-size: 17px;
+  font-size: 14.5px;
   font-weight: 800;
   overflow-wrap: break-word;
 }
@@ -299,16 +350,48 @@
   font-weight: 600;
 }
 
+/* 詳細の開閉は行の右端に小さく置き、カード1枚を1行に収める */
 .candidate-toggle {
-  margin-top: var(--sp-2);
+  flex-shrink: 0;
   background: none;
   border: none;
   color: var(--accent-text);
-  font-size: 12.5px;
+  font-size: 11px;
   font-weight: 700;
-  padding: var(--sp-1) 0;
-  min-height: 32px;
+  width: 28px;
+  min-height: 30px;
+  border-radius: var(--r-sm);
   cursor: pointer;
+}
+
+.candidate-toggle:active {
+  background: var(--accent-soft);
+}
+
+/*
+ * 狭い列に入ったカードは中身を一回り小さくする。名前が2行に折り返すと
+ * カードの高さが揃わず、1画面に収まらなくなるため。
+ * 2列にした理由（候補が多い／画面が低い）を問わず同じように効く。
+ */
+@container (max-width: 230px) {
+  .candidate-name {
+    font-size: 12.5px;
+  }
+
+  .candidate-sub {
+    font-size: 10px;
+    gap: 6px;
+  }
+
+  .candidate-round-badge {
+    width: 30px;
+    height: 30px;
+    font-size: 10px;
+  }
+
+  .candidate-toggle {
+    width: 22px;
+  }
 }
 
 /* ---------------- SLOT PICKER ---------------- */
