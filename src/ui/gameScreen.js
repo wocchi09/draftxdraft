@@ -13,6 +13,9 @@ import {
 } from "./components.js";
 import { escapeHtml } from "../utils/dom.js";
 
+/** これを超えたら候補一覧を2列にする（1画面に収めるため） */
+const DENSE_LIST_THRESHOLD = 8;
+
 export function renderGameScreen(root, app) {
   const { game, ui } = app;
   const mode = getMode(game.modeId);
@@ -32,9 +35,9 @@ export function renderGameScreen(root, app) {
     <div class="progress-block">
       <div class="progress-row">
         <span class="progress-count">${filled} <small>/ 12 PLAYERS</small></span>
+        ${skipIndicatorHtml(skipsRemaining, mode.skipLimit)}
       </div>
       <div class="progress-track"><div class="progress-fill" style="width:${(filled / 12) * 100}%"></div></div>
-      ${skipIndicatorHtml(skipsRemaining, mode.skipLimit)}
     </div>`;
 
   let draftSectionHtml = "";
@@ -56,7 +59,6 @@ export function renderGameScreen(root, app) {
     const teamName = getTeamName(teamId, year);
     draftSectionHtml = `
       <div class="draft-result settled" id="draft-result-box">
-        <span class="label">DRAFT LOTTERY</span>
         <div class="year" id="roulette-year">${year}</div>
         <div class="team-name" id="roulette-team">${escapeHtml(teamName)}</div>
       </div>
@@ -65,7 +67,7 @@ export function renderGameScreen(root, app) {
           ? `<div class="redraw-note">${escapeHtml(ui.autoRedrawNotice)}</div>`
           : ""
       }
-      <div class="candidate-list">
+      <div class="candidate-list${game.currentCandidates.length > DENSE_LIST_THRESHOLD ? " is-dense" : ""}">
         ${game.currentCandidates
           .map((p) => {
             const openSlots = getOpenEligibleSlotIds(p, game.roster);

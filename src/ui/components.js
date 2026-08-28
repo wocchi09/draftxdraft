@@ -61,9 +61,9 @@ export function candidateCardHtml(player, { expanded = false, disabled = false }
           <span>${escapeHtml(player.draftPosition || "ポジション不明")}</span>
         </div>
       </div>
+      <button type="button" class="candidate-toggle" data-toggle-detail="${escapeHtml(player.id)}" aria-expanded="${expanded}" aria-label="${escapeHtml(player.name)}の詳細を${expanded ? "閉じる" : "見る"}">${expanded ? "▲" : "▼"}</button>
     </div>
     ${detail}
-    <button type="button" class="candidate-toggle" data-toggle-detail="${escapeHtml(player.id)}">${expanded ? "閉じる ▲" : "詳細を見る ▼"}</button>
   </div>`;
 }
 
