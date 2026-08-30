@@ -248,6 +248,17 @@ python3 -m http.server 8000
 キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
 長いキャッシュを指定すると更新が反映されなくなるからです。
 
+#### 画面にPagesの選択肢が出ない場合
+
+Cloudflare の「Import a repository」はWorkersのフローに入ることがあります
+（画面に "Configure your **Worker** project"、Deploy command に
+`npx wrangler deploy` と出ていたらそれです）。そのままでは
+`Missing entry-point to Worker script or to assets directory` で失敗します。
+
+その画面のまま進めるなら、**Deploy command を `npm run deploy` に変えて**ください。
+`package.json` の `deploy` スクリプトが、Pagesプロジェクトを作ってから
+Pagesとしてデプロイします（プロジェクトが既にあれば作成は読み飛ばします）。
+
 #### Workers ではなく Pages を使う理由
 
 Cloudflare の「Connect to Git」は、既定だとプロジェクトを Workers の静的アセット
