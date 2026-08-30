@@ -1,0 +1,25 @@
+# Cloudflare へアップロードしない（＝配信しない）もの。
+# 書式は .gitignore と同じ。
+#
+# node_modules を外すのが必須。ビルド中に wrangler 自身が入り、
+# その中の workerd が146MiBあるため、1ファイル25MiBの上限に
+# 引っかかってデプロイが丸ごと失敗する。
+node_modules
+.wrangler
+.git
+.github
+
+# ゲームの動作に要らないもの（データ生成用の道具と、その素材）
+tools
+data/_raw
+
+# リポジトリ運用のためのファイル
+*.md
+.gitignore
+.assetsignore
+.nojekyll
+wrangler.jsonc
+package.json
+package-lock.json
+bun.lock
+bun.lockb

@@ -217,28 +217,34 @@ python3 -m http.server 8000
 ファイルの参照はすべて相対パスで、サイトのURLをコードに埋め込んでいないため、
 どのドメインに置いてもそのまま動きます。
 
-### Cloudflare Pages（推奨）
+### Cloudflare（推奨）
 
-無料で、独自ドメインを買わずに `〜.pages.dev` のURLで公開できます。
+無料で、独自ドメインを買わずに公開できます。
 リポジトリをつなぐと、`main` に push するたび自動で反映されます。
 
 1. https://dash.cloudflare.com/ でアカウントを作る（無料）
-2. 左メニューの **Workers & Pages** → **Create** → **Pages** →
-   **Connect to Git** から、このリポジトリを選ぶ
-3. ビルド設定は次のようにする（ビルドは走らせない）
+2. **Workers & Pages** → **Create** → **Connect to Git** から、このリポジトリを選ぶ
+3. **Save and Deploy**
 
-   | 項目 | 値 |
-   | --- | --- |
-   | Framework preset | None |
-   | Build command | （空のまま） |
-   | Build output directory | `/` |
+ビルド設定は触らなくて構いません。`wrangler.jsonc` をリポジトリに置いてあるので、
+Cloudflare 側はそれを読んで、静的ファイルだけを配信する構成でデプロイします。
 
-4. **Save and Deploy**。1分ほどで `https://<プロジェクト名>.pages.dev` が発行される
+#### なぜ設定ファイルが要るのか
 
-プロジェクト名がそのままURLになります（例: `draftxdraft` →
-`https://draftxdraft.pages.dev`）。名前は先着なので、埋まっていたら別の名前にしてください。
+Cloudflare は Git 連携のプロジェクトを Workers の静的アセットとして取り込み、
+`npx wrangler deploy` を走らせます。このとき wrangler 自身が `node_modules` へ
+インストールされ、その中の `workerd`（146MiB）が「1ファイル25MiBまで」の
+上限に引っかかって、デプロイが丸ごと失敗します。
 
-`_headers` にレスポンスヘッダの設定を置いています。Cloudflare Pages がこれを読んで、
+そこで配信対象から外すものを `.assetsignore` に書いています。
+`node_modules` のほか、ゲームの動作に要らないもの（`tools/`、`data/_raw/`、
+ドキュメント類）も外してあります。配信されるのは以下だけです。
+
+```
+index.html / src/ / styles/ / assets/ / data/*.json / _headers
+```
+
+`_headers` はレスポンスヘッダの設定で、Cloudflare がこれを読んで
 `X-Content-Type-Options` などの基本的なヘッダを付けます。
 キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
 長いキャッシュを指定すると更新が反映されなくなるからです。
@@ -247,7 +253,7 @@ python3 -m http.server 8000
 （リポジトリの Settings → Pages → Source を **None** にする。
 `.github/workflows/pages.yml` も消してよいです）。
 
-Cloudflare Pages は非公開リポジトリでも使えます。
+Cloudflare は非公開リポジトリでも使えます。
 GitHub Pages は無料プランだと公開リポジトリでしか使えないので、
 ソースを見せたくない場合はこちらへ寄せてリポジトリを非公開にする手もあります。
 

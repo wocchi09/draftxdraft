@@ -1,0 +1,17 @@
+{
+  // Cloudflare の設定。リポジトリに置いておくことで、
+  // デプロイのたびに wrangler が対話なしで同じ設定を使うようにする。
+  //
+  // 静的ファイルを置くだけのサイトなので Worker スクリプトは持たず、
+  // assets だけを配信する。
+  "name": "draftxdraft",
+  "compatibility_date": "2026-08-28",
+  "assets": {
+    // リポジトリ直下をそのまま配信する。配信したくないものは
+    // .assetsignore に書く（ビルド中に作られる node_modules など）。
+    "directory": "."
+  },
+  "observability": {
+    "enabled": true
+  }
+}
