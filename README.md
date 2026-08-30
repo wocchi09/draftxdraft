@@ -2,7 +2,7 @@
 
 > 運命のドラフトから、自分だけのチームを作れ。
 
-**遊ぶ → https://draftxdraft.shingo09324.workers.dev**
+**遊ぶ → https://draftxdraft.pages.dev**
 
 **DRAFT × DRAFT** は、実際のNPB（日本プロ野球）ドラフト史実データをもとに、
 ランダムに提示される「年度 × 球団」から実在の指名選手を1人ずつ選び、
@@ -219,37 +219,46 @@ python3 -m http.server 8000
 ファイルの参照はすべて相対パスで、サイトのURLをコードに埋め込んでいないため、
 どのドメインに置いてもそのまま動きます。
 
-### Cloudflare（推奨）
+### Cloudflare Pages（推奨）
 
-無料で、独自ドメインを買わずに公開できます。
+無料で、独自ドメインを買わずに `〜.pages.dev` のURLで公開できます。
 リポジトリをつなぐと、`main` に push するたび自動で反映されます。
 
 1. https://dash.cloudflare.com/ でアカウントを作る（無料）
-2. **Workers & Pages** → **Create** → **Connect to Git** から、このリポジトリを選ぶ
-3. **Save and Deploy**
+2. **Workers & Pages** → **Create** → **Pages** タブ → **Connect to Git** から
+   このリポジトリを選ぶ
+3. ビルド設定は次のようにする（ビルドは走らせない）
 
-ビルド設定は触らなくて構いません。`wrangler.jsonc` をリポジトリに置いてあるので、
-Cloudflare 側はそれを読んで、静的ファイルだけを配信する構成でデプロイします。
+   | 項目 | 値 |
+   | --- | --- |
+   | Framework preset | None |
+   | Build command | （空のまま） |
+   | Build output directory | `/` |
 
-#### なぜ設定ファイルが要るのか
+4. **Save and Deploy**
 
-Cloudflare は Git 連携のプロジェクトを Workers の静的アセットとして取り込み、
-`npx wrangler deploy` を走らせます。このとき wrangler 自身が `node_modules` へ
-インストールされ、その中の `workerd`（146MiB）が「1ファイル25MiBまで」の
-上限に引っかかって、デプロイが丸ごと失敗します。
+プロジェクト名がそのままURLになります（`draftxdraft` → `draftxdraft.pages.dev`）。
+名前は先着なので、埋まっていたら別の名前にしてください。
 
-そこで配信対象から外すものを `.assetsignore` に書いています。
-`node_modules` のほか、ゲームの動作に要らないもの（`tools/`、`data/_raw/`、
-ドキュメント類）も外してあります。配信されるのは以下だけです。
-
-```
-index.html / src/ / styles/ / assets/ / data/*.json / _headers
-```
+`wrangler.jsonc` に `pages_build_output_dir` を書いてあるので、Cloudflare 側は
+それを読んでリポジトリ直下を配信します。
 
 `_headers` はレスポンスヘッダの設定で、Cloudflare がこれを読んで
 `X-Content-Type-Options` などの基本的なヘッダを付けます。
 キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
 長いキャッシュを指定すると更新が反映されなくなるからです。
+
+#### Workers ではなく Pages を使う理由
+
+Cloudflare の「Connect to Git」は、既定だとプロジェクトを Workers の静的アセット
+として取り込みます。それでも動きますが、URLがアカウント名を含む
+`<プロジェクト名>.<アカウント名>.workers.dev` になります。
+Pages なら `<プロジェクト名>.pages.dev` で、アカウント名が入りません。
+
+また Workers 経路では、ビルド中に `npx wrangler deploy` が走って
+`node_modules` が作られ、その中の `workerd`（146MiB）が
+「1ファイル25MiBまで」の上限に引っかかってデプロイが失敗します
+（除外するには `.assetsignore` が要ります）。Pages 経路ではこれが起きません。
 
 SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶対URLで書いています。
 クローラーはJavaScriptを実行しないため、公開先を変えたときは
@@ -257,9 +266,9 @@ SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶
 サムネイル画像は `assets/ogp.png`（1200×630）です。
 シェア文に添えるURLのほうは実行時に `location` から作るので、差し替え不要です。
 
-Cloudflare は非公開リポジトリでも使えます。
+Cloudflare Pages は非公開リポジトリでも使えます。
 GitHub Pages は無料プランだと公開リポジトリでしか使えないので、
-ソースを見せたくない場合はこちらへ寄せてリポジトリを非公開にする手もあります。
+ソースを見せたくない場合はリポジトリを非公開にする手もあります。
 
 ### そのほか
 
