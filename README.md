@@ -213,8 +213,48 @@ python3 -m http.server 8000
 
 ## デプロイ
 
-ビルド不要の静的サイトなので、GitHub Pages・Netlify・Vercel等にリポジトリの内容を
-そのまま配置するだけで公開できます。
+ビルド不要の静的サイトなので、静的ファイルを配信できる環境ならどこでも公開できます。
+ファイルの参照はすべて相対パスで、サイトのURLをコードに埋め込んでいないため、
+どのドメインに置いてもそのまま動きます。
+
+### Cloudflare Pages（推奨）
+
+無料で、独自ドメインを買わずに `〜.pages.dev` のURLで公開できます。
+リポジトリをつなぐと、`main` に push するたび自動で反映されます。
+
+1. https://dash.cloudflare.com/ でアカウントを作る（無料）
+2. 左メニューの **Workers & Pages** → **Create** → **Pages** →
+   **Connect to Git** から、このリポジトリを選ぶ
+3. ビルド設定は次のようにする（ビルドは走らせない）
+
+   | 項目 | 値 |
+   | --- | --- |
+   | Framework preset | None |
+   | Build command | （空のまま） |
+   | Build output directory | `/` |
+
+4. **Save and Deploy**。1分ほどで `https://<プロジェクト名>.pages.dev` が発行される
+
+プロジェクト名がそのままURLになります（例: `draftxdraft` →
+`https://draftxdraft.pages.dev`）。名前は先着なので、埋まっていたら別の名前にしてください。
+
+`_headers` にレスポンスヘッダの設定を置いています。Cloudflare Pages がこれを読んで、
+`X-Content-Type-Options` などの基本的なヘッダを付けます。
+キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
+長いキャッシュを指定すると更新が反映されなくなるからです。
+
+公開できたら、GitHub Pages 側は止められます
+（リポジトリの Settings → Pages → Source を **None** にする。
+`.github/workflows/pages.yml` も消してよいです）。
+
+Cloudflare Pages は非公開リポジトリでも使えます。
+GitHub Pages は無料プランだと公開リポジトリでしか使えないので、
+ソースを見せたくない場合はこちらへ寄せてリポジトリを非公開にする手もあります。
+
+### そのほか
+
+GitHub Pages・Netlify・Vercel でも、リポジトリの内容をそのまま置くだけで公開できます。
+GitHub Pages 向けの設定は `.github/workflows/pages.yml` に入っています。
 
 ## ライセンス
 

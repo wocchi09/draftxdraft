@@ -1,0 +1,10 @@
+# Cloudflare Pages 用のレスポンスヘッダ設定。
+# 静的ファイルを置くだけのサイトなので、付けるのは基本的な防御のみ。
+# キャッシュはCloudflare Pagesの既定（ETagで都度検証）に任せる。
+# ファイル名にハッシュを付けていないため、長いキャッシュを指定すると
+# 更新が反映されなくなる。
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: geolocation=(), microphone=(), camera=()
