@@ -2,7 +2,7 @@
 
 > 運命のドラフトから、自分だけのチームを作れ。
 
-**遊ぶ → https://draftxdraft.pages.dev**
+**遊ぶ → https://draftxdraft.netlify.app**
 
 **DRAFT × DRAFT** は、実際のNPB（日本プロ野球）ドラフト史実データをもとに、
 ランダムに提示される「年度 × 球団」から実在の指名選手を1人ずつ選び、
@@ -215,61 +215,40 @@ python3 -m http.server 8000
 
 ## デプロイ
 
-ビルド不要の静的サイトなので、静的ファイルを配信できる環境ならどこでも公開できます。
-ファイルの参照はすべて相対パスで、サイトのURLをコードに埋め込んでいないため、
-どのドメインに置いてもそのまま動きます。
+ビルドツールには依存していませんが、**公開するファイルを絞るための小さな出力工程**だけ
+あります。`node tools/build-site.mjs`（= `npm run build`）が、配信するものだけを
+`dist/` に集めます。
 
-### Cloudflare Pages（推奨）
+```
+dist/  ← index.html / src / styles / assets / data/*.json / _headers （37ファイル）
+```
 
-無料で、独自ドメインを買わずに `〜.pages.dev` のURLで公開できます。
+変換も圧縮もしていません。目的は「配信するものを明示する」ことです。
+リポジトリ直下をそのまま配信対象にすると、ホスティング側がビルド中に作る
+`node_modules` や、データ生成用の道具（`tools/`）と素材（`data/_raw/`、3.1MB）まで
+巻き込まれます。実際、Cloudflareではこれで
+`Asset too large`（`node_modules/workerd` が146MiB）が起きました。
+
+### Netlify（推奨）
+
+無料で、独自ドメインを買わずに `〜.netlify.app` のURLで公開できます。
 リポジトリをつなぐと、`main` に push するたび自動で反映されます。
 
-1. https://dash.cloudflare.com/ でアカウントを作る（無料）
-2. **Workers & Pages** → **Create** → **Pages** タブ → **Connect to Git** から
+1. https://app.netlify.com/ に **GitHubアカウントでログイン**（無料）
+2. **Add new site** → **Import an existing project** → **GitHub** →
    このリポジトリを選ぶ
-3. ビルド設定は次のようにする（ビルドは走らせない）
+3. ビルド設定は触らなくてよい（`netlify.toml` を読んで、
+   `node tools/build-site.mjs` を走らせ `dist/` を配信する）
+4. **Deploy**
 
-   | 項目 | 値 |
-   | --- | --- |
-   | Framework preset | None |
-   | Build command | （空のまま） |
-   | Build output directory | `/` |
+最初は `melodic-cupcake-a1b2c3.netlify.app` のようなランダムな名前が付きます。
+**Site configuration → Site details → Change site name** で `draftxdraft` に
+変えると `https://draftxdraft.netlify.app` になります。
 
-4. **Save and Deploy**
-
-プロジェクト名がそのままURLになります（`draftxdraft` → `draftxdraft.pages.dev`）。
-名前は先着なので、埋まっていたら別の名前にしてください。
-
-`wrangler.jsonc` に `pages_build_output_dir` を書いてあるので、Cloudflare 側は
-それを読んでリポジトリ直下を配信します。
-
-`_headers` はレスポンスヘッダの設定で、Cloudflare がこれを読んで
+`dist/_headers` はレスポンスヘッダの設定で、Netlify がこれを読んで
 `X-Content-Type-Options` などの基本的なヘッダを付けます。
 キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
 長いキャッシュを指定すると更新が反映されなくなるからです。
-
-#### 画面にPagesの選択肢が出ない場合
-
-Cloudflare の「Import a repository」はWorkersのフローに入ることがあります
-（画面に "Configure your **Worker** project"、Deploy command に
-`npx wrangler deploy` と出ていたらそれです）。そのままでは
-`Missing entry-point to Worker script or to assets directory` で失敗します。
-
-その画面のまま進めるなら、**Deploy command を `npm run deploy` に変えて**ください。
-`package.json` の `deploy` スクリプトが、Pagesプロジェクトを作ってから
-Pagesとしてデプロイします（プロジェクトが既にあれば作成は読み飛ばします）。
-
-#### Workers ではなく Pages を使う理由
-
-Cloudflare の「Connect to Git」は、既定だとプロジェクトを Workers の静的アセット
-として取り込みます。それでも動きますが、URLがアカウント名を含む
-`<プロジェクト名>.<アカウント名>.workers.dev` になります。
-Pages なら `<プロジェクト名>.pages.dev` で、アカウント名が入りません。
-
-また Workers 経路では、ビルド中に `npx wrangler deploy` が走って
-`node_modules` が作られ、その中の `workerd`（146MiB）が
-「1ファイル25MiBまで」の上限に引っかかってデプロイが失敗します
-（除外するには `.assetsignore` が要ります）。Pages 経路ではこれが起きません。
 
 SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶対URLで書いています。
 クローラーはJavaScriptを実行しないため、公開先を変えたときは
@@ -277,14 +256,14 @@ SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶
 サムネイル画像は `assets/ogp.png`（1200×630）です。
 シェア文に添えるURLのほうは実行時に `location` から作るので、差し替え不要です。
 
-Cloudflare Pages は非公開リポジトリでも使えます。
-GitHub Pages は無料プランだと公開リポジトリでしか使えないので、
-ソースを見せたくない場合はリポジトリを非公開にする手もあります。
-
 ### そのほか
 
-Netlify・Vercel でも、リポジトリの内容をそのまま置くだけで公開できます。
-GitHub Pages で公開していたときのワークフローは、Cloudflareへ移したので削除しました。
+Cloudflare Pages・Vercel でも、ビルドコマンドを `node tools/build-site.mjs`、
+出力ディレクトリを `dist` にすれば同じように公開できます。
+
+GitHub Pages を使っていたときのワークフローは、移行にあたって削除しました。
+なお GitHub Pages は無料プランだと公開リポジトリでしか使えません。
+ソースを見せたくない場合、Netlify は非公開リポジトリでも使えます。
 
 ## ライセンス
 

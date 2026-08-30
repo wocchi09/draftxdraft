@@ -1,9 +1,0 @@
-{
-  // Cloudflare Pages の設定。リポジトリに置いておくことで、
-  // デプロイのたびに同じ設定が使われるようにする。
-  //
-  // ビルド工程を持たない静的サイトなので、リポジトリ直下をそのまま配信する。
-  "name": "draftxdraft",
-  "compatibility_date": "2026-08-28",
-  "pages_build_output_dir": "."
-}

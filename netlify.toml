@@ -1,0 +1,11 @@
+# Netlify の設定。
+# tools/build-site.mjs が公開用のファイルだけを dist/ に集め、そこを配信する。
+# リポジトリ直下をそのまま配信対象にすると、ホスティング側がビルド中に作る
+# node_modules や、データ生成用の道具・素材まで巻き込まれるため。
+[build]
+  command = "node tools/build-site.mjs"
+  publish = "dist"
+
+# レスポンスヘッダは dist/_headers に置いてある（Netlify がそれを読む）。
+# キャッシュ指定は入れていない。ファイル名にハッシュを付けていないので、
+# 長いキャッシュを指定すると更新が反映されなくなる。
