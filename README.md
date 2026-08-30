@@ -2,6 +2,8 @@
 
 > 運命のドラフトから、自分だけのチームを作れ。
 
+**遊ぶ → https://draftxdraft.shingo09324.workers.dev**
+
 **DRAFT × DRAFT** は、実際のNPB（日本プロ野球）ドラフト史実データをもとに、
 ランダムに提示される「年度 × 球団」から実在の指名選手を1人ずつ選び、
 12枠のロスターを完成させるスマホファーストのWebゲームです。
@@ -249,9 +251,11 @@ index.html / src/ / styles/ / assets/ / data/*.json / _headers
 キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
 長いキャッシュを指定すると更新が反映されなくなるからです。
 
-公開できたら、GitHub Pages 側は止められます
-（リポジトリの Settings → Pages → Source を **None** にする。
-`.github/workflows/pages.yml` も消してよいです）。
+SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶対URLで書いています。
+クローラーはJavaScriptを実行しないため、公開先を変えたときは
+`og:url` / `og:image` / `twitter:image` / `canonical` を差し替えてください。
+サムネイル画像は `assets/ogp.png`（1200×630）です。
+シェア文に添えるURLのほうは実行時に `location` から作るので、差し替え不要です。
 
 Cloudflare は非公開リポジトリでも使えます。
 GitHub Pages は無料プランだと公開リポジトリでしか使えないので、
@@ -259,8 +263,8 @@ GitHub Pages は無料プランだと公開リポジトリでしか使えない�
 
 ### そのほか
 
-GitHub Pages・Netlify・Vercel でも、リポジトリの内容をそのまま置くだけで公開できます。
-GitHub Pages 向けの設定は `.github/workflows/pages.yml` に入っています。
+Netlify・Vercel でも、リポジトリの内容をそのまま置くだけで公開できます。
+GitHub Pages で公開していたときのワークフローは、Cloudflareへ移したので削除しました。
 
 ## ライセンス
 
