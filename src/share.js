@@ -3,8 +3,21 @@ import { getPlayer } from "./draft.js";
 import { ROSTER_SLOTS, getSlotDef } from "./roster.js";
 
 /**
+ * 遊んでいるページ自身のURL。
+ * 公開先が変わっても直さずに済むよう、実行時に見ている場所から作る。
+ */
+function siteUrl() {
+  try {
+    return `${window.location.origin}${window.location.pathname}`;
+  } catch {
+    return "";
+  }
+}
+
+/**
  * 完成チームのシェア用テキストを生成する。
  * 強さを断定する表現は使わず、「事実＋問いかけ」の形にする。
+ * 見た人がその場で遊べるよう、末尾にゲームのURLを添える。
  */
 export function buildShareText(state, tags) {
   const lines = ["DRAFT × DRAFTで自分だけのロスターを作った。"];
@@ -12,6 +25,8 @@ export function buildShareText(state, tags) {
     lines.push(tags.slice(0, 3).join(" / "));
   }
   lines.push("あなたならこのチーム、どう見る？");
+  const url = siteUrl();
+  if (url) lines.push(url);
   return lines.join("\n");
 }
 
