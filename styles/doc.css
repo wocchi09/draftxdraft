@@ -14,7 +14,7 @@ body {
 .doc {
   max-width: 720px;
   margin: 0 auto;
-  padding: var(--sp-5) var(--sp-5) var(--sp-7);
+  padding: var(--sp-5) var(--sp-5) calc(var(--sp-7) + var(--badge-clearance));
 }
 
 .doc-back {
