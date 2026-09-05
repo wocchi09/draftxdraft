@@ -484,6 +484,39 @@ img, svg {
   cursor: pointer;
 }
 
+/* 規約類へのリンク。TOP画面の一番下に小さく置く */
+.top-footer {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 12px;
+}
+
+.top-footer a {
+  color: var(--text-2);
+  text-decoration: underline;
+  padding: 4px 2px;
+}
+
+.top-footer a:hover {
+  color: var(--accent-text);
+}
+
+.top-footer span {
+  color: var(--text-3);
+}
+
+.top-credit {
+  width: 100%;
+  margin: 2px 0 0;
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: var(--text-3);
+}
+
 .appearance-panel {
   width: 100%;
   display: flex;
