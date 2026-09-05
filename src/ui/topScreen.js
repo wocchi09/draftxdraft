@@ -108,6 +108,16 @@ export function renderTopScreen(root, app) {
       </div>
     </div>
 
+    <footer class="top-footer">
+      <a href="./terms.html">利用規約</a>
+      <span aria-hidden="true">・</span>
+      <a href="./privacy.html">プライバシーポリシー</a>
+      <p class="top-credit">
+        NPBドラフトの史実データを使った非公式のファンツールです。<br />
+        「日ハムファンが語る。」さんの企画に着想を得て制作しました。
+      </p>
+    </footer>
+
     <div class="appearance-panel" id="appearance-panel"${appearanceOpen ? "" : " hidden"}>
       <div class="top-field">
         <span class="top-field-label">アクセントカラー</span>

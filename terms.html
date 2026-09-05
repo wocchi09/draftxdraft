@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="DRAFT × DRAFT の利用規約" />
+    <meta name="robots" content="index, follow" />
+    <title>利用規約 | DRAFT × DRAFT</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚾</text></svg>" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/doc.css" />
+    <script>
+      // ゲーム本体で選んだ表示テーマを引き継ぐ。
+      // 描画前に属性を付けたいので、モジュールではなくここで同期的に実行する。
+      try {
+        var t = JSON.parse(localStorage.getItem("ddxd:theme"));
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        /* 読めなくても既定のテーマで表示する */
+      }
+    </script>
+  </head>
+  <body>
+    <main class="doc">
+      <a class="doc-back" href="./">← DRAFT × DRAFT にもどる</a>
+      <h1>利用規約</h1>
+      <p class="doc-lead">「DRAFT × DRAFT」をご利用いただくにあたっての決まりごとです。</p>
+
+      <h2>第1条（適用）</h2>
+      <p>本規約は、「DRAFT × DRAFT」（以下「本サービス」といいます）の利用条件を定めるものです。利用者は、本サービスを利用することにより、本規約に同意したものとみなします。</p>
+
+      <h2>第2条（本サービスの内容）</h2>
+      <p>本サービスは、日本プロ野球のドラフト会議の史実データをもとに、実際に指名された選手からロスターを編成して楽しむ、無料のブラウザゲームです。利用者の登録は不要で、料金は一切かかりません。</p>
+
+      <h2>第3条（非公式であることについて）</h2>
+      <p>本サービスは、個人が趣味で制作した<strong>非公式のファンツール</strong>です。日本野球機構（NPB）、各球団、選手、その他の関係団体とは一切関係がなく、これらの承認・後援・提携を受けたものではありません。</p>
+      <div class="doc-note">
+        <p style="margin:0">本サービスは、「日ハムファンが語る。」さんの企画に着想を得て、敬意をもって制作したものです。ただし、同氏および関係者とは一切関係がなく、承認・監修を受けたものではありません。本サービスに関するお問い合わせを同氏へ寄せることはお控えください。</p>
+      </div>
+
+      <h2>第4条（データについて）</h2>
+      <p>本サービスが表示する選手名・当時の所属・指名順位等は、公開されているドラフト結果などの事実情報をまとめたものです。出典には主にWikipedia（日本語版）を用いています。</p>
+      <p>制作者による選手の能力評価や優劣の判定は一切行っていません。表示しているのは、客観的に確認できる事実データのみです。</p>
+      <p>データの正確性・完全性・最新性について保証はいたしかねます。誤りにお気づきの場合は、第10条のお問い合わせ先までお知らせいただけると助かります。</p>
+
+      <h2>第5条（禁止事項）</h2>
+      <p>利用者は、本サービスの利用にあたり、次の行為をしてはなりません。</p>
+      <ul>
+        <li>法令または公序良俗に反する行為</li>
+        <li>本サービスの運営を妨害する行為、配信元に過度な負荷をかける行為</li>
+        <li>本サービスを利用して、特定の個人または団体を誹謗中傷し、その名誉や信用を毀損する行為</li>
+        <li>本サービスが公式のものであるかのように誤認させる行為</li>
+        <li>その他、制作者が不適切と判断する行為</li>
+      </ul>
+
+      <h2>第6条（免責事項）</h2>
+      <p>本サービスは現状有姿で提供されます。制作者は、本サービスの内容やデータについて、その正確性・有用性・特定の目的への適合性を保証しません。</p>
+      <p>本サービスを利用したこと、または利用できなかったことによって生じた損害について、制作者は責任を負いません。</p>
+      <p>ゲームの進行状況や完成したチームの記録は、利用者の端末内にのみ保存されます。ブラウザの設定変更やデータ削除、端末の変更等により失われることがありますが、これについて制作者は責任を負いません。</p>
+
+      <h2>第7条（サービスの変更・中断・終了）</h2>
+      <p>制作者は、事前の予告なく、本サービスの内容を変更し、または提供を中断・終了することがあります。</p>
+
+      <h2>第8条（知的財産権）</h2>
+      <p>本サービスのプログラムおよびデザインに関する権利は、制作者に帰属します。</p>
+      <p>球団名・選手名等に関する権利は、それぞれの権利者に帰属します。本サービスにおけるこれらの表示は、事実の記述および説明のために用いているものです。</p>
+
+      <h2>第9条（本規約の変更）</h2>
+      <p>制作者は、必要と判断した場合、本規約を変更することがあります。変更後の規約は、本ページに掲載した時点から効力を生じます。</p>
+
+      <h2>第10条（準拠法・お問い合わせ）</h2>
+      <p>本規約は日本法に準拠します。本サービスに関して紛争が生じた場合には、制作者の住所地を管轄する裁判所を第一審の専属的合意管轄裁判所とします。</p>
+      <p>本サービスに関するお問い合わせは <a href="mailto:wocchi009@gmail.com">wocchi009@gmail.com</a> までお願いします。</p>
+
+      <dl class="doc-meta">
+        <dt>運営者</dt>
+        <dd>DRAFT × DRAFT 運営</dd>
+        <dt>お問い合わせ</dt>
+        <dd><a href="mailto:wocchi009@gmail.com">wocchi009@gmail.com</a></dd>
+        <dt>制定日</dt>
+        <dd>2026年9月5日</dd>
+      </dl>
+
+      <div class="doc-foot">
+        <a href="./privacy.html">プライバシーポリシー</a>
+        <a href="./">DRAFT × DRAFT にもどる</a>
+      </div>
+    </main>
+  </body>
+</html>

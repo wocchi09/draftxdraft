@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#eef1f7" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0b0e14" media="(prefers-color-scheme: dark)" />
+    <meta name="description" content="DRAFT × DRAFT のプライバシーポリシー" />
+    <meta name="robots" content="index, follow" />
+    <title>プライバシーポリシー | DRAFT × DRAFT</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚾</text></svg>" />
+    <link rel="stylesheet" href="./styles/tokens.css" />
+    <link rel="stylesheet" href="./styles/doc.css" />
+    <script>
+      // ゲーム本体で選んだ表示テーマを引き継ぐ。
+      // 描画前に属性を付けたいので、モジュールではなくここで同期的に実行する。
+      try {
+        var t = JSON.parse(localStorage.getItem("ddxd:theme"));
+        if (t === "light" || t === "dark") document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        /* 読めなくても既定のテーマで表示する */
+      }
+    </script>
+  </head>
+  <body>
+    <main class="doc">
+      <a class="doc-back" href="./">← DRAFT × DRAFT にもどる</a>
+      <h1>プライバシーポリシー</h1>
+      <p class="doc-lead">「DRAFT × DRAFT」が、利用者の情報をどう扱っているかについて。</p>
+
+      <div class="doc-note">
+        <p style="margin:0"><strong>本サービスは個人情報を収集しません。</strong>サーバーを持たないつくりのため、利用者の操作内容が制作者に送信されることはありません。会員登録も、フォームへの入力もありません。</p>
+      </div>
+
+      <h2>1. 端末内に保存する情報</h2>
+      <p>ゲームを続きから再開できるようにするため、次の情報を利用者のブラウザ（localStorage）に保存します。</p>
+      <table>
+        <thead>
+          <tr><th>保存する内容</th><th>目的</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>進行中のゲームの状態</td><td>再読み込みしても続きから遊べるようにするため</td></tr>
+          <tr><td>完成したチームの記録</td><td>MY TEAMS で見返せるようにするため</td></tr>
+          <tr><td>選んだゲームモード</td><td>次に遊ぶときに引き継ぐため</td></tr>
+          <tr><td>アクセントカラー</td><td>同上</td></tr>
+          <tr><td>表示テーマ</td><td>同上</td></tr>
+          <tr><td>出題する年度の範囲</td><td>同上</td></tr>
+        </tbody>
+      </table>
+      <p>これらはすべて利用者の端末内にのみ保存され、外部へ送信されることはありません。氏名・メールアドレス・位置情報など、個人を特定できる情報は含みません。</p>
+      <p>ブラウザの設定からサイトデータを削除すれば、いつでも消去できます。</p>
+
+      <h2>2. Cookieについて</h2>
+      <p>本サービスはCookieを使用していません。</p>
+
+      <h2>3. アクセス解析について</h2>
+      <p>本サービスは、現在アクセス解析ツールを使用していません。</p>
+      <p>将来的に導入する場合は、本ポリシーを更新し、利用するツールと収集される情報の内容を明記します。</p>
+
+      <h2>4. 外部サービスについて</h2>
+      <p>本サービスは次の外部サービスを利用しています。これらへの通信に伴い、IPアドレスやブラウザの種類といった情報が各サービス提供者に送信されます。これは、インターネット上でページを表示する仕組み上、避けられないものです。</p>
+      <ul>
+        <li><strong>Netlify</strong>（配信元） — 本サービスのファイルを配信しています。アクセスログが記録されます。</li>
+        <li><strong>Google Fonts</strong>（フォントの配信） — 画面表示に使う書体を読み込むため、Googleへの通信が発生します。</li>
+      </ul>
+      <p>各サービスにおける取り扱いについては、それぞれの提供者が定めるプライバシーポリシーをご確認ください。</p>
+
+      <h2>5. 共有機能について</h2>
+      <p>結果画面の「画像で共有」「画像を保存」「Xでポスト」「LINEで送る」を利用した場合、利用者が選んだアプリやサービスに対して、画像や文章が渡されます。</p>
+      <p>渡す先を選ぶのは利用者自身であり、制作者がその内容を受け取ることはありません。</p>
+
+      <h2>6. 第三者提供</h2>
+      <p>本サービスは個人情報を収集していないため、第三者に提供することはありません。</p>
+
+      <h2>7. お子様の利用について</h2>
+      <p>本サービスは年齢による利用制限を設けていません。個人情報の収集を行わないため、保護者の同意を必要とする情報の取得も行いません。</p>
+
+      <h2>8. 本ポリシーの変更</h2>
+      <p>必要に応じて本ポリシーを変更することがあります。変更後の内容は、本ページに掲載した時点から適用されます。</p>
+
+      <h2>9. お問い合わせ</h2>
+      <p>本サービスおよび本ポリシーに関するお問い合わせは <a href="mailto:wocchi009@gmail.com">wocchi009@gmail.com</a> までお願いします。</p>
+
+      <dl class="doc-meta">
+        <dt>運営者</dt>
+        <dd>DRAFT × DRAFT 運営</dd>
+        <dt>お問い合わせ</dt>
+        <dd><a href="mailto:wocchi009@gmail.com">wocchi009@gmail.com</a></dd>
+        <dt>制定日</dt>
+        <dd>2026年9月5日</dd>
+      </dl>
+
+      <div class="doc-foot">
+        <a href="./terms.html">利用規約</a>
+        <a href="./">DRAFT × DRAFT にもどる</a>
+      </div>
+    </main>
+  </body>
+</html>

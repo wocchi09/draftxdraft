@@ -12,7 +12,7 @@ import path from "node:path";
 /** 丸ごと持っていくもの */
 const DIRS = ["src", "styles", "assets"];
 /** 単体で持っていくもの */
-const FILES = ["index.html", "_headers"];
+const FILES = ["index.html", "terms.html", "privacy.html", "_headers"];
 /** data/ からはJSONだけ。data/_raw（Wikipediaの素材）は要らない */
 const DATA_GLOB = /\.json$/;
 
