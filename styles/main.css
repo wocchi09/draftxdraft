@@ -188,7 +188,8 @@ img, svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: var(--sp-4) var(--sp-5) var(--sp-5);
+  /* 右下のバッジに末尾のリンクが潜らないよう、下だけ余分に空ける */
+  padding: var(--sp-4) var(--sp-5) calc(var(--sp-5) + var(--badge-clearance));
   text-align: center;
   gap: var(--sp-4);
   background:
@@ -548,7 +549,7 @@ img, svg {
   display: flex;
   flex-direction: column;
   gap: var(--sp-3);
-  padding: var(--sp-4);
+  padding: var(--sp-4) var(--sp-4) calc(var(--sp-4) + var(--badge-clearance));
 }
 
 .myteam-item {

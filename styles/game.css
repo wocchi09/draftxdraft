@@ -1,6 +1,6 @@
 .game-body {
   flex: 1;
-  padding: var(--sp-3) var(--sp-4) calc(96px + var(--sa-bottom));
+  padding: var(--sp-3) var(--sp-4) calc(96px + var(--badge-clearance) + var(--sa-bottom));
   display: flex;
   flex-direction: column;
   gap: var(--sp-3);
@@ -185,7 +185,9 @@
 .candidate-list {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 6px;
+  /* 右下バッジの逃げ幅を確保したぶん、ここを1px詰めて
+     指名が最多の年でも1画面に収まる状態を維持する */
+  gap: 5px;
 }
 
 /*
@@ -718,7 +720,7 @@
   bottom: 0;
   max-width: 480px;
   margin: 0 auto;
-  padding: var(--sp-3) var(--sp-4) calc(var(--sp-3) + var(--sa-bottom));
+  padding: var(--sp-3) var(--sp-4) calc(var(--sp-3) + var(--badge-clearance) + var(--sa-bottom));
   background: var(--bg-overlay);
   backdrop-filter: blur(10px);
   border-top: 1px solid var(--border-1);

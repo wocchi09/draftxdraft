@@ -135,7 +135,7 @@ draftxdraft/
 `tools/` にはデータ生成用のスクリプトが入っていますが、ゲーム本体からは
 参照していません。実行にNode.jsが要るのはデータを更新するときだけです。
 
-### データについて
+### 表示しない情報について
 
 選手データは調査に基づく客観的事実のみを収録しています。守備経験・二刀流判定・
 タイトルなど確認が取れなかった項目は `null` または空配列のままにしており、
@@ -233,7 +233,8 @@ python3 -m http.server 8000
 `dist/` に集めます。
 
 ```
-dist/  ← index.html / src / styles / assets / data/*.json / _headers （37ファイル）
+dist/  ← index.html / terms.html / privacy.html / src / styles / assets /
+        data/*.json / _headers （40ファイル）
 ```
 
 変換も圧縮もしていません。目的は「配信するものを明示する」ことです。
@@ -242,40 +243,55 @@ dist/  ← index.html / src / styles / assets / data/*.json / _headers （37フ�
 巻き込まれます。実際、Cloudflareではこれで
 `Asset too large`（`node_modules/workerd` が146MiB）が起きました。
 
-### いまの公開先（Cloudflare）
+### いまの公開先（Netlify）
 
-`wrangler.jsonc` を置いてあるので、Cloudflare の Workers プロジェクトに
-リポジトリを繋いであれば、`main` に push するたび自動で反映されます。
-Deploy command は既定の `npx wrangler deploy` のままでよく、
-その前に `tools/build-site.mjs` が走って `dist/` が作られます。
+`netlify.toml` を置いてあるので、`main` に push するたび自動で反映されます。
+ビルド設定を触る必要はありません。
 
-URLは `<プロジェクト名>.<アカウント名>.workers.dev` になります。
-アカウント名を出したくない場合は、下のどちらかで消せます。
-
-- **Cloudflare のサブドメイン名を変える** — Workers & Pages の設定に
-  「Subdomain」の項目があれば、そこで別名にできます
-- **Netlify に移す** — 下の手順（URLは `<サイト名>.netlify.app` になり、
-  アカウント名は入りません）
-
-### Netlify に移す場合
-
-`netlify.toml` も置いてあるので、そのまま繋げば動きます。
+つなぎ直す場合の手順:
 
 1. https://app.netlify.com/ に **GitHubアカウントでログイン**（無料）
 2. **Add new site** → **Import an existing project** → **GitHub** →
    このリポジトリを選ぶ
-3. ビルド設定は触らなくてよい（`netlify.toml` を読む）
-4. **Deploy**
-5. 最初はランダムな名前が付くので、**Site configuration → Site details →
-   Change site name** で `draftxdraft` に変える
+3. ビルド設定は触らず **Deploy**
+4. 最初はランダムな名前が付くので、**Site configuration → Site details →
+   Change site name** で好きな名前に変える
 
-移したら、`index.html` の `og:url` / `og:image` / `twitter:image` / `canonical`
-と、READMEの先頭のURLを新しいものに差し替えてください。
+`dist/_headers` はレスポンスヘッダの設定で、Netlify がこれを読んで
+`X-Content-Type-Options` などの基本的なヘッダを付けます。
+キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
+長いキャッシュを指定すると更新が反映されなくなるからです。
 
-### そのほか
+#### 右下のバッジについて
 
-Cloudflare Pages・Vercel でも、ビルドコマンドを `node tools/build-site.mjs`、
-出力ディレクトリを `dist` にすれば同じように公開できます。
+Netlifyの無料プランは、画面の右下に「Powered by Netlify」のバッジを固定表示します。
+そのままだとゲーム画面のSKIPボタンや、各画面の末尾のボタンがバッジの下に潜って
+押せなくなるため、`--badge-clearance`（`styles/tokens.css`、既定52px）で
+その高さぶんの余白を下端に確保しています。
+
+バッジの無い配信先へ移したり、バッジを消せるようになった場合は、
+このトークンを `0px` にすれば元の詰め方に戻ります。
+
+なお、この余白を確保したぶん、画面の低い端末では
+1画面に収まる候補の人数が減ります（iPhone SE 375×667 で14人→12人）。
+
+### 公開先を変えるとき
+
+`wrangler.jsonc` も残してあるので、Cloudflare（Workers の静的アセット）に
+繋いでもそのまま動きます。Deploy command は既定の `npx wrangler deploy` のままでよく、
+その前に `tools/build-site.mjs` が走って `dist/` が作られます。
+ただしURLは `<プロジェクト名>.<アカウント名>.workers.dev` になります。
+
+Vercel でも、ビルドコマンドを `node tools/build-site.mjs`、
+出力ディレクトリを `dist` にすれば公開できます。
+
+公開先を変えたら、次の2つを差し替えてください。
+
+- `index.html` の `og:url` / `og:image` / `twitter:image` / `canonical`
+  （クローラーはJavaScriptを実行しないため、絶対URLで書く必要があります）
+- READMEの先頭のURL
+
+シェア文に添えるURLのほうは実行時に `location` から作るので、差し替え不要です。
 
 GitHub Pages を使っていたときのワークフローは、移行にあたって削除しました。
 なお GitHub Pages は無料プランだと公開リポジトリでしか使えません。

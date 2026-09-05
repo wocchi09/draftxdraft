@@ -79,6 +79,13 @@
   /* Safe area */
   --sa-top: env(safe-area-inset-top, 0px);
   --sa-bottom: env(safe-area-inset-bottom, 0px);
+  /*
+   * ホスティング側が画面の右下に固定表示するバッジ（Netlifyの
+   * "Powered by Netlify" など）の逃げ幅。これを確保しないと
+   * SKIPボタンや画面末尾のボタンがバッジの下に潜って押せなくなる。
+   * バッジが無い配信先へ移したときは 0px にすれば元の詰め方に戻る。
+   */
+  --badge-clearance: 52px;
   --sa-left: env(safe-area-inset-left, 0px);
   --sa-right: env(safe-area-inset-right, 0px);
 
