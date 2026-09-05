@@ -2,7 +2,7 @@
 
 > 運命のドラフトから、自分だけのチームを作れ。
 
-**遊ぶ → https://draftxdraft.netlify.app**
+**遊ぶ → https://draftxdraft.shingo09324.workers.dev**
 
 **DRAFT × DRAFT** は、実際のNPB（日本プロ野球）ドラフト史実データをもとに、
 ランダムに提示される「年度 × 球団」から実在の指名選手を1人ずつ選び、
@@ -229,32 +229,35 @@ dist/  ← index.html / src / styles / assets / data/*.json / _headers （37フ�
 巻き込まれます。実際、Cloudflareではこれで
 `Asset too large`（`node_modules/workerd` が146MiB）が起きました。
 
-### Netlify（推奨）
+### いまの公開先（Cloudflare）
 
-無料で、独自ドメインを買わずに `〜.netlify.app` のURLで公開できます。
-リポジトリをつなぐと、`main` に push するたび自動で反映されます。
+`wrangler.jsonc` を置いてあるので、Cloudflare の Workers プロジェクトに
+リポジトリを繋いであれば、`main` に push するたび自動で反映されます。
+Deploy command は既定の `npx wrangler deploy` のままでよく、
+その前に `tools/build-site.mjs` が走って `dist/` が作られます。
+
+URLは `<プロジェクト名>.<アカウント名>.workers.dev` になります。
+アカウント名を出したくない場合は、下のどちらかで消せます。
+
+- **Cloudflare のサブドメイン名を変える** — Workers & Pages の設定に
+  「Subdomain」の項目があれば、そこで別名にできます
+- **Netlify に移す** — 下の手順（URLは `<サイト名>.netlify.app` になり、
+  アカウント名は入りません）
+
+### Netlify に移す場合
+
+`netlify.toml` も置いてあるので、そのまま繋げば動きます。
 
 1. https://app.netlify.com/ に **GitHubアカウントでログイン**（無料）
 2. **Add new site** → **Import an existing project** → **GitHub** →
    このリポジトリを選ぶ
-3. ビルド設定は触らなくてよい（`netlify.toml` を読んで、
-   `node tools/build-site.mjs` を走らせ `dist/` を配信する）
+3. ビルド設定は触らなくてよい（`netlify.toml` を読む）
 4. **Deploy**
+5. 最初はランダムな名前が付くので、**Site configuration → Site details →
+   Change site name** で `draftxdraft` に変える
 
-最初は `melodic-cupcake-a1b2c3.netlify.app` のようなランダムな名前が付きます。
-**Site configuration → Site details → Change site name** で `draftxdraft` に
-変えると `https://draftxdraft.netlify.app` になります。
-
-`dist/_headers` はレスポンスヘッダの設定で、Netlify がこれを読んで
-`X-Content-Type-Options` などの基本的なヘッダを付けます。
-キャッシュ指定は入れていません。ファイル名にハッシュを付けていないため、
-長いキャッシュを指定すると更新が反映されなくなるからです。
-
-SNSに貼ったときのリンクプレビュー（OGP）は `index.html` に絶対URLで書いています。
-クローラーはJavaScriptを実行しないため、公開先を変えたときは
-`og:url` / `og:image` / `twitter:image` / `canonical` を差し替えてください。
-サムネイル画像は `assets/ogp.png`（1200×630）です。
-シェア文に添えるURLのほうは実行時に `location` から作るので、差し替え不要です。
+移したら、`index.html` の `og:url` / `og:image` / `twitter:image` / `canonical`
+と、READMEの先頭のURLを新しいものに差し替えてください。
 
 ### そのほか
 
