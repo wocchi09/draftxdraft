@@ -1,0 +1,19 @@
+{
+  // Cloudflare（Workers の静的アセット）用の設定。
+  // Netlify 用の netlify.toml と同居させてあるので、どちらに置いても動く。
+  //
+  // deploy の前に build を走らせて、配信するファイルだけを dist/ に集める。
+  // リポジトリ直下を配信対象にすると、ビルド中に作られる node_modules の
+  // workerd（146MiB）が1ファイル25MiBの上限に当たってデプロイが失敗するため。
+  "name": "draftxdraft",
+  "compatibility_date": "2026-08-28",
+  "build": {
+    "command": "node tools/build-site.mjs"
+  },
+  "assets": {
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
+}
