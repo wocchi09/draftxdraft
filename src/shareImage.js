@@ -7,6 +7,8 @@
  * 配色は表示中のテーマから読むので、ライト/ダークとアクセント色がそのまま反映される。
  */
 
+import { ensureContrast } from "./utils/color.js";
+
 /** 出力サイズ。4:5 はX・Instagramのフィードで切られずに出る縦長比率 */
 const W = 1080;
 const H = 1350;
@@ -130,11 +132,27 @@ export async function renderShareCardImage({ summary, tags, modeLabel }) {
     ctx.fill();
     ctx.textAlign = "center";
     ctx.fillStyle = p.text2;
-    ctx.font = `700 22px ${FONT}`;
-    ctx.fillText(fitText(ctx, slot.slotLabel, boxW - 20), x + boxW / 2, y + 40);
+    ctx.font = `700 20px ${FONT}`;
+    ctx.fillText(fitText(ctx, slot.slotLabel, boxW - 20), x + boxW / 2, y + 32);
     ctx.fillStyle = p.text0;
     ctx.font = `800 28px ${FONT}`;
-    ctx.fillText(fitText(ctx, slot.name, boxW - 20), x + boxW / 2, y + 78);
+    ctx.fillText(fitText(ctx, slot.name, boxW - 20), x + boxW / 2, y + 68);
+    if (slot.origin) {
+      ctx.font = `700 17px ${FONT}`;
+      const line = `${slot.origin.teamShort} ${slot.origin.year} ${slot.origin.round}`;
+      const lineW = ctx.measureText(line).width;
+      const startX = x + boxW / 2 - (lineW + 16) / 2;
+      if (slot.origin.teamColor) {
+        ctx.fillStyle = ensureContrast(slot.origin.teamColor, p.bg3, 3);
+        ctx.beginPath();
+        ctx.arc(startX + 5, y + 86, 5, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.fillStyle = p.text2;
+      ctx.textAlign = "left";
+      ctx.fillText(line, startX + 16, y + 92);
+      ctx.textAlign = "center";
+    }
     ctx.textAlign = "left";
   });
   y += boxH + 36;
@@ -153,12 +171,29 @@ export async function renderShareCardImage({ summary, tags, modeLabel }) {
     ctx.font = `700 27px ${FONT}`;
     const label = `${o.order}. ${o.posLabel}`;
     ctx.fillText(label, PAD_X, baseline);
-    const labelW = ctx.measureText(label).width;
+
+    // 左の枠と右の名前のあいだに、球団カラーの点つきで出所を置く
+    let originW = 0;
+    if (o.origin) {
+      const ox = PAD_X + 96;
+      if (o.origin.teamColor) {
+        // 濃紺や黒の球団カラーは背景に沈むので、見える明るさまで寄せる
+        ctx.fillStyle = ensureContrast(o.origin.teamColor, p.bg1, 3);
+        ctx.beginPath();
+        ctx.arc(ox + 7, baseline - 9, 7, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.fillStyle = p.text2;
+      ctx.font = `700 21px ${FONT}`;
+      const line = `${o.origin.teamShort} ${o.origin.year} ${o.origin.round}`;
+      ctx.fillText(line, ox + 22, baseline);
+      originW = 96 + 22 + ctx.measureText(line).width;
+    }
 
     ctx.fillStyle = p.text0;
     ctx.font = `800 31px ${FONT}`;
     ctx.textAlign = "right";
-    ctx.fillText(fitText(ctx, o.name, innerW - labelW - 40), W - PAD_X, baseline);
+    ctx.fillText(fitText(ctx, o.name, innerW - originW - 30), W - PAD_X, baseline);
     ctx.textAlign = "left";
 
     // 行の区切り（最終行の下には引かない）
