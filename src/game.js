@@ -11,6 +11,7 @@ import {
 import { createHistoryEntry } from "./history.js";
 import { comboKey, BATTING_ORDER_SIZE, normalizeBattingOrderDraft } from "./state.js";
 import { normalizeYearRange } from "./yearRange.js";
+import { normalizeTeamIds } from "./teamFilter.js";
 
 const MAX_AUTO_REDRAW = 40;
 
@@ -30,11 +31,23 @@ export function drawForState(state) {
   const drawnKeys = state.drawnComboKeys || [];
   const excludeComboKeys = new Set(drawnKeys);
   const avoidComboKey = drawnKeys.length > 0 ? drawnKeys[drawnKeys.length - 1] : null;
-  // 範囲は保存データから復元されることもあるので、毎回整えてから使う
+  // 絞り込みは保存データから復元されることもあるので、毎回整えてから使う
   const yearRange = normalizeYearRange(state.yearRange);
+  const teamIds = normalizeTeamIds(state.teamIds);
+
+  // この呼び出しの中で「引いたが指名できる選手が残っていなかった」組み合わせ。
+  // プールから外さないと、抽選が同じ1件を返し続けて再抽選が空回りする。
+  const exhaustedKeys = new Set();
 
   for (let attempt = 0; attempt < MAX_AUTO_REDRAW; attempt++) {
-    const combo = drawDraftCombo(mode, { state, excludeComboKeys, avoidComboKey, yearRange });
+    const combo = drawDraftCombo(mode, {
+      state,
+      excludeComboKeys,
+      skipComboKeys: exhaustedKeys,
+      avoidComboKey,
+      yearRange,
+      teamIds,
+    });
     if (!combo) {
       return { ok: false, reason: "pool_empty" };
     }
@@ -50,6 +63,7 @@ export function drawForState(state) {
       state.drawnComboKeys = drawnKeys.includes(key) ? [key] : [...drawnKeys, key];
       return { ok: true, autoRedraws: attempt };
     }
+    exhaustedKeys.add(comboKey(combo.year, combo.teamId));
   }
 
   state.currentDraft = null;

@@ -189,7 +189,7 @@ img, svg {
   justify-content: center;
   align-items: center;
   /* 右下のバッジに末尾のリンクが潜らないよう、下だけ余分に空ける */
-  padding: var(--sp-4) var(--sp-5) calc(var(--sp-5) + var(--badge-clearance));
+  padding: var(--sp-3) var(--sp-5) calc(var(--sp-5) + var(--badge-clearance));
   text-align: center;
   gap: var(--sp-4);
   background:
@@ -298,7 +298,7 @@ img, svg {
 }
 
 .year-preset {
-  min-height: 46px;
+  min-height: 44px;
   border-radius: var(--r-md);
   border: 1.5px solid var(--border-1);
   background: var(--bg-2);
@@ -363,6 +363,97 @@ img, svg {
 .year-custom-sep {
   color: var(--text-2);
   font-weight: 700;
+}
+
+/* 出題する球団。使う人だけが開けばよいので、既定では1行に畳んである */
+.team-select {
+  gap: var(--sp-2);
+}
+
+.team-disclosure {
+  display: flex;
+  align-items: center;
+  gap: var(--sp-2);
+  width: 100%;
+  min-height: 44px;
+  padding: 0 var(--sp-3);
+  border-radius: var(--r-md);
+  border: 1.5px solid var(--border-1);
+  background: var(--bg-2);
+  font-family: inherit;
+  color: var(--text-1);
+  cursor: pointer;
+  text-align: left;
+}
+
+.team-disclosure .top-field-label {
+  flex: none;
+}
+
+.team-summary {
+  flex: 1;
+  min-width: 0;
+  font-size: 13px;
+  font-weight: 800;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-caret {
+  flex: none;
+  font-size: 10px;
+  color: var(--text-2);
+}
+
+.team-panel {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+}
+
+.team-panel[hidden] {
+  display: none;
+}
+
+.team-chips {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.team-chip {
+  min-height: 36px;
+  padding: 0 2px;
+  border-radius: var(--r-sm);
+  border: 1.5px solid var(--border-1);
+  background: var(--bg-2);
+  color: var(--text-1);
+  font-family: inherit;
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.team-chip-all {
+  width: 100%;
+  min-height: 38px;
+  font-size: 12.5px;
+}
+
+.team-chip-all.is-selected {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+  color: var(--accent-text);
+}
+
+.team-chip:active {
+  transform: scale(0.97);
 }
 
 .theme-options {

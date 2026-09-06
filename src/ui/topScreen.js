@@ -1,13 +1,19 @@
 import { getAllModes } from "../modes.js";
 import { escapeHtml } from "../utils/dom.js";
-import { DEFAULT_ACCENT } from "../utils/color.js";
+import { DEFAULT_ACCENT, readableTextOn, hexToRgba } from "../utils/color.js";
 import { getAvailableYears } from "../draft.js";
 import {
   getYearPresets,
   matchPresetId,
   normalizeYearRange,
-  summarizeYearRange,
 } from "../yearRange.js";
+import {
+  getSelectableTeams,
+  allTeamIds,
+  normalizeTeamIds,
+  isAllTeams,
+  summarizePool,
+} from "../teamFilter.js";
 
 const PRESET_COLORS = [
   DEFAULT_ACCENT,
@@ -30,8 +36,9 @@ const THEME_OPTIONS = [
 /**
  * TOP画面。
  *
- * 遊ぶ前に決めることは「モード」と「年度」の2つだけなので、
+ * 遊ぶ前に決めることは「モード」と「年度」だけなので、
  * この2つとSTARTがスクロールせずに収まるようにしている。
+ * 球団の絞り込みは使う人だけが開けばよいので、1行のボタンに畳んである。
  * 見た目の好み（アクセントカラー・表示テーマ）は毎回いじるものではないため、
  * STARTの下の「表示設定」に畳んである。
  */
@@ -46,9 +53,21 @@ export function renderTopScreen(root, app) {
   const years = getAvailableYears();
   const range = normalizeYearRange(app.yearRange);
   const activePresetId = matchPresetId(range);
-  const { comboCount, playerCount } = summarizeYearRange(range);
+  const teamIds = normalizeTeamIds(app.teamIds);
+  const teams = getSelectableTeams();
+  const allTeamsSelected = isAllTeams(teamIds);
+  const teamOpen = Boolean(app.teamPanelOpen);
+  const teamSummary = allTeamsSelected
+    ? "全球団"
+    : teamIds.length <= 3
+      ? teams.filter((t) => teamIds.includes(t.id)).map((t) => t.shortName).join("・")
+      : `${teamIds.length}球団`;
+
+  const { comboCount, playerCount } = summarizePool(range, teamIds);
   // 12人そろえるので、12通り未満だと一巡しきって同じ組み合わせが再び出る
   const tooNarrow = comboCount < 12;
+  // 重複指名はできないので、延べ12人に満たないプールではロスターを埋めきれない
+  const tooSmall = playerCount < 12;
 
   const yearOptions = (selected) =>
     years.map((y) => `<option value="${y}"${y === selected ? " selected" : ""}>${y}年</option>`).join("");
@@ -93,13 +112,43 @@ export function renderTopScreen(root, app) {
         <span class="year-custom-sep" aria-hidden="true">〜</span>
         <select id="year-to-select" aria-label="終了年">${yearOptions(range.to)}</select>
       </div>
-      <p class="top-field-note${tooNarrow ? " is-warning" : ""}">
-        <strong>${comboCount}</strong> 通り（${playerCount}人）から出題${tooNarrow ? "／12通りを下回るため同じ年度×球団が再び出ます" : ""}
+    </div>
+
+    <div class="top-field team-select">
+      <button type="button" class="team-disclosure" id="team-toggle" aria-expanded="${teamOpen}" aria-controls="team-panel">
+        <span class="top-field-label">出題する球団</span>
+        <span class="team-summary">${escapeHtml(teamSummary)}</span>
+        <span class="team-caret" aria-hidden="true">${teamOpen ? "▲" : "▼"}</span>
+      </button>
+      <div class="team-panel" id="team-panel"${teamOpen ? "" : " hidden"}>
+        <button type="button" class="team-chip team-chip-all${allTeamsSelected ? " is-selected" : ""}" id="team-all-btn" aria-pressed="${allTeamsSelected}">全球団</button>
+        <div class="team-chips" role="group" aria-label="出題する球団を選択">
+          ${teams
+            .map((t) => {
+              const on = !allTeamsSelected && teamIds.includes(t.id);
+              const color = t.colorAccent || DEFAULT_ACCENT;
+              const style = on
+                ? `background:${color};color:${readableTextOn(color)};border-color:${color}`
+                : `border-color:${hexToRgba(color, 0.5)}`;
+              return `
+            <button type="button" class="team-chip${on ? " is-selected" : ""}" data-team-id="${escapeHtml(t.id)}" aria-pressed="${on}" style="${style}">${escapeHtml(t.shortName)}</button>`;
+            })
+            .join("")}
+        </div>
+      </div>
+      <p class="top-field-note top-pool-note${tooNarrow || tooSmall ? " is-warning" : ""}">
+        <strong>${comboCount}</strong> 通り（${playerCount}人）から出題${
+          tooSmall
+            ? "／12人に届かないため、この条件では始められません"
+            : tooNarrow
+              ? "／12通りを下回るため同じ年度×球団が再び出ます"
+              : ""
+        }
       </p>
     </div>
 
     <div class="top-actions">
-      <button type="button" class="btn btn-primary btn-block" id="start-game-btn">START</button>
+      <button type="button" class="btn btn-primary btn-block" id="start-game-btn"${tooSmall ? " disabled" : ""}>START</button>
       <div class="top-sub-actions">
         <button type="button" class="top-disclosure" id="appearance-toggle" aria-expanded="${appearanceOpen}" aria-controls="appearance-panel">
           表示設定 <span aria-hidden="true">${appearanceOpen ? "▲" : "▼"}</span>
@@ -176,6 +225,29 @@ export function renderTopScreen(root, app) {
   fromSelect.addEventListener("change", onYearChange);
   toSelect.addEventListener("change", onYearChange);
 
+  wrap.querySelector("#team-toggle").addEventListener("click", () => {
+    app.teamPanelOpen = !app.teamPanelOpen;
+    app.render();
+  });
+
+  wrap.querySelector("#team-all-btn").addEventListener("click", () => {
+    app.setTeamIds(allTeamIds());
+  });
+
+  wrap.querySelectorAll("[data-team-id]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const id = btn.dataset.teamId;
+      // 「全球団」の状態から1球団を押したときは、その球団だけに絞る。
+      // 逆に最後の1球団を外したときは「全球団」へ戻す（normalizeTeamIdsが空を全球団に倒す）。
+      if (allTeamsSelected) {
+        app.setTeamIds([id]);
+        return;
+      }
+      const next = teamIds.includes(id) ? teamIds.filter((t) => t !== id) : [...teamIds, id];
+      app.setTeamIds(next);
+    });
+  });
+
   wrap.querySelectorAll("[data-theme-id]").forEach((btn) => {
     btn.addEventListener("click", () => {
       app.setTheme(btn.dataset.themeId);
@@ -202,7 +274,9 @@ export function renderTopScreen(root, app) {
     app.render();
   });
 
-  wrap.querySelector("#start-game-btn").addEventListener("click", () => {
+  const startBtn = wrap.querySelector("#start-game-btn");
+  startBtn.addEventListener("click", () => {
+    if (startBtn.disabled) return;
     app.startNewGame(app.selectedModeId);
   });
 

@@ -8,7 +8,7 @@ import { DEFAULT_MODE_ID } from "./modes.js";
 import { drawForState, pickPlayer, skip, getEligibleOpenSlotsForCandidate, GameError } from "./game.js";
 import { getAvailableYears } from "./draft.js";
 import { getSlotDef } from "./roster.js";
-import { getAllTeamShortNames, getTeamShortName, getTeamName, getTeamAccentColor } from "./teams.js";
+import { getTeamShortName, getTeamName, getTeamAccentColor } from "./teams.js";
 import { moveUp, moveDown } from "./battingOrder.js";
 import { runRouletteAnimation, prefersReducedMotion } from "./ui/animations.js";
 import { renderTopScreen } from "./ui/topScreen.js";
@@ -20,6 +20,7 @@ import { hexToRgba, lighten, darken, readableTextOn, DEFAULT_ACCENT } from "./ut
 import { loadGameData } from "./dataStore.js";
 import * as storage from "./storage.js";
 import { normalizeYearRange } from "./yearRange.js";
+import { normalizeTeamIds } from "./teamFilter.js";
 
 function defaultUiState() {
   return {
@@ -54,6 +55,7 @@ class App {
     this.favoriteColor = storage.loadFavoriteColor() || DEFAULT_ACCENT;
     this.theme = storage.loadTheme();
     this.yearRange = storage.loadYearRange();
+    this.teamIds = storage.loadTeamIds();
     applyTheme(this.theme);
     this.game = null;
     this.viewingTeam = null;
@@ -90,6 +92,13 @@ class App {
     this.render();
   }
 
+  /** TOP画面で選んだ、抽選する球団を覚えておく */
+  setTeamIds(ids) {
+    this.teamIds = normalizeTeamIds(ids);
+    storage.saveTeamIds(this.teamIds);
+    this.render();
+  }
+
   setTheme(theme) {
     this.theme = theme;
     storage.saveTheme(theme);
@@ -115,6 +124,9 @@ class App {
       // 範囲を持たない古い保存データは全期間として再開する
       this.game.yearRange = normalizeYearRange(this.game.yearRange);
       this.yearRange = this.game.yearRange;
+      // 球団の絞り込みを持たない古い保存データは全球団として再開する
+      this.game.teamIds = normalizeTeamIds(this.game.teamIds);
+      this.teamIds = this.game.teamIds;
       this.screen = "GAME";
       if (!this.game.currentDraft) {
         const result = drawForState(this.game);
@@ -158,7 +170,7 @@ class App {
     }
     this.selectedModeId = modeId;
     storage.saveLastMode(modeId);
-    this.game = createInitialState(modeId, this.yearRange);
+    this.game = createInitialState(modeId, this.yearRange, this.teamIds);
     this.viewingTeam = null;
     this.viewingTeamIndex = null;
     this.ui = defaultUiState();
@@ -187,10 +199,10 @@ class App {
         : null;
     this.render();
 
-    // ルーレットに流す年度は、選んだ範囲の中だけにする
+    // ルーレットに流す年度・球団は、選んだ範囲の中だけにする
     const range = normalizeYearRange(this.game.yearRange);
     const years = getAvailableYears().filter((y) => y >= range.from && y <= range.to);
-    const teamNames = getAllTeamShortNames();
+    const teamNames = normalizeTeamIds(this.game.teamIds).map((id) => getTeamShortName(id));
     const finalTeamShortName = getTeamShortName(combo.teamId);
 
     this._stopRoulette = runRouletteAnimation({
