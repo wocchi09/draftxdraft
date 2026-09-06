@@ -1,5 +1,4 @@
 import { getPlayer } from "../draft.js";
-import { getTeamName } from "../teams.js";
 import { getSlotDef, ROSTER_SLOTS } from "../roster.js";
 import { computeAnalysis, computeTags, getPlayerBadges } from "../analysis.js";
 import { moveTo } from "../battingOrder.js";
@@ -13,8 +12,10 @@ import {
 } from "../share.js";
 import { renderShareCardImage } from "../shareImage.js";
 import { getMode } from "../modes.js";
+import { historyItemHtml } from "./components.js";
 import { spawnConfetti } from "./animations.js";
 import { escapeHtml } from "../utils/dom.js";
+import { ensureContrast } from "../utils/color.js";
 
 function slotIdForPlayer(roster, playerId) {
   return ROSTER_SLOTS.find((s) => roster[s.id] === playerId)?.id || null;
@@ -149,11 +150,7 @@ export function renderResultScreen(root, app) {
             ${record.history
               .slice()
               .reverse()
-              .map((e) => {
-                const teamName = getTeamName(e.teamId, e.year);
-                const player = e.playerId ? getPlayer(e.playerId) : null;
-                return `<div class="history-item${e.action === "SKIP" ? " is-skip" : ""}"><span class="h-round">${e.round}巡</span><span class="h-body">${e.year}年 ${escapeHtml(teamName)} → <strong>${e.action === "SKIP" ? "SKIP" : escapeHtml(player ? player.name : "?")}</strong></span></div>`;
-              })
+              .map((e) => historyItemHtml(e, getPlayer))
               .join("")}
           </div>
         </div>
@@ -167,10 +164,14 @@ export function renderResultScreen(root, app) {
             <span class="sc-heading">MY TEAM</span>
             <span class="sc-meta">${escapeHtml(mode.label)}${shareSummary.decade ? ` ・ ${escapeHtml(shareSummary.decade)}` : ""}</span>
             <div class="sc-pitchers">
-              ${shareSummary.pitcherSlots.map((p) => `<span>${escapeHtml(p.slotLabel)}<br>${escapeHtml(p.name)}</span>`).join("")}
+              ${shareSummary.pitcherSlots.map((p) => `<span>${escapeHtml(p.slotLabel)}<br>${escapeHtml(p.name)}${scOriginHtml(p.origin)}</span>`).join("")}
             </div>
             <div class="sc-order">
-              ${shareSummary.battingOrder.map((o) => `<div><span>${o.order}. ${escapeHtml(o.posLabel)}</span><b>${escapeHtml(o.name)}</b></div>`).join("")}
+              ${shareSummary.battingOrder
+                .map(
+                  (o) => `<div><span class="sc-pos">${o.order}. ${escapeHtml(o.posLabel)}</span>${scOriginHtml(o.origin)}<b>${escapeHtml(o.name)}</b></div>`
+                )
+                .join("")}
             </div>
             <div class="sc-tags">${tags.map((t) => `<span>${escapeHtml(t)}</span>`).join("")}</div>
             <div class="sc-footer"><span>あなたならこのチーム、どう見る？</span><span>DRAFT × DRAFT</span></div>
@@ -265,6 +266,20 @@ function bindShareImage(wrap, record) {
       saveBtn.disabled = false;
     }
   });
+}
+
+/**
+ * シェアカードの各行に「どこの何年何位で獲った選手か」を出す。
+ * 球団カラーの点を添えることで、12球団ばらばらに引いたことが一目で分かる。
+ */
+function scOriginHtml(origin) {
+  if (!origin) return "";
+  // 濃紺や黒の球団カラーは背景に沈むので、カードの地色に対して見える明るさまで寄せる
+  const cardBg = (getComputedStyle(document.documentElement).getPropertyValue("--bg-1") || "#ffffff").trim();
+  const dot = origin.teamColor
+    ? `<i class="sc-dot" style="background:${ensureContrast(origin.teamColor, cardBg, 3)}"></i>`
+    : "";
+  return `<span class="sc-origin">${dot}${escapeHtml(origin.teamShort)} ${origin.year} ${escapeHtml(origin.round)}</span>`;
 }
 
 function bindEvents(wrap, app, record) {

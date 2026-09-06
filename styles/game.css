@@ -677,30 +677,54 @@
 
 .history-item {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: var(--sp-2);
   font-size: 13px;
-  padding: var(--sp-2) 0;
+  padding: 6px 0;
   border-top: 1px solid var(--border-1);
 }
 
 .history-item .h-round {
   color: var(--text-3);
   font-weight: 800;
-  min-width: 44px;
+  min-width: 34px;
+  font-size: 11px;
+  flex-shrink: 0;
 }
 
-.history-item .h-body {
-  flex: 1;
+/* 球団名のバッジ。背景は球団カラー、文字色はコントラストから決める */
+.history-item .h-team {
+  flex-shrink: 0;
+  min-width: 62px;
+  text-align: center;
+  padding: 3px 7px;
+  border-radius: var(--r-pill);
+  background: var(--bg-3);
   color: var(--text-1);
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
 }
 
-.history-item .h-body strong {
+.history-item .h-meta {
+  flex-shrink: 0;
+  color: var(--text-2);
+  font-size: 11.5px;
+  font-variant-numeric: tabular-nums;
+}
+
+.history-item .h-name {
+  flex: 1;
+  text-align: right;
   color: var(--text-0);
+  font-weight: 800;
+  overflow-wrap: anywhere;
 }
 
-.history-item.is-skip .h-body {
+.history-item.is-skip .h-name {
   color: var(--text-3);
+  font-weight: 700;
 }
 
 .no-candidates-banner {

@@ -1,6 +1,7 @@
 import { escapeHtml } from "../utils/dom.js";
 import { ROSTER_SLOTS, getSlotDef } from "../roster.js";
-import { getTeamName } from "../teams.js";
+import { getTeamName, getTeamShortName, getTeamAccentColor } from "../teams.js";
+import { readableTextOn } from "../utils/color.js";
 import { parseDraftRound, draftKindLabel, isLowRound } from "../draftRound.js";
 
 export function twoWayBadgeHtml(pulse = false) {
@@ -111,20 +112,42 @@ export function rosterListHtml(roster, playerLookup) {
   }).join("")}</div>`;
 }
 
+/**
+ * 球団名を、その球団のカラーで塗ったバッジにする。
+ * アクセントの明るさは球団ごとにばらばら（阪神の黄色からロッテの黒まで）なので、
+ * 載せる文字色はコントラスト比から都度決める。
+ */
+function teamBadgeHtml(teamId, year) {
+  const label = getTeamShortName(teamId);
+  const color = getTeamAccentColor(teamId);
+  if (!color) return `<span class="h-team">${escapeHtml(label)}</span>`;
+  const ink = readableTextOn(color);
+  return `<span class="h-team" style="background:${color};color:${ink}" title="${escapeHtml(getTeamName(teamId, year))}">${escapeHtml(label)}</span>`;
+}
+
 export function historyItemHtml(entry, playerLookup) {
-  const teamName = escapeHtml(getTeamName(entry.teamId, entry.year));
+  const badge = teamBadgeHtml(entry.teamId, entry.year);
   if (entry.action === "SKIP") {
     return `
     <div class="history-item is-skip">
       <span class="h-round">${entry.round}巡</span>
-      <span class="h-body">${entry.year}年 ${teamName} → <strong>SKIP</strong></span>
+      ${badge}
+      <span class="h-meta">${entry.year}年</span>
+      <span class="h-name">SKIP</span>
     </div>`;
   }
   const player = entry.playerId ? playerLookup(entry.playerId) : null;
+  // 「ソフトバンク 2019年5位 柳町達」の形で読めるようにする
+  const round = player ? (() => {
+    const { kind, shortRank } = parseDraftRound(player.draftRound);
+    return `${kind}${shortRank}`;
+  })() : "";
   return `
   <div class="history-item">
     <span class="h-round">${entry.round}巡</span>
-    <span class="h-body">${entry.year}年 ${teamName} → <strong>${escapeHtml(player ? player.name : "?")}</strong> を指名</span>
+    ${badge}
+    <span class="h-meta">${entry.year}年${escapeHtml(round)}</span>
+    <strong class="h-name">${escapeHtml(player ? player.name : "?")}</strong>
   </div>`;
 }
 

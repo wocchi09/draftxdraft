@@ -1,6 +1,7 @@
-import { getTeamName } from "./teams.js";
+import { getTeamName, getTeamShortName, getTeamAccentColor } from "./teams.js";
 import { getPlayer } from "./draft.js";
 import { ROSTER_SLOTS, getSlotDef } from "./roster.js";
+import { parseDraftRound } from "./draftRound.js";
 
 /**
  * 遊んでいるページ自身のURL。
@@ -30,18 +31,39 @@ export function buildShareText(state, tags) {
   return lines.join("\n");
 }
 
+/**
+ * 「どの球団の何年何位で獲った選手か」をひとまとめにする。
+ * 球団カラーはシェアカードの色分けにそのまま使う。
+ */
+function draftOrigin(player) {
+  if (!player) return null;
+  const { kind, shortRank } = parseDraftRound(player.draftRound);
+  return {
+    teamId: player.draftTeamId,
+    teamShort: getTeamShortName(player.draftTeamId),
+    teamColor: getTeamAccentColor(player.draftTeamId),
+    year: player.draftYear,
+    round: `${kind}${shortRank}`,
+  };
+}
+
 export function buildShareSummary(state) {
   const battingOrder = (state.battingOrder || []).map((playerId, idx) => {
     const player = getPlayer(playerId);
     const slotId = Object.keys(state.roster).find((s) => state.roster[s] === playerId);
     const slot = getSlotDef(slotId);
-    return { order: idx + 1, name: player ? player.name : "-", posLabel: slot ? slot.shortLabel : "" };
+    return {
+      order: idx + 1,
+      name: player ? player.name : "-",
+      posLabel: slot ? slot.shortLabel : "",
+      origin: draftOrigin(player),
+    };
   });
 
   const pitcherSlots = ROSTER_SLOTS.filter((s) => s.category === "pitcher").map((slot) => {
     const playerId = state.roster[slot.id];
     const player = playerId ? getPlayer(playerId) : null;
-    return { slotLabel: slot.shortLabel, name: player ? player.name : "未選択" };
+    return { slotLabel: slot.shortLabel, name: player ? player.name : "未選択", origin: draftOrigin(player) };
   });
 
   const drawnTeams = [...new Set(state.history.filter((h) => h.action === "PICK").map((h) => h.teamId))];
