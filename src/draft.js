@@ -1,6 +1,7 @@
 import { getGameData } from "./dataStore.js";
 import { pickRandom } from "./utils/random.js";
 import { filterPoolByYearRange } from "./yearRange.js";
+import { filterPoolByTeams } from "./teamFilter.js";
 
 function draftsData() {
   return getGameData().drafts;
@@ -74,10 +75,20 @@ export function getCandidates(year, teamId, excludePlayerIds = new Set()) {
  * `ctx.avoidComboKey`（直前に出た組み合わせ）を候補から外し、
  * 巡の境目で同じ組み合わせが2連続で出ないようにする。
  *
- * `ctx.yearRange` が指定されていれば、その年度の範囲だけに絞ってから抽選する。
+ * `ctx.skipComboKeys` は「引いても意味がないと分かっている組み合わせ」で、
+ * シャッフルバッグより先にプールから外す。`ctx.excludeComboKeys` と違い、
+ * 巡の境目の `avoidComboKey` 処理でも復活しない。
+ *
+ * `ctx.yearRange` / `ctx.teamIds` が指定されていれば、その年度・球団だけに絞ってから抽選する。
  */
 export function drawDraftCombo(mode, ctx = {}) {
-  const inRange = filterPoolByYearRange(buildDraftPool(), ctx.yearRange);
+  let inRange = filterPoolByTeams(
+    filterPoolByYearRange(buildDraftPool(), ctx.yearRange),
+    ctx.teamIds
+  );
+  if (ctx.skipComboKeys && ctx.skipComboKeys.size > 0) {
+    inRange = inRange.filter((c) => !ctx.skipComboKeys.has(`${c.year}-${c.teamId}`));
+  }
   const pool = mode.filterPool(inRange, ctx);
   if (pool.length === 0) return null;
 

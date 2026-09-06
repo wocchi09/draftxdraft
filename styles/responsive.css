@@ -27,6 +27,27 @@
   }
 }
 
+/* 縦の短い端末（iPhone SE など）では、TOP画面の選択肢がひと画面に収まるよう詰める。
+   キャッチコピーなど読まなくても遊べる飾りから順に落としていく。 */
+@media (max-height: 720px) {
+  .top-screen {
+    gap: var(--sp-3);
+  }
+
+  .top-logo h1 {
+    font-size: 30px;
+  }
+
+  .top-logo .mark,
+  .top-logo .copy {
+    display: none;
+  }
+
+  .top-credit {
+    font-size: 10px;
+  }
+}
+
 /* Wider viewports (tablet/desktop): keep the phone-shaped column centered */
 @media (min-width: 560px) {
   body {

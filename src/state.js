@@ -1,6 +1,7 @@
 import { createEmptyRoster } from "./roster.js";
 import { getMode, DEFAULT_MODE_ID } from "./modes.js";
 import { normalizeYearRange } from "./yearRange.js";
+import { normalizeTeamIds } from "./teamFilter.js";
 
 /**
  * ゲーム状態のファクトリ。UIやロジックはこのシェイプに従う。
@@ -20,6 +21,7 @@ import { normalizeYearRange } from "./yearRange.js";
  *   指名のたびに空いている番号へ選手を入れていき、完成時に battingOrder へ確定する。
  * @property {string[]} drawnComboKeys - このゲームで一度でも抽選に出た「年度×球団」の組み合わせ（重複抽選を避けるため）
  * @property {{from:number, to:number}} yearRange - 抽選する年度の範囲（TOP画面で選ぶ）
+ * @property {string[]} teamIds - 抽選する球団（TOP画面で選ぶ。全球団なら全IDが入る）
  * @property {number|null} completedAt
  */
 
@@ -40,11 +42,12 @@ export function normalizeBattingOrderDraft(draft) {
   return slots;
 }
 
-export function createInitialState(modeId = DEFAULT_MODE_ID, yearRange = null) {
+export function createInitialState(modeId = DEFAULT_MODE_ID, yearRange = null, teamIds = null) {
   return {
     status: "playing",
     modeId,
     yearRange: normalizeYearRange(yearRange),
+    teamIds: normalizeTeamIds(teamIds),
     roster: createEmptyRoster(),
     pickedPlayerIds: [],
     skipsUsed: 0,

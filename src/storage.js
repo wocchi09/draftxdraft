@@ -11,6 +11,7 @@ const KEYS = {
   favoriteColor: "ddxd:favoriteColor",
   theme: "ddxd:theme",
   yearRange: "ddxd:yearRange",
+  teamIds: "ddxd:teamIds",
 };
 
 function safeGet(key) {
@@ -120,6 +121,20 @@ export function loadYearRange() {
   const data = safeGet(KEYS.yearRange);
   if (!data || typeof data !== "object") return null;
   return { from: Number(data.from), to: Number(data.to) };
+}
+
+/**
+ * 抽選する球団。存在しないIDが混ざっていないか等は teamFilter.js 側で
+ * 整えるので、ここでは「文字列の配列か」だけを見る。
+ */
+export function saveTeamIds(ids) {
+  if (!Array.isArray(ids)) return false;
+  return safeSet(KEYS.teamIds, ids.filter((id) => typeof id === "string"));
+}
+
+export function loadTeamIds() {
+  const data = safeGet(KEYS.teamIds);
+  return Array.isArray(data) ? data.filter((id) => typeof id === "string") : null;
 }
 
 export function clearFavoriteColor() {

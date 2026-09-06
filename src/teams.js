@@ -36,8 +36,3 @@ export function getTeamAccentColor(teamId) {
   const team = getTeam(teamId);
   return team && team.colorAccent ? team.colorAccent : null;
 }
-
-/** 抽選演出用: 全球団の表示名一覧 */
-export function getAllTeamShortNames() {
-  return teamsData().map((t) => t.shortName);
-}
